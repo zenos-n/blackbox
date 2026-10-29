@@ -20,6 +20,14 @@
 
 namespace Terminal {
 
+  public string shell_command_from_argv(string[] argv) {
+    string[] quoted = {};
+    foreach (unowned string arg in argv) {
+      quoted += Shell.quote(arg);
+    }
+    return string.joinv(" ", quoted);
+  }
+
   public async int get_foreground_process (
     int terminal_fd,
     Cancellable? cancellable = null

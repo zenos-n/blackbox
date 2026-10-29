@@ -638,7 +638,7 @@ public class Terminal.Terminal : Vte.Terminal {
   }
 
   private void withdraw_command_completed_notification() {
-    this.window.application.withdraw_notification(
+    this.window.application?.withdraw_notification(
       process_completed_notification_id()
     );
   }

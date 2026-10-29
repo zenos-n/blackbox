@@ -230,6 +230,63 @@ void test_tab_overview() {
   window.destroy();
 }
 
+void test_floating_tab_overview() {
+  var settings = Terminal.Settings.get_default();
+  settings.fill_tabs = true;
+  settings.floating_controls = true;
+  settings.floating_controls_hover_area = 10;
+  settings.delay_before_showing_floating_controls = 400;
+  settings.show_headerbar = true;
+  var window = new Terminal.Window(test_application, "sleep 10", "/");
+  window.set_default_size(720, 440);
+  window.resizable = false;
+  window.present();
+  wait_frames(350);
+  settings.schema.set_boolean("show-headerbar", false);
+  wait_frames(350);
+  Gtk.EventControllerMotion? motion = null;
+  var controllers = window.observe_controllers();
+  for (uint i = 0; i < controllers.get_n_items(); i++) {
+    var controller = controllers.get_item(i) as Gtk.EventControllerMotion;
+    if (controller != null && controller.name == "floating-controls") {
+      motion = controller;
+    }
+  }
+  assert(motion != null);
+  motion.propagation_phase = Gtk.PropagationPhase.NONE;
+  motion.motion(10, 300);
+  motion.motion(10, 1);
+  wait_frames(700);
+  var buttons = new Gee.ArrayList<Adw.TabButton>();
+  collect_tab_buttons(window.tab_overview.child, buttons);
+  assert(buttons.size == 2);
+  assert(buttons[0].get_mapped());
+  Graphene.Rect bounds;
+  assert(buttons[0].compute_bounds(window, out bounds));
+  var center = bounds.get_center();
+  motion.motion(center.x, center.y);
+  wait_frames(50);
+  var picked = window.pick(center.x, center.y, Gtk.PickFlags.DEFAULT);
+  assert(picked != null && (picked == buttons[0] || picked.is_ancestor(buttons[0])));
+  assert(((Gtk.Widget) buttons[0]).activate());
+  wait_frames(300);
+  assert(window.tab_overview.open);
+  window.tab_overview.open = false;
+  wait_frames(300);
+  motion.motion(10, 300);
+  wait_frames(300);
+  assert(!buttons[0].get_mapped());
+  motion.motion(10, 1);
+  wait_frames(700);
+  assert(buttons[0].get_mapped());
+  assert(((Gtk.Widget) buttons[0]).activate());
+  wait_frames(300);
+  assert(window.tab_overview.open);
+  ((Terminal.TerminalTab) window.tab_view.selected_page.child).on_before_close();
+  window.destroy();
+  settings.show_headerbar = true;
+}
+
 void test_closed_session_is_released() {
   var settings = Terminal.Settings.get_default();
   settings.context_aware_header_bar = false;
@@ -269,6 +326,7 @@ int main(string[] args) {
     Test.add_func("/cursor/geometry-and-animation", test_cursor_geometry_and_animation);
     Test.add_func("/cursor/color-preference", test_cursor_color_preference);
     Test.add_func("/tabs/overview", test_tab_overview);
+    Test.add_func("/tabs/floating-overview", test_floating_tab_overview);
     Test.add_func("/search/keeps-url-matches", () => {
     try { test_search_keeps_url_matches(); }
     catch (Error e) { error("%s", e.message); }

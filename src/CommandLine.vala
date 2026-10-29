@@ -131,7 +131,7 @@ public class Terminal.CommandLine {
       }
       // If "--" or "-e"/"--execute" was used and "-c" wasn't set
       if (consume_rest && options.command == null && commandv.length > 0) {
-        options.command = string.joinv(" ", commandv);
+        options.command = shell_command_from_argv(commandv);
       }
     } catch (Error e) {
       cmd.printerr("%s\n", e.message);

@@ -299,7 +299,7 @@ public class Terminal.Window : Adw.ApplicationWindow {
     this.notify["active-terminal"]
     .connect(this.on_active_terminal_tab_changed);
 
-    var motion_controller = new Gtk.EventControllerMotion();
+    var motion_controller = new Gtk.EventControllerMotion() { name = "floating-controls" };
     motion_controller.motion.connect(this.on_mouse_motion);
 
     (this as Gtk.Widget)?.add_controller(motion_controller);

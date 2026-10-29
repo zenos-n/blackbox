@@ -50,11 +50,27 @@ void test_file_roundtrip() {
   }
 }
 
+void test_command_arguments() {
+  string[] command = { "printf", "<%s>\\n", "two words", "", "a'b",
+                       "$(printf injected)", ";exit 7" };
+  try {
+    string output;
+    int status;
+    Process.spawn_sync(null, { "/bin/sh", "-c", Terminal.shell_command_from_argv(command) },
+                       null, 0, null, out output, null, out status);
+    assert(status == 0);
+    assert(output == "<two words>\n<>\n<a'b>\n<$(printf injected)>\n<;exit 7>\n");
+  } catch (Error e) {
+    error("%s", e.message);
+  }
+}
+
 int main(string[] args) {
   Test.init(ref args);
   Test.add_func("/process/invalid-pids", test_invalid_pids);
   Test.add_func("/process/missing-owner", test_missing_process_owner);
   Test.add_func("/files/missing", test_missing_file);
   Test.add_func("/files/roundtrip", test_file_roundtrip);
+  Test.add_func("/command/argument-boundaries", test_command_arguments);
   return Test.run();
 }

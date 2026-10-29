@@ -10,6 +10,7 @@ Keywords=Terminal;terminal;shell;prompt;command;commandline;cmd;box;run;
 Icon=com.neg-zero.BlackBoxNext
 X-GNOME-UsesNotifications=true
 X-ExecArg=--
+X-TerminalArgExec=--
 X-TerminalArgDir=--working-directory
 
 [Desktop Action new-tab]

@@ -86,12 +86,15 @@ The Nix recipe is `package.nix`. It builds against the package set supplied by
 the caller; Meson rejects an older GNOME stack. Tests use temporary user data
 and memory-backed GSettings. Without a display, graphical tests report a skip.
 The local sandbox build used GTK 4.22.4, libadwaita 1.9.3, VTE 0.84.1, Vala
-0.56.19, and GCC 16.2. Core, process-lifetime and benchmark checks pass. The eight
+0.56.19, and GCC 16.2. Core, process-lifetime and benchmark checks pass. The nine
 graphical/process checks also passed through a temporary user service in the
 real Wayland session, using `GskVulkanRenderer` and the desktop's purple accent.
 Those checks cover styles, accent, search, Unicode/scrollback cursor geometry,
 trail rendering and cleanup, the cursor color preference, tab overview actions
-in both header layouts, and process lifetime. GPU throughput and input
+in both header layouts (including floating-control reveal/hide), and process lifetime.
+GUI cases run in separate processes so application singletons and pending frame
+callbacks cannot leak between cases. Command execution also preserves argument
+boundaries after `--`/`-e`, including spaces, empty strings and shell metacharacters. GPU throughput and input
 latency have not been measured; other desktop features still need validation.
 
 See [PERFORMANCE.md](PERFORMANCE.md) for measurements and remaining validation.
