@@ -52,6 +52,7 @@ public class Terminal.PreferencesWindow : Adw.PreferencesDialog {
   [GtkChild] unowned Adw.SpinRow              padding_spin_row;
   [GtkChild] unowned Adw.SwitchRow            easy_copy_paste_switch_row;
   [GtkChild] unowned Adw.SwitchRow            fill_tabs_switch_row;
+  [GtkChild] unowned Adw.ComboRow             tab_switching_order_combo_row;
   [GtkChild] unowned Adw.SwitchRow            floating_controls_switch_row;
   [GtkChild] unowned Adw.SwitchRow            use_sixel_switch_row;
   [GtkChild] unowned Adw.SwitchRow            pretty_switch_row;
@@ -261,6 +262,8 @@ public class Terminal.PreferencesWindow : Adw.PreferencesDialog {
       "active",
       SettingsBindFlags.DEFAULT
     );
+    settings.schema.bind("tab-switching-order", this.tab_switching_order_combo_row,
+                         "selected", SettingsBindFlags.DEFAULT);
 
     settings.schema.bind(
       "show-menu-button",

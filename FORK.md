@@ -4,7 +4,7 @@ This is a development fork of [Black Box](https://gitlab.gnome.org/raggesilver/b
 starting with performance, reliability, and GNOME 50. Kitty compatibility is
 the longer-term target, not a feature claim for this first version.
 
-Version: **0.15.2.4**. Executable: `blackbox-next`. Desktop application and
+Version: **0.15.2.5**. Executable: `blackbox-next`. Desktop application and
 GSettings ID: `com.neg-zero.BlackBoxNext`. Themes and keybindings live in
 `$XDG_DATA_HOME/blackbox-next/` (normally `~/.local/share/blackbox-next/`).
 The fork can coexist with upstream and does not migrate its settings.
@@ -72,6 +72,16 @@ evaluate whether to extend a separately maintained VTE backend or integrate
 another embeddable core. A GTK window wrapped around a Kitty subprocess would
 not provide a reliable native terminal widget.
 
+## Tab switching
+
+Preferences → General → Tabs → Tab Switching Order offers Tab Position (the
+existing default) and Most Recently Used. Recent order applies to the next and
+previous tab shortcuts, including Ctrl+Tab/Ctrl+Shift+Tab and Ctrl+Page Down/Up.
+Hold Control and press Tab repeatedly to traverse a fixed recent-tab order;
+release Control to make the chosen tab most recent. Direct selections update
+history, reordering preserves it, and closing or moving a tab clears an active
+cycle. Each window has its own history.
+
 ## Build and checks
 
 The flake supports x86_64 and AArch64 Linux and locks the GNOME build dependencies:
@@ -99,7 +109,7 @@ The Nix recipe is `package.nix`. It builds against the package set supplied by
 the caller; Meson rejects an older GNOME stack. Tests use temporary user data
 and memory-backed GSettings. Without a display, graphical tests report a skip.
 The local sandbox build used GTK 4.22.4, libadwaita 1.9.3, VTE 0.84.1, Vala
-0.56.19, and GCC 16.2. Core, process-lifetime and benchmark checks pass. The nine
+0.56.19, and GCC 16.2. Core, process-lifetime and benchmark checks pass. The ten
 graphical/process checks also passed through a temporary user service in the
 real Wayland session, using `GskVulkanRenderer` and the desktop's purple accent.
 Those checks cover styles, accent, search, Unicode/scrollback cursor geometry,

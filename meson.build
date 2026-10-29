@@ -1,7 +1,7 @@
 project(
   'blackbox-next',
   ['c', 'vala'],
-  version: '0.15.2.4',
+  version: '0.15.2.5',
   meson_version: '>= 0.59.0',
   default_options: [
     'warning_level=2',

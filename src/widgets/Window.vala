@@ -115,6 +115,11 @@ public class Terminal.Window : Adw.ApplicationWindow {
   Gtk.Box     layout_box;
   Gtk.Overlay overlay;
   private static uint next_id = 0;
+  Gee.ArrayList<Adw.TabPage> tab_history = new Gee.ArrayList<Adw.TabPage>();
+  Gee.ArrayList<Adw.TabPage>? tab_cycle = null;
+  int tab_cycle_index = 0;
+  bool selecting_tab_cycle = false;
+  bool control_held = false;
 
   weak Adw.TabPage? tab_menu_target = null;
 
@@ -283,8 +288,18 @@ public class Terminal.Window : Adw.ApplicationWindow {
     });
 
     this.tab_view.notify["selected-page"].connect(() => {
+      if (!this.selecting_tab_cycle) this.finish_tab_cycle();
       this.on_tab_selected();
     });
+    this.tab_view.page_attached.connect((page, position) => {
+      if (!this.tab_history.contains(page)) this.tab_history.add(page);
+      this.finish_tab_cycle();
+    });
+    this.tab_view.page_detached.connect((page, position) => {
+      this.tab_history.remove(page);
+      this.finish_tab_cycle();
+    });
+    this.settings.notify["tab-switching-order"].connect(this.finish_tab_cycle);
 
     this.tab_view.setup_menu.connect(this.on_setup_menu);
 
@@ -303,6 +318,30 @@ public class Terminal.Window : Adw.ApplicationWindow {
     motion_controller.motion.connect(this.on_mouse_motion);
 
     (this as Gtk.Widget)?.add_controller(motion_controller);
+
+    var tab_keys = new Gtk.EventControllerKey() {
+      name = "tab-switching",
+      propagation_phase = Gtk.PropagationPhase.CAPTURE,
+    };
+    tab_keys.key_pressed.connect((keyval, keycode, state) => {
+      this.control_held = (state & Gdk.ModifierType.CONTROL_MASK) != 0 ||
+                         keyval == Gdk.Key.Control_L || keyval == Gdk.Key.Control_R;
+      return false;
+    });
+    tab_keys.key_released.connect((keyval, keycode, state) => {
+      if (keyval == Gdk.Key.Control_L || keyval == Gdk.Key.Control_R ||
+          (state & Gdk.ModifierType.CONTROL_MASK) == 0) {
+        this.control_held = false;
+        this.finish_tab_cycle();
+      }
+    });
+    ((Gtk.Widget) this).add_controller(tab_keys);
+    this.notify["is-active"].connect(() => {
+      if (!this.is_active) {
+        this.control_held = false;
+        this.finish_tab_cycle();
+      }
+    });
 
     this.close_request.connect(this.on_close_request);
 
@@ -922,16 +961,51 @@ public class Terminal.Window : Adw.ApplicationWindow {
   }
 
   public void focus_next_tab() {
+    if (this.tab_view.n_pages <= 1) return;
+    if (this.settings.tab_switching_order == 1) {
+      this.focus_recent_tab(1);
+      return;
+    }
     if (!this.tab_view.select_next_page()) {
       this.tab_view.set_selected_page(this.tab_view.get_nth_page(0));
     }
   }
 
   public void focus_previous_tab() {
+    if (this.tab_view.n_pages <= 1) return;
+    if (this.settings.tab_switching_order == 1) {
+      this.focus_recent_tab(-1);
+      return;
+    }
     if (!this.tab_view.select_previous_page()) {
       this.tab_view.set_selected_page(this.tab_view.get_nth_page(
                                         this.tab_view.n_pages - 1));
     }
+  }
+
+  private void finish_tab_cycle() {
+    this.tab_cycle = null;
+    var page = this.tab_view.selected_page;
+    if (page != null) {
+      this.tab_history.remove(page);
+      this.tab_history.insert(0, page);
+    }
+  }
+
+  private void focus_recent_tab(int direction) {
+    if (this.tab_cycle == null) {
+      this.finish_tab_cycle();
+      this.tab_cycle = new Gee.ArrayList<Adw.TabPage>();
+      this.tab_cycle.add_all(this.tab_history);
+      this.tab_cycle_index = 0;
+    }
+    // Keep a stable order until Control is released, so every tab is reachable.
+    this.tab_cycle_index = (this.tab_cycle_index + direction + this.tab_cycle.size)
+                          % this.tab_cycle.size;
+    this.selecting_tab_cycle = true;
+    this.tab_view.selected_page = this.tab_cycle[this.tab_cycle_index];
+    this.selecting_tab_cycle = false;
+    if (!this.control_held) this.finish_tab_cycle();
   }
 
   public void focus_nth_tab(int index) {

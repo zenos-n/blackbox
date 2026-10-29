@@ -69,6 +69,7 @@ public class Terminal.Settings : SettingsBinder {
   public uint    scrollback_lines                     { get; set; }
   public uint    scrollback_mode                      { get; set; }
   public uint    style_preference                     { get; set; }
+  public uint    tab_switching_order                  { get; set; }
   public uint    window_height                        { get; set; }
   public uint    window_width                         { get; set; }
   public uint    working_directory_mode               { get; set; }

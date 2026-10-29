@@ -39,6 +39,20 @@
                 <property name="title" translatable="yes">Expand Tabs</property>
               </object>
             </child>
+            <child>
+              <object class="AdwComboRow" id="tab_switching_order_combo_row">
+                <property name="title" translatable="yes">Tab Switching Order</property>
+                <property name="subtitle" translatable="yes">Choose the order used by next and previous tab shortcuts, including Ctrl+Tab.</property>
+                <property name="model">
+                  <object class="GtkStringList">
+                    <items>
+                      <item translatable="yes">Tab Position</item>
+                      <item translatable="yes">Most Recently Used</item>
+                    </items>
+                  </object>
+                </property>
+              </object>
+            </child>
           </object>
         </child>
         <child>

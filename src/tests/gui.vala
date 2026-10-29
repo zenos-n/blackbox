@@ -287,6 +287,107 @@ void test_floating_tab_overview() {
   settings.show_headerbar = true;
 }
 
+void test_recent_tab_order() {
+  var settings = Terminal.Settings.get_default();
+  assert(settings.schema.get_default_value("tab-switching-order").get_uint32() == 0);
+  settings.tab_switching_order = 0;
+  var window = new Terminal.Window(test_application, null, "/", true);
+  window.focus_next_tab();
+  window.focus_previous_tab();
+  var a = window.tab_view.append(new Gtk.Label("A"));
+  var b = window.tab_view.append(new Gtk.Label("B"));
+  var c = window.tab_view.append(new Gtk.Label("C"));
+  var d = window.tab_view.append(new Gtk.Label("D"));
+  window.tab_view.selected_page = d;
+  window.focus_next_tab();
+  assert(window.tab_view.selected_page == a);
+  window.focus_previous_tab();
+  assert(window.tab_view.selected_page == d);
+
+  var preferences = new Terminal.PreferencesWindow(window, test_application);
+  var row = preferences.get_template_child(typeof(Terminal.PreferencesWindow),
+    "tab_switching_order_combo_row") as Adw.ComboRow;
+  assert(row != null && row.selected == 0);
+  row.selected = 1;
+  assert(settings.tab_switching_order == 1);
+
+  Gtk.EventControllerKey? keys = null;
+  var controllers = window.observe_controllers();
+  for (uint i = 0; i < controllers.get_n_items(); i++) {
+    var controller = controllers.get_item(i) as Gtk.EventControllerKey;
+    if (controller != null && controller.name == "tab-switching") keys = controller;
+  }
+  assert(keys != null && keys.propagation_phase == Gtk.PropagationPhase.CAPTURE);
+
+  // Visit C, A, B, D: this history differs from horizontal order.
+  window.tab_view.selected_page = c;
+  window.tab_view.selected_page = a;
+  window.tab_view.selected_page = b;
+  window.tab_view.selected_page = d;
+  keys.key_pressed(Gdk.Key.Tab, 0, Gdk.ModifierType.CONTROL_MASK);
+  window.focus_next_tab();
+  assert(window.tab_view.selected_page == b);
+  window.focus_next_tab();
+  assert(window.tab_view.selected_page == a);
+  window.focus_next_tab();
+  assert(window.tab_view.selected_page == c);
+  window.focus_next_tab();
+  assert(window.tab_view.selected_page == d);
+  window.focus_previous_tab();
+  assert(window.tab_view.selected_page == c);
+  keys.key_released(Gdk.Key.Control_L, 0, Gdk.ModifierType.CONTROL_MASK);
+  // Intermediate visits did not overwrite history. Releasing Control commits C.
+  keys.key_pressed(Gdk.Key.Tab, 0, Gdk.ModifierType.CONTROL_MASK);
+  window.focus_next_tab();
+  assert(window.tab_view.selected_page == d);
+  keys.key_released(Gdk.Key.Control_L, 0, Gdk.ModifierType.CONTROL_MASK);
+  keys.key_pressed(Gdk.Key.Tab, 0, Gdk.ModifierType.CONTROL_MASK);
+  window.focus_next_tab();
+  assert(window.tab_view.selected_page == c);
+  keys.key_released(Gdk.Key.Control_L, 0, Gdk.ModifierType.CONTROL_MASK);
+
+  // Reordering tabs leaves recency intact; closing during a cycle cancels it.
+  assert(window.tab_view.reorder_page(d, 0));
+  keys.key_pressed(Gdk.Key.ISO_Left_Tab, 0,
+    Gdk.ModifierType.CONTROL_MASK | Gdk.ModifierType.SHIFT_MASK);
+  window.focus_previous_tab();
+  assert(window.tab_view.selected_page == a);
+  window.tab_view.close_page(b);
+  assert(window.tab_view.n_pages == 3);
+  window.focus_next_tab();
+  assert(window.tab_view.selected_page == c);
+  keys.key_released(Gdk.Key.Control_R, 0, Gdk.ModifierType.CONTROL_MASK);
+
+  // Moving a tab between windows removes it from the old window's history.
+  var other = new Terminal.Window(test_application, null, "/", true);
+  var e = other.tab_view.append(new Gtk.Label("E"));
+  window.tab_view.transfer_page(d, other.tab_view, 1);
+  window.focus_next_tab();
+  assert(window.tab_view.selected_page == a);
+  window.focus_next_tab();
+  assert(window.tab_view.selected_page == c);
+  other.tab_view.selected_page = d;
+  other.focus_next_tab();
+  assert(other.tab_view.selected_page == e);
+
+  keys.key_pressed(Gdk.Key.Tab, 0, Gdk.ModifierType.CONTROL_MASK);
+  window.focus_next_tab();
+  window.tab_view.selected_page = c;
+  window.focus_next_tab();
+  assert(window.tab_view.selected_page == a);
+  settings.schema.set_uint("tab-switching-order", 0);
+  assert(row.selected == 0);
+  window.focus_next_tab();
+  assert(window.tab_view.selected_page == c);
+  keys.key_released(Gdk.Key.Control_L, 0, Gdk.ModifierType.CONTROL_MASK);
+  window.tab_view.close_page(a);
+  window.focus_next_tab();
+  window.focus_previous_tab();
+  assert(window.tab_view.selected_page == c);
+  other.destroy();
+  window.destroy();
+}
+
 void test_closed_session_is_released() {
   var settings = Terminal.Settings.get_default();
   settings.context_aware_header_bar = false;
@@ -327,6 +428,7 @@ int main(string[] args) {
     Test.add_func("/cursor/color-preference", test_cursor_color_preference);
     Test.add_func("/tabs/overview", test_tab_overview);
     Test.add_func("/tabs/floating-overview", test_floating_tab_overview);
+    Test.add_func("/tabs/recent-order", test_recent_tab_order);
     Test.add_func("/search/keeps-url-matches", () => {
     try { test_search_keeps_url_matches(); }
     catch (Error e) { error("%s", e.message); }

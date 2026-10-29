@@ -35,6 +35,11 @@
       <default>true</default>
       <summary>Whether or not tabs should expand to fill tab bar</summary>
     </key>
+    <key name="tab-switching-order" type="u">
+      <range min="0" max="1"/>
+      <default>0</default>
+      <summary>Tab switching order: position or most recently used</summary>
+    </key>
     <key name="show-headerbar" type="b">
       <default>true</default>
       <summary>Whether the headerbar should be shown or not</summary>

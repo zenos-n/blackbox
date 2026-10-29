@@ -3,7 +3,7 @@
 No throughput or latency improvement is claimed yet. Direct sandbox commands
 cannot connect to the desktop, start Xvfb, or access the Nix daemon. A temporary
 user-systemd service can run the graphical checks in the real Wayland session.
-Those nine checks passed with `GskVulkanRenderer` and the system's purple accent
+Those ten checks passed with `GskVulkanRenderer` and the system's purple accent
 (`rgb(145,65,172)`), including a captured cursor-trail frame. The animation test
 checks that the frame callback stops after the trail and remains stopped when
 the setting is disabled. Full package builds and GPU performance measurements
