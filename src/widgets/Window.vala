@@ -86,6 +86,7 @@ public class Terminal.Window : Adw.ApplicationWindow {
 
   public ThemeProvider theme_provider        { get; private set; }
   public Adw.TabView   tab_view              { get; private set; }
+  public Adw.TabOverview tab_overview        { get; private set; }
   public Adw.TabBar    tab_bar               { get; private set; }
   public Terminal?     active_terminal       { get; private set; }
   public TerminalTab?  active_terminal_tab   { get; private set; default = null;
@@ -174,7 +175,16 @@ public class Terminal.Window : Adw.ApplicationWindow {
     this.overlay = new Gtk.Overlay();
     this.overlay.child = this.layout_box;
 
-    this.content = this.overlay;
+    this.tab_overview = new Adw.TabOverview() {
+      view = this.tab_view,
+      child = this.overlay,
+      enable_new_tab = true,
+    };
+    this.tab_overview.create_tab.connect(() => {
+      this.on_new_tab();
+      return this.tab_view.selected_page;
+    });
+    this.content = this.tab_overview;
 
     this.set_name("blackbox-main-window");
   }

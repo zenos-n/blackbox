@@ -24,7 +24,7 @@
 
 stdenv.mkDerivation {
   pname = "blackbox-next";
-  version = "0.15.2.2";
+  version = "0.15.2.3";
   src = lib.cleanSourceWith {
     src = ./.;
     filter = path: type:

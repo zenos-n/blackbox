@@ -37,6 +37,7 @@ public enum Terminal.ApplicationStyle {
 public class Terminal.Settings : SettingsBinder {
   public bool    command_as_login_shell               { get; set; }
   public bool    cursor_trail                         { get; set; }
+  public bool    cursor_use_accent                    { get; set; }
   public bool    context_aware_header_bar             { get; set; }
   public bool    easy_copy_paste                      { get; set; }
   public bool    fill_tabs                            { get; set; }

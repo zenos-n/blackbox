@@ -117,7 +117,8 @@ public class Terminal.Terminal : Vte.Terminal {
     this.settings.notify["font"].connect(this.on_font_changed);
     this.settings.notify["terminal-padding"].connect(this.on_padding_changed);
     this.settings.notify["opacity"].connect(this.on_theme_changed);
-    Adw.StyleManager.get_default().notify["accent-color"].connect(this.on_theme_changed);
+    this.settings.notify["cursor-use-accent"].connect(this.on_cursor_color_changed);
+    Adw.StyleManager.get_default().notify["accent-color"].connect(this.on_cursor_color_changed);
 
     this.setup_drag_drop();
     this.setup_regexes();
@@ -218,7 +219,7 @@ public class Terminal.Terminal : Vte.Terminal {
     path.line_to(head.x - nx * radius, head.y - ny * radius);
     path.line_to(tail.x - nx * radius * 0.15f, tail.y - ny * radius * 0.15f);
     path.close();
-    var color = Adw.StyleManager.get_default().get_accent_color_rgba();
+    var color = this.get_cursor_color();
     color.alpha = (float) (0.55 * (1 - this.cursor_trail.progress(now)));
     snapshot.push_clip(Graphene.Rect().init(0, 0, this.get_width(), this.get_height()));
     snapshot.append_fill(path.to_path(), Gsk.FillRule.WINDING, color);
@@ -306,6 +307,22 @@ public class Terminal.Terminal : Vte.Terminal {
     return bg_transparent;
   }
 
+  internal Gdk.RGBA get_cursor_color() {
+    if (this.settings.cursor_use_accent) {
+      return Adw.StyleManager.get_default().get_accent_color_rgba();
+    }
+    return Gdk.RGBA() { red = 1, green = 1, blue = 1, alpha = 1 };
+  }
+
+  private void on_cursor_color_changed() {
+    this.set_color_cursor(this.get_cursor_color());
+    float foreground = this.settings.cursor_use_accent ? 1 : 0;
+    this.set_color_cursor_foreground(Gdk.RGBA() {
+      red = foreground, green = foreground, blue = foreground, alpha = 1,
+    });
+    this.queue_draw();
+  }
+
   private void on_theme_changed() {
     var theme_provider = ThemeProvider.get_default();
     var theme_name = theme_provider.current_theme;
@@ -322,8 +339,7 @@ public class Terminal.Terminal : Vte.Terminal {
       bg,
       theme.palette.data
     );
-    this.set_color_cursor(Adw.StyleManager.get_default().get_accent_color_rgba());
-    this.set_color_cursor_foreground(Gdk.RGBA() { red = 1, green = 1, blue = 1, alpha = 1 });
+    this.on_cursor_color_changed();
   }
 
   private Gtk.CssProvider? padding_provider = null;

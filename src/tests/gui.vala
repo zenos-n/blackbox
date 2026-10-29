@@ -148,6 +148,80 @@ void test_cursor_geometry_and_animation() {
   window.destroy();
 }
 
+void test_cursor_color_preference() {
+  var settings = Terminal.Settings.get_default();
+  assert(!settings.schema.get_default_value("cursor-use-accent").get_boolean());
+  settings.schema.reset("cursor-use-accent");
+  var window = new Terminal.Window(test_application, null, "/", true);
+  var terminal = new Terminal.Terminal(window, "true", "/");
+  var preferences = new Terminal.PreferencesWindow(window, test_application);
+  var row = preferences.get_template_child(typeof(Terminal.PreferencesWindow),
+    "cursor_accent_switch_row") as Adw.SwitchRow;
+  assert(row != null && !row.active);
+  var white = Gdk.RGBA() { red = 1, green = 1, blue = 1, alpha = 1 };
+  assert(terminal.get_cursor_color().equal(white));
+  row.active = true;
+  assert(settings.cursor_use_accent);
+  assert(terminal.get_cursor_color().equal(Adw.StyleManager.get_default().get_accent_color_rgba()));
+  settings.schema.set_boolean("cursor-use-accent", false);
+  assert(!row.active);
+  assert(terminal.get_cursor_color().equal(white));
+  terminal.on_before_close();
+  window.destroy();
+}
+
+void collect_tab_buttons(Gtk.Widget root, Gee.ArrayList<Adw.TabButton> buttons) {
+  if (root is Adw.TabButton) buttons.add((Adw.TabButton) root);
+  for (var child = root.get_first_child(); child != null; child = child.get_next_sibling()) {
+    collect_tab_buttons(child, buttons);
+  }
+}
+
+void test_tab_overview() {
+  var settings = Terminal.Settings.get_default();
+  settings.fill_tabs = true;
+  settings.show_headerbar = true;
+  var window = new Terminal.Window(test_application, "sleep 5", "/");
+  window.set_default_size(720, 440);
+  window.resizable = false;
+  window.present();
+  wait_frames(200);
+  var buttons = new Gee.ArrayList<Adw.TabButton>();
+  collect_tab_buttons(window.tab_overview.child, buttons);
+  assert(buttons.size == 2);
+  foreach (var button in buttons) {
+    assert(button.view == window.tab_view);
+    assert(((Gtk.Box) button.parent).spacing >= 6);
+  }
+  assert(buttons[0].activate_action("overview.open", null));
+  assert(window.tab_overview.open);
+  window.tab_overview.open = false;
+  wait_frames(200);
+  window.new_tab("sleep 5", "/");
+  window.new_tab("sleep 5", "/");
+  wait_frames(200);
+  assert(buttons[1].activate_action("overview.open", null));
+  assert(window.tab_overview.open);
+  int count = window.tab_view.n_pages;
+  var created = window.tab_overview.create_tab();
+  assert(window.tab_view.n_pages == count + 1);
+  assert(created == window.tab_view.selected_page);
+  wait_frames(650);
+  if (Environment.get_variable("BLACKBOX_TEST_SCREENSHOT") != null) {
+    var paintable = new Gtk.WidgetPaintable(window.tab_overview);
+    var snapshot = new Gtk.Snapshot();
+    paintable.snapshot(snapshot, window.tab_overview.get_width(), window.tab_overview.get_height());
+    var node = snapshot.to_node();
+    assert(node != null);
+    assert(window.get_renderer().render_texture(node, null)
+      .save_to_png("/tmp/blackbox-tab-overview.png"));
+  }
+  for (int i = 0; i < window.tab_view.n_pages; i++) {
+    ((Terminal.TerminalTab) window.tab_view.get_nth_page(i).child).on_before_close();
+  }
+  window.destroy();
+}
+
 void test_closed_session_is_released() {
   var settings = Terminal.Settings.get_default();
   settings.context_aware_header_bar = false;
@@ -185,6 +259,8 @@ int main(string[] args) {
       catch (Error e) { error("%s", e.message); }
     });
     Test.add_func("/cursor/geometry-and-animation", test_cursor_geometry_and_animation);
+    Test.add_func("/cursor/color-preference", test_cursor_color_preference);
+    Test.add_func("/tabs/overview", test_tab_overview);
     Test.add_func("/search/keeps-url-matches", () => {
     try { test_search_keeps_url_matches(); }
     catch (Error e) { error("%s", e.message); }

@@ -137,6 +137,10 @@
       <default>true</default>
       <summary>Animate a trail when the text cursor moves</summary>
     </key>
+    <key name="cursor-use-accent" type="b">
+      <default>false</default>
+      <summary>Use the desktop accent for the cursor instead of white</summary>
+    </key>
     <key name="easy-copy-paste" type="b">
       <default>false</default>
       <summary>If enabled, ctrl+c and ctrl+v will work for copy/paste</summary>

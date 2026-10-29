@@ -209,6 +209,12 @@
                     <property name="subtitle" translatable="yes">Follow cursor jumps with an animated trail.</property>
                   </object>
                 </child>
+                <child>
+                  <object class="AdwSwitchRow" id="cursor_accent_switch_row">
+                    <property name="title" translatable="yes">Use Desktop Accent</property>
+                    <property name="subtitle" translatable="yes">Use your accent color for the cursor and trail instead of white.</property>
+                  </object>
+                </child>
               </object>
             </child>
 
