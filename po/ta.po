@@ -1,0 +1,1191 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the blackbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: blackbox\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-26 23:47-0300\n"
+"PO-Revision-Date: 2026-06-25 23:01+0000\n"
+"Last-Translator: தமிழ்நேரம் <tamilneram247@gmail.com>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/blackbox/blackbox/"
+"ta/>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.7.dev0\n"
+
+#: data/com.raggesilver.BlackBox.desktop.in:2
+msgid "Black Box"
+msgstr "கருப்பு Box"
+
+#: data/com.raggesilver.BlackBox.desktop.in:8
+msgid "Terminal;terminal;shell;prompt;command;commandline;cmd;box;"
+msgstr "டெர்மினல்;டெர்மினல்; செல்"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:6
+msgid "Window width"
+msgstr "சாளரம் அகலம்"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:10
+msgid "Window height"
+msgstr "சாளரம் height"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:14
+msgid "Whether or not to remember window size"
+msgstr "Whether or not பெறுநர் remember சாளரம் அளவு"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:24
+msgid "Font family and size"
+msgstr "எழுத்துரு குடும்பம் மற்றும் அளவு"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:28
+msgid "Whether the window should inherit terminal theme's colors"
+msgstr "சாளரம் டெர்மினல் தீமின் வண்ணங்களைப் பெற வேண்டுமா"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:32
+msgid "Terminal window background opacity"
+msgstr "டெர்மினல் சாளரத்தின் பின்னணி ஒளிபுகாநிலை"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:36
+msgid "Whether or not tabs should expand to fill tab bar"
+msgstr "தாவல் பட்டியை நிரப்ப தாவல்கள் விரிவடைய வேண்டுமா இல்லையா"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:40
+msgid "Whether the headerbar should be shown or not"
+msgstr "எடர்பார் காட்டப்பட வேண்டுமா இல்லையா"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:44
+msgid ""
+"If enabled, the header bar will be colored differently for root and ssh "
+"contexts"
+msgstr ""
+"இயக்கப்பட்டால், ரூட் மற்றும் பாஓடு சூழல்களுக்கு தலைப்புப் பட்டி வெவ்வேறு வண்ணத்தில் இருக்கும்"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:48
+msgid "Whether or not to display a menu button in the headerbar"
+msgstr "எடர்பாரில் பட்டியல் பட்டனைக் காட்ட வேண்டுமா இல்லையா"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:52
+msgid "Whether or not to reserve an area for dragging the header bar"
+msgstr "தலைப்புப் பட்டியை இழுக்க ஒரு பகுதியை ஒதுக்க வேண்டுமா இல்லையா"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:56
+msgid "Whether or not to show scrollbars"
+msgstr "சுருள் பட்டைகளைக் காட்டலாமா வேண்டாமா"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:60
+msgid "Whether overlay scrolling should be enabled"
+msgstr "மேலடுக்கு ச்க்ரோலிங் இயக்கப்பட வேண்டுமா"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:64
+msgid "If enabled, terminals will scroll by pixels instead of rows"
+msgstr ""
+"இயக்கப்பட்டால், டெர்மினல்கள் வரிசைகளுக்குப் பதிலாக படப்புள்ளிகள் மூலம் உருட்டும்"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:68
+msgid "If enabled, terminals will render sixel escape sequences"
+msgstr "இயக்கப்பட்டால், டெர்மினல்கள் சிக்செல் எச்கேப் சீக்வென்ச்களை வழங்கும்"
+
+#. 0 = Fixed size, 1 = Unlimited, 2 = Disabled
+#: data/com.raggesilver.BlackBox.gschema.xml:73
+#: src/gtk/preferences-window.ui:308
+msgid "Scrollback mode"
+msgstr "ச்க்ரோல்பேக் பயன்முறை"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:77
+msgid "Number of lines stored in scrollback"
+msgstr "ச்க்ரோல்பேக்கில் சேமிக்கப்பட்ட வரிகளின் எண்ணிக்கை"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:81
+msgid "If enabled, floating controls will be shown in headerless mode"
+msgstr ""
+"இயக்கப்பட்டால், மிதக்கும் கட்டுப்பாடுகள் எடர்லெச் பயன்முறையில் காண்பிக்கப்படும்"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:85
+msgid ""
+"Hoverable area (in pixels) at the top of the window to trigger floating "
+"controls"
+msgstr ""
+"மிதக்கும் கட்டுப்பாடுகளைத் தூண்டுவதற்கு சாளரத்தின் மேற்புறத்தில் வட்டமிடக்கூடிய பகுதி "
+"(பிக்சல்களில்)."
+
+#: data/com.raggesilver.BlackBox.gschema.xml:89
+msgid "Delay time before showing floating controls"
+msgstr "மிதக்கும் கட்டுப்பாடுகளைக் காண்பிக்கும் முன் தாமத நேரம்"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:93
+msgid "The light color scheme for the terminal"
+msgstr "முனையத்திற்கான ஒளி வண்ணத் திட்டம்"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:97
+msgid "The dark color scheme for the terminal"
+msgstr "முனையத்திற்கான இருண்ட வண்ணத் திட்டம்"
+
+#. 0 = Follow system, 1 = Light Style, 2 = Dark Style
+#: data/com.raggesilver.BlackBox.gschema.xml:102
+msgid "Style preference"
+msgstr "உடை விருப்பம்"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:106
+msgid "Show bold text in bright colors"
+msgstr "பிரகாசமான வண்ணங்களில் தடித்த உரையைக் காட்டு"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:110
+msgid "Hide cursor while typing"
+msgstr "தட்டச்சு செய்யும் போது கர்சரை மறைக்கவும்"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:114
+msgid "Amount of padding around terminal widgets (top, right, bottom, left)"
+msgstr ""
+"டெர்மினல் விட்செட்களைச் சுற்றியுள்ள திணிப்பின் அளவு (மேல், வலது, கீழ், இடது)"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:118
+msgid "Terminal cell width"
+msgstr "டெர்மினல் செல் அகலம்"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:122
+msgid "Terminal cell height"
+msgstr "டெர்மினல் செல் உயரம்"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:126
+msgid "Terminal bell"
+msgstr "முனையத்தில் bell"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:130
+msgid "Cursor shape"
+msgstr "கர்சர் வடிவம்"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:134
+msgid "Whether or not the cursor should blink"
+msgstr "கர்சர் சிமிட்ட வேண்டுமா இல்லையா"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:138
+msgid "If enabled, ctrl+c and ctrl+v will work for copy/paste"
+msgstr ""
+"இயக்கப்பட்டிருந்தால், ctrl+c மற்றும் ctrl+v ஆகியவை நகலெடுக்க/ஒட்டுவதற்கு வேலை செய்யும்"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:142
+msgid "Whether to spawn shell in login mode"
+msgstr "உள்நுழைவு பயன்முறையில் செல் உருவாக்க வேண்டுமா"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:146
+msgid "Whether to use a custom command instead of the user's shell"
+msgstr "பயனரின் செல்லுக்குப் பதிலாக தனிப்பயன் கட்டளையைப் பயன்படுத்த வேண்டுமா"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:150
+msgid "Custom command to use instead of the user's shell"
+msgstr "Custom command பெறுநர் use instead of the user's ஓடு"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:154
+msgid ""
+"Send a desktop notification when a process is completed on an unfocussed tab"
+msgstr ""
+"கவனம் செலுத்தாத தாவலில் செயல்முறை முடிந்ததும் டெச்க்டாப் அறிவிப்பை அனுப்பவும்"
+
+#. 0 = Previous terminal CWD, 1 = Home Directory, 2 = Custom
+#: data/com.raggesilver.BlackBox.gschema.xml:159
+msgid "Working directory mode"
+msgstr "பணி அடைவு முறை"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:163
+msgid "Custom working directory for new terminals"
+msgstr "புதிய டெர்மினல்களுக்கான தனிப்பயன் வேலை அடைவு"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:171
+msgid ""
+"Whether clicking next on the last search result should return to the first"
+msgstr ""
+"கடைசி தேடல் முடிவில் அடுத்ததைக் சொடுக்கு செய்தால், முதலில் திரும்ப வேண்டுமா"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:175
+msgid "Whether search should be case sensitive"
+msgstr "Whether தேடல் should be case sensitive"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:179
+msgid "Whether search should only match entire words"
+msgstr "தேடல் முழு வார்த்தைகளுடன் மட்டும் பொருந்த வேண்டுமா"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:183
+msgid "Whether search should be performed using regular expressions"
+msgstr "வழக்கமான வெளிப்பாடுகளைப் பயன்படுத்தி தேடலைச் செய்ய வேண்டுமா"
+
+#: src/gtk/shortcut-dialog.ui:6
+msgid "Edit Shortcut"
+msgstr "குறுக்குவழியைத் திருத்து"
+
+#: src/gtk/shortcut-dialog.ui:17 src/utils/Dialogs.vala:36
+#: src/utils/Dialogs.vala:38 src/widgets/PreferencesWindow.vala:606
+#: src/widgets/ShortcutEditor.vala:246 src/widgets/Window.vala:632
+msgid "Cancel"
+msgstr "ரத்துசெய்"
+
+#: src/gtk/shortcut-dialog.ui:24
+msgid "Apply"
+msgstr "இடு"
+
+#: src/gtk/shortcut-dialog.ui:65
+msgid "This shortcut is already in use"
+msgstr "இந்த குறுக்குவழி ஏற்கனவே பயன்பாட்டில் உள்ளது"
+
+#: src/gtk/shortcut-dialog.ui:78
+msgid "Press Escape to cancel or Backspace to disable shortcut"
+msgstr "Press Escape பெறுநர் நீக்கறல் or Backspace பெறுநர் முடக்கு குறுக்குவழி"
+
+#: src/gtk/shortcut-editor.ui:6
+msgid "Keyboard"
+msgstr "விசைப்பலகை"
+
+#: src/gtk/shortcut-editor.ui:10
+msgid "Shortcuts"
+msgstr "குறுக்குவழிகள்"
+
+#: src/gtk/shortcut-editor.ui:29
+msgid "Reset All Shortcuts"
+msgstr "அனைத்து குறுக்குவழிகளையும் மீட்டமைக்கவும்"
+
+#: src/gtk/shortcut-editor.ui:30
+msgid ""
+"This will reset all shortcuts to their default keybindings and overwrite "
+"your config file."
+msgstr ""
+"இது அனைத்து குறுக்குவழிகளையும் அவற்றின் இயல்புநிலை விசைப் பிணைப்புகளுக்கு மீட்டமைத்து, "
+"உங்கள் கட்டமைப்பு கோப்பை மேலெழுதும்."
+
+#: src/gtk/shortcut-editor.ui:34
+msgid "Reset All"
+msgstr "அனைத்தையும் மீட்டமைக்கவும்"
+
+#: src/gtk/search-toolbar.ui:20
+msgid "Find"
+msgstr "கண்டுபிடி"
+
+#: src/gtk/search-toolbar.ui:41
+msgid "Previous result"
+msgstr "முந்தைய முடிவு"
+
+#: src/gtk/search-toolbar.ui:47
+msgid "Next result"
+msgstr "அடுத்த முடிவு"
+
+#: src/gtk/search-toolbar.ui:89
+msgid "Search wraps around"
+msgstr "தேடல் சுற்றி வருகிறது"
+
+#: src/gtk/search-toolbar.ui:94
+msgid "Match is case sensitive"
+msgstr "மேட்ச் கேச் சென்சிட்டிவ்"
+
+#: src/gtk/search-toolbar.ui:99
+msgid "Match entire words only"
+msgstr "முழு வார்த்தைகளையும் மட்டும் பொருத்தவும்"
+
+#: src/gtk/search-toolbar.ui:104
+msgid "Match using regular expression"
+msgstr "வழக்கமான வெளிப்பாட்டைப் பயன்படுத்தி பொருத்தவும்"
+
+#: src/gtk/preferences-window.ui:11
+msgid "General"
+msgstr "பொது"
+
+#: src/gtk/preferences-window.ui:15
+msgid "Window"
+msgstr "சாளரம்"
+
+#: src/gtk/preferences-window.ui:18
+msgid "Remember Window Size"
+msgstr "சாளரத்தின் அளவை நினைவில் கொள்ளுங்கள்"
+
+#: src/gtk/preferences-window.ui:23
+msgid "Theme settings have been moved to Terminal > Appearance."
+msgstr "Theme அமைப்புகள் have been moved பெறுநர் முனையத்தில் > Appearance."
+
+#: src/gtk/preferences-window.ui:36
+msgid "Tabs"
+msgstr "தாவல்கள்"
+
+#: src/gtk/preferences-window.ui:39
+msgid "Expand Tabs"
+msgstr "தாவல்களை விரிவாக்கு"
+
+#: src/gtk/preferences-window.ui:46
+msgid "Header Bar"
+msgstr "தலைப்புப் பட்டி"
+
+#: src/gtk/preferences-window.ui:49
+msgid "Show Header Bar"
+msgstr "தலைப்புப் பட்டியைக் காட்டு"
+
+#: src/gtk/preferences-window.ui:54
+msgid "Context Aware"
+msgstr "சூழல் விழிப்புணர்வு"
+
+#: src/gtk/preferences-window.ui:55
+msgid ""
+"If enabled, the header bar will be colored differently when the active tab "
+"is running ssh or sudo."
+msgstr ""
+"If enabled, the தலைப்பி மதுக்கூடம் will be colored differently when the செயலில் "
+"தாவல் is running பாஓடு or sudo."
+
+#: src/gtk/preferences-window.ui:60
+msgid "Show Menu Button"
+msgstr "பட்டியல் பட்டனைக் காட்டு"
+
+#: src/gtk/preferences-window.ui:65
+msgid "Drag Area"
+msgstr "இழுவை பகுதி"
+
+#: src/gtk/preferences-window.ui:66
+msgid "Enable to reserve some space on the left side to drag the window."
+msgstr "சாளரத்தை இழுக்க இடது பக்கத்தில் சிறிது இடத்தை ஒதுக்கி இயக்கவும்."
+
+#: src/gtk/preferences-window.ui:71
+msgid "Floating Controls"
+msgstr "மிதக்கும் கட்டுப்பாடுகள்"
+
+#: src/gtk/preferences-window.ui:74
+msgid "Show Floating Controls"
+msgstr "மிதக்கும் கட்டுப்பாடுகளைக் காட்டு"
+
+#: src/gtk/preferences-window.ui:75
+msgid "Show floating controls when header bar is hidden."
+msgstr "தலைப்புப் பட்டி மறைக்கப்படும்போது மிதக்கும் கட்டுப்பாடுகளைக் காட்டு."
+
+#: src/gtk/preferences-window.ui:81
+msgid "Floating Controls Hover Area"
+msgstr "மிதக்கும் கட்டுப்பாடுகள் மிதவை பகுதி"
+
+#: src/gtk/preferences-window.ui:82
+msgid ""
+"Hoverable area (in pixels) at the top of the window to trigger floating "
+"controls."
+msgstr ""
+"மிதக்கும் கட்டுப்பாடுகளைத் தூண்டுவதற்கு சாளரத்தின் மேற்புறத்தில் வட்டமிடக்கூடிய பகுதி "
+"(பிக்சல்களில்)."
+
+#: src/gtk/preferences-window.ui:89
+msgid "Delay Before Show Floating Controls"
+msgstr "Delay Before காட்டு Floating Controls"
+
+#: src/gtk/preferences-window.ui:90
+msgid "Delay time (ms) before show floating controls."
+msgstr "மிதக்கும் கட்டுப்பாடுகளைக் காண்பிக்கும் முன் தாமத நேரம் (மி.வி.)."
+
+#: src/gtk/preferences-window.ui:103 src/gtk/preferences-window.ui:157
+msgid "Terminal"
+msgstr "முனையத்தில்"
+
+#: src/gtk/preferences-window.ui:108
+msgid "Text"
+msgstr "உரை"
+
+#: src/gtk/preferences-window.ui:112
+msgid "Font"
+msgstr "எழுத்துரு"
+
+#: src/gtk/preferences-window.ui:124
+msgid "Cell Spacing"
+msgstr "செல் இடைவெளி"
+
+#: src/gtk/preferences-window.ui:127
+msgid "Width"
+msgstr "அகலம்"
+
+#: src/gtk/preferences-window.ui:134
+msgid "Height"
+msgstr "உயரம்"
+
+#: src/gtk/preferences-window.ui:143
+msgid "Bright Bold Text"
+msgstr "பிரகாசமான தடித்த உரை"
+
+#: src/gtk/preferences-window.ui:144
+msgid "Use bright colors for bold text."
+msgstr "தடித்த உரைக்கு பிரகாசமான வண்ணங்களைப் பயன்படுத்தவும்."
+
+#: src/gtk/preferences-window.ui:149
+msgid "Easy Copy &amp; Paste"
+msgstr "எளிதாக நகல் &amp; ஒட்டவும்"
+
+#: src/gtk/preferences-window.ui:150
+msgid "Use ctrl+c/ctrl+v for copy/paste."
+msgstr "நகலெடுக்க/ஒட்டுவதற்கு ctrl+c/ctrl+v ஐப் பயன்படுத்தவும்."
+
+#: src/gtk/preferences-window.ui:161
+msgid "Audible Bell"
+msgstr "கேட்கக்கூடிய மணி"
+
+#: src/gtk/preferences-window.ui:162
+msgid "If enabled, terminals might use an audible bell to indicate events."
+msgstr ""
+"இயக்கப்பட்டால், நிகழ்வுகளைக் குறிக்க டெர்மினல்கள் கேட்கக்கூடிய மணியைப் பயன்படுத்தலாம்."
+
+#: src/gtk/preferences-window.ui:169
+msgid "Cursor"
+msgstr "கர்சர்"
+
+#: src/gtk/preferences-window.ui:170
+msgid "Adjust cursor shape and behavior."
+msgstr "கர்சர் வடிவம் மற்றும் நடத்தையை சரிசெய்யவும்."
+
+#: src/gtk/preferences-window.ui:173
+msgid "Cursor Shape"
+msgstr "கர்சர் வடிவம்"
+
+#: src/gtk/preferences-window.ui:177
+msgid "Block"
+msgstr "தடு"
+
+#: src/gtk/preferences-window.ui:178
+msgid "IBeam"
+msgstr "ஐபீம்"
+
+#: src/gtk/preferences-window.ui:179
+msgid "Underline"
+msgstr "அடிக்கோடிட்டு"
+
+#: src/gtk/preferences-window.ui:187
+msgid "Cursor Blinking"
+msgstr "கர்சர் ஒளிரும்"
+
+#: src/gtk/preferences-window.ui:188
+msgid "Whether or not the cursor should blink."
+msgstr "கர்சர் சிமிட்ட வேண்டுமா இல்லையா."
+
+#: src/gtk/preferences-window.ui:192 src/gtk/preferences-window.ui:377
+msgid "Follow System"
+msgstr "சிச்டத்தைப் பின்பற்றவும்"
+
+#: src/gtk/preferences-window.ui:193
+msgid "On"
+msgstr "அன்று"
+
+#: src/gtk/preferences-window.ui:194
+msgid "Off"
+msgstr "அணை"
+
+#: src/gtk/preferences-window.ui:202
+msgid "Autohide"
+msgstr "தானாக மறை"
+
+#: src/gtk/preferences-window.ui:203
+msgid "Enable to hide the cursor while typing"
+msgstr "தட்டச்சு செய்யும் போது கர்சரை மறைக்க இயக்கவும்"
+
+#: src/gtk/preferences-window.ui:211
+msgid "Padding"
+msgstr "திணிப்பு"
+
+#: src/gtk/preferences-window.ui:220
+msgid "Opacity"
+msgstr "ஒளிபுகாநிலை"
+
+#: src/gtk/preferences-window.ui:221
+msgid "Terminal background opacity."
+msgstr "டெர்மினல் பின்னணி ஒளிபுகாநிலை."
+
+#: src/gtk/preferences-window.ui:239
+msgid "Working Directory"
+msgstr "வேலை அடைவு"
+
+#: src/gtk/preferences-window.ui:248
+msgid "Previous Session"
+msgstr "முந்தைய அமர்வு"
+
+#: src/gtk/preferences-window.ui:249
+msgid "Home Directory"
+msgstr "முகப்பு அடைவு"
+
+#: src/gtk/preferences-window.ui:250
+msgid "Custom"
+msgstr "தனிப்பயன்"
+
+#: src/gtk/preferences-window.ui:259
+msgid "Custom Working Directory"
+msgstr "விருப்ப வேலை அடைவு"
+
+#: src/gtk/preferences-window.ui:276
+msgid "Set to user's home"
+msgstr "பயனரின் வீட்டிற்கு அமைக்கவும்"
+
+#: src/gtk/preferences-window.ui:288
+msgid "Scrolling"
+msgstr "ச்க்ரோலிங்"
+
+#: src/gtk/preferences-window.ui:291
+msgid "Scrollbars"
+msgstr "சுருள் பட்டைகள்"
+
+#: src/gtk/preferences-window.ui:294
+msgid "Show Scrollbars"
+msgstr "ச்க்ரோல்பார்களைக் காட்டு"
+
+#: src/gtk/preferences-window.ui:299
+msgid "Use Overlay Scrolling"
+msgstr "மேலடுக்கு ச்க்ரோலிங் பயன்படுத்தவும்"
+
+#: src/gtk/preferences-window.ui:312
+msgid "Fixed Size"
+msgstr "நிலையான அளவு"
+
+#: src/gtk/preferences-window.ui:313
+msgid "Unlimited"
+msgstr "வரம்பற்றது"
+
+#: src/gtk/preferences-window.ui:314 src/widgets/ShortcutEditor.vala:106
+msgid "Disabled"
+msgstr "முடக்கப்பட்டது"
+
+#: src/gtk/preferences-window.ui:323
+msgid "Scrollback Lines"
+msgstr "ச்க்ரோல்பேக் கோடுகள்"
+
+#: src/gtk/preferences-window.ui:335
+msgid "Command"
+msgstr "கட்டளை"
+
+#: src/gtk/preferences-window.ui:338
+msgid "Run Command as Login Shell"
+msgstr "கட்டளையை புகுபதிவு ஓடு ஆக இயக்கவும்"
+
+#: src/gtk/preferences-window.ui:343
+msgid "Use Custom Command"
+msgstr "தனிப்பயன் கட்டளையைப் பயன்படுத்தவும்"
+
+#: src/gtk/preferences-window.ui:348
+msgid "Custom Command"
+msgstr "தனிப்பயன் கட்டளை"
+
+#: src/gtk/preferences-window.ui:361
+msgid "Notification on Completed Task"
+msgstr "முடிக்கப்பட்ட பணி பற்றிய அறிவிப்பு"
+
+#: src/gtk/preferences-window.ui:362
+msgid ""
+"Send a desktop notification when a command is completed on an unfocussed tab."
+msgstr ""
+"கவனம் செலுத்தாத தாவலில் கட்டளை முடிந்ததும் டெச்க்டாப் அறிவிப்பை அனுப்பவும்."
+
+#: src/gtk/preferences-window.ui:370
+msgid "Appearance"
+msgstr "தோற்றம்"
+
+#: src/gtk/preferences-window.ui:373
+msgid "Application Style"
+msgstr "பயன்பாட்டு நடை"
+
+#: src/gtk/preferences-window.ui:378
+msgid "Light"
+msgstr "ஒளி"
+
+#: src/gtk/preferences-window.ui:379
+msgid "Dark"
+msgstr "இருள்"
+
+#: src/gtk/preferences-window.ui:387
+msgid "Theme Integration"
+msgstr "கருப்பொருள் ஒருங்கிணைப்பு"
+
+#: src/gtk/preferences-window.ui:388
+msgid "Paint the whole app with colors from your colorscheme."
+msgstr ""
+"உங்கள் கலர்ச்கீமில் உள்ள வண்ணங்களைக் கொண்டு முழு பயன்பாட்டையும் பெயிண்ட் செய்யுங்கள்."
+
+#: src/gtk/preferences-window.ui:397
+msgid "Theme"
+msgstr "கருப்பொருள்"
+
+#: src/gtk/preferences-window.ui:398
+msgid "Set your preferred theme for light and dark styles."
+msgstr ""
+"ஒளி மற்றும் இருண்ட பாணிகளுக்கு உங்கள் விருப்பமான கருப்பொருள் அமைக்கவும்."
+
+#: src/gtk/preferences-window.ui:410
+msgid "Open themes folder"
+msgstr "தீம்கள் கோப்புறையைத் திறக்கவும்"
+
+#: src/gtk/preferences-window.ui:418
+msgid "Get more themes online"
+msgstr "மேலும் தீம்களை ஆன்லைனில் பெறுங்கள்"
+
+#: src/gtk/preferences-window.ui:439
+msgid "Light Theme"
+msgstr "ஒளி கருப்பொருள்"
+
+#: src/gtk/preferences-window.ui:445
+msgid "Dark Theme"
+msgstr "இருண்ட கருப்பொருள்"
+
+#: src/gtk/preferences-window.ui:453
+msgid "Only display themes for the current style"
+msgstr "தற்போதைய பாணிக்கான தீம்களை மட்டும் காட்டவும்"
+
+#: src/gtk/preferences-window.ui:461
+msgid ""
+"To ensure readability, \"Theme Integration\" will be disabled if you select "
+"a light color scheme while using the dark app style or a dark color scheme "
+"while using the light app style."
+msgstr ""
+"படிக்கக்கூடிய தன்மையை உறுதிப்படுத்த, இருண்ட பயன்பாட்டு பாணியைப் பயன்படுத்தும் போது வெளிர் "
+"வண்ணத் திட்டத்தையோ அல்லது ஒளி பயன்பாட்டு பாணியைப் பயன்படுத்தும் போது இருண்ட வண்ணத் திட்டத்தையோ "
+"நீங்கள் தேர்ந்தெடுத்தால் \"கருப்பொருள் ஒருங்கிணைப்பு\" முடக்கப்படும்."
+
+#: src/gtk/preferences-window.ui:494
+msgid "Advanced"
+msgstr "மேம்பட்ட"
+
+#: src/gtk/preferences-window.ui:498
+msgid "Experimental"
+msgstr "ஆய்வு"
+
+#: src/gtk/preferences-window.ui:499
+msgid ""
+"Features in this section are known to be unstable. Please feel free to test "
+"and <a href=\"https://gitlab.gnome.org/raggesilver/blackbox/-/"
+"issues\">report bugs</a>."
+msgstr ""
+"இந்த பிரிவில் உள்ள நற்பொருத்தங்கள் நிலையற்றதாக அறியப்படுகிறது. தயவுசெய்து சோதனை செய்து "
+"<a href=\"https://gitlab.gnome.org/raggesilver/blackbox/-/issues\">பிழைகளைப் "
+"புகாரளிக்கவும்</a>."
+
+#: src/gtk/preferences-window.ui:502
+msgid "Sixel Support"
+msgstr "சிக்சல் உதவி"
+
+#: src/gtk/preferences-window.ui:503
+msgid "Render sixel escape sequences."
+msgstr "சிக்செல் தப்பிக்கும் காட்சிகளை வழங்குதல் செய்யவும்."
+
+#: src/gtk/preferences-window.ui:512
+msgid ""
+"The VTE build you are using does not have support Sixel. Sixel is still an "
+"experimental feature in VTE. For this reason, most distros do not build VTE "
+"with Sixel support. Installing Black Box via Flatpak will enable this "
+"feature. <a href=\"https://gitlab.gnome.org/raggesilver/blackbox/-/issues/"
+"273\">See discussion in issue tracker.</a>"
+msgstr ""
+"நீங்கள் பயன்படுத்தும் VTE கட்டமைப்பில் Sixel உதவி இல்லை. சிக்சல் இன்னும் VTE இல் ஒரு சோதனை "
+"அம்சமாக உள்ளது. இந்த காரணத்திற்காக, பெரும்பாலான டிச்ட்ரோக்கள் சிக்சல் ஆதரவுடன் VTE ஐ "
+"உருவாக்கவில்லை. பிளாட்பேக் வழியாக கருப்பு பெட்டியை நிறுவுவது இந்த அம்சத்தை செயல்படுத்தும். "
+"<a href=\"https://gitlab.gnome.org/raggesilver/blackbox/-/issues/273\">சிக்கல் "
+"டிராக்கரில் விவாதத்தைக் காண்க.</a>"
+
+#: src/gtk/preferences-window.ui:522
+msgid "Danger Zone"
+msgstr "இடர் மண்டலம்"
+
+#: src/gtk/preferences-window.ui:525 src/widgets/PreferencesWindow.vala:602
+#: src/widgets/PreferencesWindow.vala:606
+msgid "Reset Preferences"
+msgstr "விருப்பங்களை மீட்டமைக்கவும்"
+
+#: src/gtk/preferences-window.ui:526
+msgid ""
+"This will revert all settings back to default. Your extra themes will not be "
+"removed."
+msgstr ""
+"இது எல்லா அமைப்புகளையும் இயல்புநிலைக்கு மாற்றும். உங்கள் கூடுதல் தீம்கள் அகற்றப்படாது."
+
+#: src/gtk/preferences-window.ui:531
+msgid "Reset preferences"
+msgstr "விருப்பங்களை மீட்டமைக்கவும்"
+
+#: src/gtk/terminal-menu.ui:20
+msgid "Open Link"
+msgstr "இணைப்பை திற"
+
+#: src/gtk/terminal-menu.ui:28 src/gtk/header-bar.ui:58
+#: src/gtk/header-bar.ui:170 src/gtk/header-bar.ui:280
+#: src/widgets/ShortcutEditor.vala:137
+msgid "New Tab"
+msgstr "புதிய தாவல்"
+
+#: src/gtk/terminal-menu.ui:32 src/gtk/header-bar.ui:62
+#: src/widgets/ShortcutEditor.vala:135
+msgid "New Window"
+msgstr "புதிய சாளரம்"
+
+#: src/gtk/terminal-menu.ui:55 src/widgets/ShortcutEditor.vala:139
+msgid "Copy"
+msgstr "நகலெடு"
+
+#: src/gtk/terminal-menu.ui:59
+msgid "Copy Link"
+msgstr "இணைப்பை நகலெடுக்கவும்"
+
+#: src/gtk/terminal-menu.ui:64 src/widgets/ShortcutEditor.vala:140
+msgid "Paste"
+msgstr "ஒட்டு"
+
+#: src/gtk/terminal-menu.ui:71 src/gtk/header-bar.ui:72
+#: src/widgets/ShortcutEditor.vala:138
+msgid "Preferences"
+msgstr "விருப்பத்தேர்வுகள்"
+
+#: src/gtk/terminal-menu.ui:78 src/gtk/header-bar.ui:78
+#: src/widgets/ShortcutEditor.vala:143
+msgid "Keyboard Shortcuts"
+msgstr "விசைப்பலகை குறுக்குவழிகள்"
+
+#: src/gtk/terminal-menu.ui:82 src/gtk/header-bar.ui:82
+msgid "About Black Box"
+msgstr "கருப்பு பெட்டி பற்றி"
+
+#: src/gtk/help-overlay.ui:10
+msgctxt "shortcut window"
+msgid "Window"
+msgstr "சாளரம்"
+
+#: src/gtk/help-overlay.ui:13
+msgctxt "shortcut window"
+msgid "New window"
+msgstr "புதிய சாளரம்"
+
+#: src/gtk/help-overlay.ui:19
+msgctxt "shortcut window"
+msgid "New tab"
+msgstr "புதிய தாவல்"
+
+#: src/gtk/help-overlay.ui:25
+msgctxt "shortcut window"
+msgid "Close tab"
+msgstr "தாவலை மூடு"
+
+#: src/gtk/help-overlay.ui:31
+msgctxt "shortcut window"
+msgid "Rename tab"
+msgstr "தாவலை மறுபெயரிடவும்"
+
+#: src/gtk/help-overlay.ui:37
+msgctxt "shortcut window"
+msgid "Switch headbar mode"
+msgstr "எட்பார் பயன்முறையை மாற்றவும்"
+
+#: src/gtk/help-overlay.ui:43
+msgctxt "shortcut window"
+msgid "Toggle fullscreen"
+msgstr "மாற்று முழுத்திரை"
+
+#: src/gtk/help-overlay.ui:51
+msgctxt "shortcut window"
+msgid "Terminal"
+msgstr "முனையத்தில்"
+
+#: src/gtk/help-overlay.ui:54
+msgctxt "shortcut window"
+msgid "Search"
+msgstr "தேடல்"
+
+#: src/gtk/help-overlay.ui:60
+msgctxt "shortcut window"
+msgid "Copy"
+msgstr "நகலெடு"
+
+#: src/gtk/help-overlay.ui:66
+msgctxt "shortcut window"
+msgid "Paste"
+msgstr "ஒட்டு"
+
+#: src/gtk/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Zoom in"
+msgstr "பெரிதாக்கு"
+
+#: src/gtk/help-overlay.ui:78
+msgctxt "shortcut window"
+msgid "Zoom out"
+msgstr "சிறிதாக்கு"
+
+#: src/gtk/help-overlay.ui:84
+msgctxt "shortcut window"
+msgid "Reset zoom"
+msgstr "பெரிதாக்கு மீட்டமைக்கவும்"
+
+#: src/gtk/help-overlay.ui:92
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "வானோடல்"
+
+#: src/gtk/help-overlay.ui:95
+msgctxt "shortcut window"
+msgid "Focus next tab"
+msgstr "அடுத்த தாவலில் கவனம் செலுத்தவும்"
+
+#: src/gtk/help-overlay.ui:101
+msgctxt "shortcut window"
+msgid "Focus previous tab"
+msgstr "முந்தைய தாவலில் கவனம் செலுத்துங்கள்"
+
+#: src/gtk/help-overlay.ui:107
+msgctxt "shortcut window"
+msgid "Switch to Tab 1"
+msgstr "தாவல் 1 க்கு மாறவும்"
+
+#: src/gtk/help-overlay.ui:113
+msgctxt "shortcut window"
+msgid "Switch to Tab 2"
+msgstr "தாவல் 2 க்கு மாறவும்"
+
+#: src/gtk/help-overlay.ui:119
+msgctxt "shortcut window"
+msgid "Switch to Tab 3"
+msgstr "தாவல் 3க்கு மாறவும்"
+
+#: src/gtk/help-overlay.ui:125
+msgctxt "shortcut window"
+msgid "Switch to Tab 4"
+msgstr "தாவல் 4 க்கு மாறவும்"
+
+#: src/gtk/help-overlay.ui:131
+msgctxt "shortcut window"
+msgid "Switch to Tab 5"
+msgstr "தாவல் 5 க்கு மாறவும்"
+
+#: src/gtk/help-overlay.ui:137
+msgctxt "shortcut window"
+msgid "Switch to Tab 6"
+msgstr "தாவல் 6 க்கு மாறவும்"
+
+#: src/gtk/help-overlay.ui:143
+msgctxt "shortcut window"
+msgid "Switch to Tab 7"
+msgstr "தாவல் 7க்கு மாறவும்"
+
+#: src/gtk/help-overlay.ui:149
+msgctxt "shortcut window"
+msgid "Switch to Tab 8"
+msgstr "தாவல் 8 க்கு மாறவும்"
+
+#: src/gtk/help-overlay.ui:155
+msgctxt "shortcut window"
+msgid "Switch to Tab 9"
+msgstr "தாவல் 9 க்கு மாறவும்"
+
+#: src/gtk/help-overlay.ui:161
+msgctxt "shortcut window"
+msgid "Switch to last Tab"
+msgstr "கடைசி தாவலுக்கு மாறவும்"
+
+#: src/gtk/help-overlay.ui:169
+msgctxt "shortcut window"
+msgid "General"
+msgstr "பொது"
+
+#: src/gtk/help-overlay.ui:172
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "குறுக்குவழிகளைக் காட்டு"
+
+#: src/gtk/help-overlay.ui:178
+msgctxt "shortcut window"
+msgid "Edit Preferences"
+msgstr "விருப்பங்களைத் திருத்தவும்"
+
+#: src/gtk/tab-menu.ui:9 src/widgets/ShortcutEditor.vala:149
+msgid "Move Tab Left"
+msgstr "தாவலை இடதுபுறமாக நகர்த்தவும்"
+
+#: src/gtk/tab-menu.ui:14 src/widgets/ShortcutEditor.vala:150
+msgid "Move Tab Right"
+msgstr "தாவலை வலதுபுறமாக நகர்த்தவும்"
+
+#: src/gtk/tab-menu.ui:21 src/widgets/ShortcutEditor.vala:148
+#: src/widgets/Window.vala:622
+msgid "Rename Tab"
+msgstr "தாவலை மறுபெயரிடவும்"
+
+#: src/gtk/tab-menu.ui:25
+msgid "Move Tab to New Window"
+msgstr "தாவலை புதிய சாளரத்திற்கு நகர்த்தவும்"
+
+#: src/gtk/tab-menu.ui:32 src/widgets/ShortcutEditor.vala:147
+msgid "Close Tab"
+msgstr "தாவலை மூடு"
+
+#: src/gtk/header-bar.ui:23
+msgid "Remote Access"
+msgstr "தொலைநிலை அணுகல்"
+
+#: src/gtk/header-bar.ui:25
+msgid "SSH Connections"
+msgstr "பாஓடு இணைப்புகள்"
+
+#: src/gtk/header-bar.ui:35 src/gtk/header-bar.ui:43
+msgid "New Connection"
+msgstr "புதிய இணைப்பு"
+
+#: src/gtk/header-bar.ui:41
+msgid "SFTP Servers"
+msgstr "SFTP சேவையகங்கள்"
+
+#: src/gtk/header-bar.ui:68 src/widgets/ShortcutEditor.vala:142
+msgid "Fullscreen"
+msgstr "முழு திரை"
+
+#: src/gtk/header-bar.ui:178 src/gtk/header-bar.ui:288
+msgid "Exit Fullscreen"
+msgstr "முழுத்திரையிலிருந்து வெளியேறு"
+
+#: src/gtk/header-bar.ui:193 src/gtk/header-bar.ui:303
+msgid "Menu"
+msgstr "பட்டியல்"
+
+#: src/gtk/style-switcher.ui:17
+msgid "Use System Colors"
+msgstr "கணினி வண்ணங்களைப் பயன்படுத்தவும்"
+
+#: src/gtk/style-switcher.ui:46
+msgid "Use Light Colors"
+msgstr "ஒளி வண்ணங்களைப் பயன்படுத்தவும்"
+
+#: src/gtk/style-switcher.ui:74
+msgid "Use Dark Colors"
+msgstr "அடர் வண்ணங்களைப் பயன்படுத்தவும்"
+
+#: src/services/Shortcuts.vala:327
+msgid "Replace keybinding?"
+msgstr "விசை பிணைப்பை மாற்றவா?"
+
+#. FIXME: `to_action` is an action identifier (i.e. win.paste). Replace it
+#. with the user-friendly action name.
+#: src/services/Shortcuts.vala:330
+#, c-format
+msgid "%s is already assigned to %s"
+msgstr "%s ஏற்கனவே %sக்கு ஒதுக்கப்பட்டுள்ளது"
+
+#: src/utils/Constants.vala:34
+msgid "You can still access the menu by right-clicking any terminal."
+msgstr "எந்த முனையத்திலும் வலது சொடுக்கு செய்வதன் மூலம் மெனுவை அணுகலாம்."
+
+#: src/utils/Constants.vala:36
+#, c-format
+msgid ""
+"%s uses an early Gtk 4 port of VTE as a terminal widget. While a lot of "
+"progress has been made on this port, copying has yet to be implemented. This "
+"means there's currently no way to copy text in %s."
+msgstr ""
+"%s ஆனது VTE இன் ஆரம்பகால Gtk 4 போர்ட்டை டெர்மினல் விட்செட்டாகப் பயன்படுத்துகிறது. இந்த "
+"துறைமுகத்தில் நிறைய முன்னேற்றம் ஏற்பட்டுள்ள நிலையில், நகல் எடுப்பது இன்னும் "
+"செயல்படுத்தப்படவில்லை. %s இல் உள்ள உரையை நகலெடுக்க தற்போது எந்த வழியும் இல்லை என்பதே இதன் "
+"பொருள்."
+
+#: src/utils/Constants.vala:38
+msgid ""
+"Warning: unlimited scrollback saves content to disk, which may cause your "
+"system to run out of storage."
+msgstr ""
+"எச்சரிக்கை: வரம்பற்ற ச்க்ரோல்பேக் உள்ளடக்கத்தை வட்டில் சேமிக்கிறது, இதனால் உங்கள் கணினியில் "
+"சேமிப்பகம் தீர்ந்துவிடும்."
+
+#: src/utils/Dialogs.vala:35
+msgid "No"
+msgstr "இல்லை"
+
+#: src/utils/Dialogs.vala:35
+msgid "Yes"
+msgstr "ஆம்"
+
+#: src/utils/Dialogs.vala:36
+msgid "OK"
+msgstr "சரி"
+
+#: src/utils/Dialogs.vala:37
+msgid "Keep"
+msgstr "வைத்துக்கொள்"
+
+#: src/utils/Dialogs.vala:37
+msgid "Replace"
+msgstr "மாற்றவும்"
+
+#: src/utils/Dialogs.vala:38
+msgid "Close"
+msgstr "மூடு"
+
+#: src/utils/Dialogs.vala:119
+msgid "Close Tab?"
+msgstr "தாவலை மூடவா?"
+
+#: src/utils/Dialogs.vala:120
+msgid "Close Window?"
+msgstr "மூடு Window?"
+
+#: src/utils/Dialogs.vala:123
+msgid ""
+"Some commands are still running. Closing this tab will kill them and may "
+"lead to unexpected outcomes."
+msgstr ""
+"சில கட்டளைகள் இன்னும் இயங்குகின்றன. இந்த தாவலை மூடுவது அவர்களை அழித்து, எதிர்பாராத "
+"விளைவுகளுக்கு வழிவகுக்கும்."
+
+#: src/utils/Dialogs.vala:124
+msgid ""
+"Some commands are still running. Closing this window will kill them and may "
+"lead to unexpected outcomes."
+msgstr ""
+"சில கட்டளைகள் இன்னும் இயங்குகின்றன. இந்த சாளரத்தை மூடுவது அவர்களைக் கொன்றுவிடும் மற்றும் "
+"எதிர்பாராத விளைவுகளுக்கு வழிவகுக்கும்."
+
+#: src/utils/Shortcuts.vala:32
+msgid "invalid keybinding"
+msgstr "தவறான விசை பிணைப்பு"
+
+#: src/widgets/AboutDialog.vala:53
+msgid "Donate"
+msgstr "நன்கொடை"
+
+#: src/widgets/AboutDialog.vala:54
+msgid "Full Changelog"
+msgstr "முழு சேஞ்ச்லாக்"
+
+#: src/widgets/PreferencesWindow.vala:577
+msgid "Terminal Font"
+msgstr "டெர்மினல் எழுத்துரு"
+
+#: src/widgets/PreferencesWindow.vala:603
+msgid "Are you sure you want to reset all settings?"
+msgstr "எல்லா அமைப்புகளையும் மீட்டமைக்க விரும்புகிறீர்களா?"
+
+#: src/widgets/PreferencesWindow.vala:647
+msgid "Reuse previous tab's directory."
+msgstr "முந்தைய தாவலின் கோப்பகத்தை மீண்டும் பயன்படுத்தவும்."
+
+#: src/widgets/PreferencesWindow.vala:649
+msgid "Use the current user's home as working directory."
+msgstr "தற்போதைய பயனரின் வீட்டை வேலை செய்யும் கோப்பகமாகப் பயன்படுத்தவும்."
+
+#: src/widgets/PreferencesWindow.vala:651
+msgid "Use a custom path as working directory."
+msgstr "தனிப்பயன் பாதையை வேலை செய்யும் கோப்பகமாகப் பயன்படுத்தவும்."
+
+#: src/widgets/ShortcutDialog.vala:46
+msgid "Enter new shortcut"
+msgstr "புதிய குறுக்குவழியை உள்ளிடவும்"
+
+#: src/widgets/ShortcutDialog.vala:47
+#, c-format
+msgid "Enter new shortcut for \"%s\""
+msgstr "\"%s\"க்கான புதிய குறுக்குவழியை உள்ளிடவும்"
+
+#: src/widgets/ShortcutEditor.vala:59
+msgid "Add Keybinding"
+msgstr "விசை பிணைப்பைச் சேர்க்கவும்"
+
+#: src/widgets/ShortcutEditor.vala:66
+msgid "Reset Keybindings"
+msgstr "விசை பிணைப்புகளை மீட்டமைக்கவும்"
+
+#: src/widgets/ShortcutEditor.vala:81
+#, c-format
+msgid "Remove %s"
+msgstr "%sஐ அகற்று"
+
+#: src/widgets/ShortcutEditor.vala:133
+msgid "Focus Next Tab"
+msgstr "அடுத்த தாவலில் கவனம் செலுத்துங்கள்"
+
+#: src/widgets/ShortcutEditor.vala:134
+msgid "Focus Previous Tab"
+msgstr "முந்தைய தாவலில் கவனம் செலுத்துங்கள்"
+
+#: src/widgets/ShortcutEditor.vala:136
+msgid "Toggle Header Bar"
+msgstr "தலைப்புப் பட்டியை நிலைமாற்று"
+
+#: src/widgets/ShortcutEditor.vala:141
+msgid "Search"
+msgstr "தேடல்"
+
+#: src/widgets/ShortcutEditor.vala:144
+msgid "Zoom In"
+msgstr "பெரிதாக்கு"
+
+#: src/widgets/ShortcutEditor.vala:145
+msgid "Zoom Out"
+msgstr "சிறிதாக்கு"
+
+#: src/widgets/ShortcutEditor.vala:146
+msgid "Reset Zoom"
+msgstr "பெரிதாக்கு மீட்டமைக்கவும்"
+
+#: src/widgets/ShortcutEditor.vala:152 src/widgets/ShortcutEditor.vala:153
+#: src/widgets/ShortcutEditor.vala:154 src/widgets/ShortcutEditor.vala:155
+#: src/widgets/ShortcutEditor.vala:156 src/widgets/ShortcutEditor.vala:157
+#: src/widgets/ShortcutEditor.vala:158 src/widgets/ShortcutEditor.vala:159
+#: src/widgets/ShortcutEditor.vala:160
+#, c-format
+msgid "Switch to Tab %u"
+msgstr "%u தாவலுக்கு மாறவும்"
+
+#: src/widgets/ShortcutEditor.vala:161
+msgid "Switch to Last Tab"
+msgstr "கடைசி தாவலுக்கு மாறவும்"
+
+#: src/widgets/ShortcutEditor.vala:243
+msgid "Reset All Shortcuts?"
+msgstr "அனைத்து குறுக்குவழிகளையும் மீட்டமைக்கவா?"
+
+#: src/widgets/ShortcutEditor.vala:244
+msgid ""
+"This will reset all shortcuts to default and overwrite your config file. "
+"This action is irreversible."
+msgstr ""
+"இது அனைத்து குறுக்குவழிகளையும் இயல்புநிலைக்கு மீட்டமைத்து, உங்கள் கட்டமைப்பு கோப்பை "
+"மேலெழுதும். இந்த நடவடிக்கை மீள முடியாதது."
+
+#: src/widgets/ShortcutEditor.vala:247
+msgid "Reset"
+msgstr "மீட்டமை"
+
+#: src/widgets/TerminalTab.vala:58
+msgid "tab"
+msgstr "தாவல்"
+
+#: src/widgets/TerminalTab.vala:109
+msgid "Error"
+msgstr "பிழை"
+
+#: src/widgets/Window.vala:623
+msgid "Set a custom title for this tab"
+msgstr "இந்த தாவலுக்கு தனிப்பயன் தலைப்பை அமைக்கவும்"
+
+#: src/widgets/Window.vala:626
+msgid "Enter a custom tab title"
+msgstr "Enter a தனிப்பயன் தாவல் title"
+
+#: src/widgets/Window.vala:633
+msgid "Reset Title"
+msgstr "தலைப்பை மீட்டமை"
+
+#: src/widgets/Window.vala:634
+msgid "Set Title"
+msgstr "தலைப்பை அமைக்கவும்"
+
+#: src/widgets/Terminal.vala:631
+msgid "Command completed"
+msgstr "கட்டளை முடிந்தது"
+
+#: src/CommandLine.vala:47
+msgid "Show app version"
+msgstr "பயன்பாட்டின் பதிப்பைக் காட்டு"
+
+#: src/CommandLine.vala:56
+msgid "Set current working directory"
+msgstr "தற்போதைய வேலை கோப்பகத்தை அமைக்கவும்"
+
+#: src/CommandLine.vala:65
+msgid "Execute command in a terminal"
+msgstr "முனையத்தில் கட்டளையை இயக்கவும்"
+
+#: src/CommandLine.vala:74
+msgid "Show help"
+msgstr "உதவி காட்டு"
+
+#: src/CommandLine.vala:121
+#, c-format
+msgid "Run %s --help to get help\n"
+msgstr "உதவி பெற %s --help ஐ இயக்கவும்\n"

@@ -1,0 +1,1195 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the blackbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: blackbox\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-26 23:47-0300\n"
+"PO-Revision-Date: 2026-03-29 07:09+0000\n"
+"Last-Translator: Arif Budiman <arifpedia@gmail.com>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/blackbox/"
+"blackbox/id/>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.17-dev\n"
+
+#: data/com.raggesilver.BlackBox.desktop.in:2
+msgid "Black Box"
+msgstr "Black Box"
+
+#: data/com.raggesilver.BlackBox.desktop.in:8
+msgid "Terminal;terminal;shell;prompt;command;commandline;cmd;box;"
+msgstr "Terminal;terminal;shell;prompt;perintah;baris perintah;cmd;kotak;"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:6
+msgid "Window width"
+msgstr "Lebar jendela"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:10
+msgid "Window height"
+msgstr "Tinggi jendela"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:14
+msgid "Whether or not to remember window size"
+msgstr "Apakah ukuran jendela harus diingat atau tidak"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:24
+msgid "Font family and size"
+msgstr "Keluarga font dan ukuran"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:28
+msgid "Whether the window should inherit terminal theme's colors"
+msgstr "Apakah jendela harus mewarisi warna tema terminal"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:32
+msgid "Terminal window background opacity"
+msgstr "Opasitas latar belakang jendela terminal"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:36
+msgid "Whether or not tabs should expand to fill tab bar"
+msgstr "Apakah tab harus diperluas untuk memenuhi bilah tab"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:40
+msgid "Whether the headerbar should be shown or not"
+msgstr "Apakah headerbar harus ditampilkan atau tidak"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:44
+msgid ""
+"If enabled, the header bar will be colored differently for root and ssh "
+"contexts"
+msgstr ""
+"Jika diaktifkan, bilah header akan diberi warna berbeda untuk konteks root "
+"dan ssh"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:48
+msgid "Whether or not to display a menu button in the headerbar"
+msgstr "Apakah tombol menu harus ditampilkan di headerbar atau tidak"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:52
+msgid "Whether or not to reserve an area for dragging the header bar"
+msgstr "Apakah area harus disediakan untuk menyeret bilah header atau tidak"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:56
+msgid "Whether or not to show scrollbars"
+msgstr "Apakah bilah gulir harus ditampilkan atau tidak"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:60
+msgid "Whether overlay scrolling should be enabled"
+msgstr "Apakah pengguliran overlay harus diaktifkan"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:64
+msgid "If enabled, terminals will scroll by pixels instead of rows"
+msgstr ""
+"Jika diaktifkan, terminal akan menggulir berdasarkan piksel, bukan baris"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:68
+msgid "If enabled, terminals will render sixel escape sequences"
+msgstr "Jika diaktifkan, terminal akan merender urutan escape sixel"
+
+#. 0 = Fixed size, 1 = Unlimited, 2 = Disabled
+#: data/com.raggesilver.BlackBox.gschema.xml:73
+#: src/gtk/preferences-window.ui:308
+msgid "Scrollback mode"
+msgstr "Mode scrollback"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:77
+msgid "Number of lines stored in scrollback"
+msgstr "Jumlah baris yang disimpan dalam scrollback"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:81
+msgid "If enabled, floating controls will be shown in headerless mode"
+msgstr ""
+"Jika diaktifkan, kontrol mengambang akan ditampilkan dalam mode tanpa header"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:85
+msgid ""
+"Hoverable area (in pixels) at the top of the window to trigger floating "
+"controls"
+msgstr ""
+"Area yang dapat di-hover (dalam piksel) di bagian atas jendela untuk memicu "
+"kontrol mengambang"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:89
+msgid "Delay time before showing floating controls"
+msgstr "Waktu tunda sebelum menampilkan kontrol mengambang"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:93
+msgid "The light color scheme for the terminal"
+msgstr "Skema warna terang untuk terminal"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:97
+msgid "The dark color scheme for the terminal"
+msgstr "Skema warna gelap untuk terminal"
+
+#. 0 = Follow system, 1 = Light Style, 2 = Dark Style
+#: data/com.raggesilver.BlackBox.gschema.xml:102
+msgid "Style preference"
+msgstr "Preferensi gaya"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:106
+msgid "Show bold text in bright colors"
+msgstr "Tampilkan teks tebal dalam warna terang"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:110
+msgid "Hide cursor while typing"
+msgstr "Sembunyikan kursor saat mengetik"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:114
+msgid "Amount of padding around terminal widgets (top, right, bottom, left)"
+msgstr "Jumlah padding di sekitar widget terminal (atas, kanan, bawah, kiri)"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:118
+msgid "Terminal cell width"
+msgstr "Lebar sel terminal"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:122
+msgid "Terminal cell height"
+msgstr "Tinggi sel terminal"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:126
+msgid "Terminal bell"
+msgstr "Bel terminal"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:130
+msgid "Cursor shape"
+msgstr "Bentuk kursor"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:134
+msgid "Whether or not the cursor should blink"
+msgstr "Apakah kursor harus berkedip atau tidak"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:138
+msgid "If enabled, ctrl+c and ctrl+v will work for copy/paste"
+msgstr "Jika diaktifkan, ctrl+c dan ctrl+v akan berfungsi untuk salin/tempel"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:142
+msgid "Whether to spawn shell in login mode"
+msgstr "Apakah shell harus dijalankan dalam mode login"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:146
+msgid "Whether to use a custom command instead of the user's shell"
+msgstr "Apakah akan menggunakan perintah khusus alih-alih shell pengguna"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:150
+msgid "Custom command to use instead of the user's shell"
+msgstr "Perintah khusus yang digunakan alih-alih shell pengguna"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:154
+msgid ""
+"Send a desktop notification when a process is completed on an unfocussed tab"
+msgstr ""
+"Kirim notifikasi desktop ketika proses selesai pada tab yang tidak difokuskan"
+
+#. 0 = Previous terminal CWD, 1 = Home Directory, 2 = Custom
+#: data/com.raggesilver.BlackBox.gschema.xml:159
+msgid "Working directory mode"
+msgstr "Mode direktori kerja"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:163
+msgid "Custom working directory for new terminals"
+msgstr "Direktori kerja khusus untuk terminal baru"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:171
+msgid ""
+"Whether clicking next on the last search result should return to the first"
+msgstr ""
+"Apakah mengklik berikutnya pada hasil pencarian terakhir harus kembali ke "
+"yang pertama"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:175
+msgid "Whether search should be case sensitive"
+msgstr "Apakah pencarian harus peka huruf besar/kecil"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:179
+msgid "Whether search should only match entire words"
+msgstr "Apakah pencarian hanya harus cocok dengan seluruh kata"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:183
+msgid "Whether search should be performed using regular expressions"
+msgstr "Apakah pencarian harus dilakukan menggunakan ekspresi reguler"
+
+#: src/gtk/shortcut-dialog.ui:6
+msgid "Edit Shortcut"
+msgstr "Edit Pintasan"
+
+#: src/gtk/shortcut-dialog.ui:17 src/utils/Dialogs.vala:36
+#: src/utils/Dialogs.vala:38 src/widgets/PreferencesWindow.vala:606
+#: src/widgets/ShortcutEditor.vala:246 src/widgets/Window.vala:632
+msgid "Cancel"
+msgstr "Batal"
+
+#: src/gtk/shortcut-dialog.ui:24
+msgid "Apply"
+msgstr "Terapkan"
+
+#: src/gtk/shortcut-dialog.ui:65
+msgid "This shortcut is already in use"
+msgstr "Pintasan ini sudah digunakan"
+
+#: src/gtk/shortcut-dialog.ui:78
+msgid "Press Escape to cancel or Backspace to disable shortcut"
+msgstr ""
+"Tekan Escape untuk membatalkan atau Backspace untuk menonaktifkan pintasan"
+
+#: src/gtk/shortcut-editor.ui:6
+msgid "Keyboard"
+msgstr "Keyboard"
+
+#: src/gtk/shortcut-editor.ui:10
+msgid "Shortcuts"
+msgstr "Pintasan"
+
+#: src/gtk/shortcut-editor.ui:29
+msgid "Reset All Shortcuts"
+msgstr "Atur Ulang Semua Pintasan"
+
+#: src/gtk/shortcut-editor.ui:30
+msgid ""
+"This will reset all shortcuts to their default keybindings and overwrite "
+"your config file."
+msgstr ""
+"Ini akan mengatur ulang semua pintasan ke pengikatan tombol bawaan dan "
+"menimpa berkas konfigurasi Anda."
+
+#: src/gtk/shortcut-editor.ui:34
+msgid "Reset All"
+msgstr "Atur Ulang Semua"
+
+#: src/gtk/search-toolbar.ui:20
+msgid "Find"
+msgstr "Cari"
+
+#: src/gtk/search-toolbar.ui:41
+msgid "Previous result"
+msgstr "Hasil sebelumnya"
+
+#: src/gtk/search-toolbar.ui:47
+msgid "Next result"
+msgstr "Hasil berikutnya"
+
+#: src/gtk/search-toolbar.ui:89
+msgid "Search wraps around"
+msgstr "Pencarian berputar kembali"
+
+#: src/gtk/search-toolbar.ui:94
+msgid "Match is case sensitive"
+msgstr "Pencocokan peka huruf besar/kecil"
+
+#: src/gtk/search-toolbar.ui:99
+msgid "Match entire words only"
+msgstr "Cocokkan hanya seluruh kata"
+
+#: src/gtk/search-toolbar.ui:104
+msgid "Match using regular expression"
+msgstr "Cocokkan menggunakan ekspresi reguler"
+
+#: src/gtk/preferences-window.ui:11
+msgid "General"
+msgstr "Umum"
+
+#: src/gtk/preferences-window.ui:15
+msgid "Window"
+msgstr "Jendela"
+
+#: src/gtk/preferences-window.ui:18
+msgid "Remember Window Size"
+msgstr "Ingat Ukuran Jendela"
+
+#: src/gtk/preferences-window.ui:23
+msgid "Theme settings have been moved to Terminal > Appearance."
+msgstr "Pengaturan tema telah dipindahkan ke Terminal > Tampilan."
+
+#: src/gtk/preferences-window.ui:36
+msgid "Tabs"
+msgstr "Tab"
+
+#: src/gtk/preferences-window.ui:39
+msgid "Expand Tabs"
+msgstr "Perluas Tab"
+
+#: src/gtk/preferences-window.ui:46
+msgid "Header Bar"
+msgstr "Bilah Header"
+
+#: src/gtk/preferences-window.ui:49
+msgid "Show Header Bar"
+msgstr "Tampilkan Bilah Header"
+
+#: src/gtk/preferences-window.ui:54
+msgid "Context Aware"
+msgstr "Sadar Konteks"
+
+#: src/gtk/preferences-window.ui:55
+msgid ""
+"If enabled, the header bar will be colored differently when the active tab "
+"is running ssh or sudo."
+msgstr ""
+"Jika diaktifkan, bilah header akan diberi warna berbeda saat tab aktif "
+"menjalankan ssh atau sudo."
+
+#: src/gtk/preferences-window.ui:60
+msgid "Show Menu Button"
+msgstr "Tampilkan Tombol Menu"
+
+#: src/gtk/preferences-window.ui:65
+msgid "Drag Area"
+msgstr "Area Seret"
+
+#: src/gtk/preferences-window.ui:66
+msgid "Enable to reserve some space on the left side to drag the window."
+msgstr "Aktifkan untuk menyisihkan ruang di sisi kiri untuk menyeret jendela."
+
+#: src/gtk/preferences-window.ui:71
+msgid "Floating Controls"
+msgstr "Kontrol Mengambang"
+
+#: src/gtk/preferences-window.ui:74
+msgid "Show Floating Controls"
+msgstr "Tampilkan Kontrol Mengambang"
+
+#: src/gtk/preferences-window.ui:75
+msgid "Show floating controls when header bar is hidden."
+msgstr "Tampilkan kontrol mengambang saat bilah header disembunyikan."
+
+#: src/gtk/preferences-window.ui:81
+msgid "Floating Controls Hover Area"
+msgstr "Area Hover Kontrol Mengambang"
+
+#: src/gtk/preferences-window.ui:82
+msgid ""
+"Hoverable area (in pixels) at the top of the window to trigger floating "
+"controls."
+msgstr ""
+"Area yang dapat di-hover (dalam piksel) di bagian atas jendela untuk memicu "
+"kontrol mengambang."
+
+#: src/gtk/preferences-window.ui:89
+msgid "Delay Before Show Floating Controls"
+msgstr "Tunda Sebelum Menampilkan Kontrol Mengambang"
+
+#: src/gtk/preferences-window.ui:90
+msgid "Delay time (ms) before show floating controls."
+msgstr "Waktu tunda (ms) sebelum menampilkan kontrol mengambang."
+
+#: src/gtk/preferences-window.ui:103 src/gtk/preferences-window.ui:157
+msgid "Terminal"
+msgstr "Terminal"
+
+#: src/gtk/preferences-window.ui:108
+msgid "Text"
+msgstr "Teks"
+
+#: src/gtk/preferences-window.ui:112
+msgid "Font"
+msgstr "Font"
+
+#: src/gtk/preferences-window.ui:124
+msgid "Cell Spacing"
+msgstr "Jarak Antar Sel"
+
+#: src/gtk/preferences-window.ui:127
+msgid "Width"
+msgstr "Lebar"
+
+#: src/gtk/preferences-window.ui:134
+msgid "Height"
+msgstr "Tinggi"
+
+#: src/gtk/preferences-window.ui:143
+msgid "Bright Bold Text"
+msgstr "Teks Tebal Terang"
+
+#: src/gtk/preferences-window.ui:144
+msgid "Use bright colors for bold text."
+msgstr "Gunakan warna terang untuk teks tebal."
+
+#: src/gtk/preferences-window.ui:149
+msgid "Easy Copy &amp; Paste"
+msgstr "Salin &amp; Tempel Mudah"
+
+#: src/gtk/preferences-window.ui:150
+msgid "Use ctrl+c/ctrl+v for copy/paste."
+msgstr "Gunakan ctrl+c/ctrl+v untuk salin/tempel."
+
+#: src/gtk/preferences-window.ui:161
+msgid "Audible Bell"
+msgstr "Bel Terdengar"
+
+#: src/gtk/preferences-window.ui:162
+msgid "If enabled, terminals might use an audible bell to indicate events."
+msgstr ""
+"Jika diaktifkan, terminal dapat menggunakan bel terdengar untuk menunjukkan "
+"peristiwa."
+
+#: src/gtk/preferences-window.ui:169
+msgid "Cursor"
+msgstr "Kursor"
+
+#: src/gtk/preferences-window.ui:170
+msgid "Adjust cursor shape and behavior."
+msgstr "Sesuaikan bentuk dan perilaku kursor."
+
+#: src/gtk/preferences-window.ui:173
+msgid "Cursor Shape"
+msgstr "Bentuk Kursor"
+
+#: src/gtk/preferences-window.ui:177
+msgid "Block"
+msgstr "Blok"
+
+#: src/gtk/preferences-window.ui:178
+msgid "IBeam"
+msgstr "IBeam"
+
+#: src/gtk/preferences-window.ui:179
+msgid "Underline"
+msgstr "Garis Bawah"
+
+#: src/gtk/preferences-window.ui:187
+msgid "Cursor Blinking"
+msgstr "Kedipan Kursor"
+
+#: src/gtk/preferences-window.ui:188
+msgid "Whether or not the cursor should blink."
+msgstr "Apakah kursor harus berkedip atau tidak."
+
+#: src/gtk/preferences-window.ui:192 src/gtk/preferences-window.ui:377
+msgid "Follow System"
+msgstr "Ikuti Sistem"
+
+#: src/gtk/preferences-window.ui:193
+msgid "On"
+msgstr "Aktif"
+
+#: src/gtk/preferences-window.ui:194
+msgid "Off"
+msgstr "Nonaktif"
+
+#: src/gtk/preferences-window.ui:202
+msgid "Autohide"
+msgstr "Sembunyikan Otomatis"
+
+#: src/gtk/preferences-window.ui:203
+msgid "Enable to hide the cursor while typing"
+msgstr "Aktifkan untuk menyembunyikan kursor saat mengetik"
+
+#: src/gtk/preferences-window.ui:211
+msgid "Padding"
+msgstr "Padding"
+
+#: src/gtk/preferences-window.ui:220
+msgid "Opacity"
+msgstr "Opasitas"
+
+#: src/gtk/preferences-window.ui:221
+msgid "Terminal background opacity."
+msgstr "Opasitas latar belakang terminal."
+
+#: src/gtk/preferences-window.ui:239
+msgid "Working Directory"
+msgstr "Direktori Kerja"
+
+#: src/gtk/preferences-window.ui:248
+msgid "Previous Session"
+msgstr "Sesi Sebelumnya"
+
+#: src/gtk/preferences-window.ui:249
+msgid "Home Directory"
+msgstr "Direktori Home"
+
+#: src/gtk/preferences-window.ui:250
+msgid "Custom"
+msgstr "Kustom"
+
+#: src/gtk/preferences-window.ui:259
+msgid "Custom Working Directory"
+msgstr "Direktori Kerja Kustom"
+
+#: src/gtk/preferences-window.ui:276
+msgid "Set to user's home"
+msgstr "Atur ke home pengguna"
+
+#: src/gtk/preferences-window.ui:288
+msgid "Scrolling"
+msgstr "Pengguliran"
+
+#: src/gtk/preferences-window.ui:291
+msgid "Scrollbars"
+msgstr "Bilah Gulir"
+
+#: src/gtk/preferences-window.ui:294
+msgid "Show Scrollbars"
+msgstr "Tampilkan Bilah Gulir"
+
+#: src/gtk/preferences-window.ui:299
+msgid "Use Overlay Scrolling"
+msgstr "Gunakan Pengguliran Overlay"
+
+#: src/gtk/preferences-window.ui:312
+msgid "Fixed Size"
+msgstr "Ukuran Tetap"
+
+#: src/gtk/preferences-window.ui:313
+msgid "Unlimited"
+msgstr "Tak Terbatas"
+
+#: src/gtk/preferences-window.ui:314 src/widgets/ShortcutEditor.vala:106
+msgid "Disabled"
+msgstr "Dinonaktifkan"
+
+#: src/gtk/preferences-window.ui:323
+msgid "Scrollback Lines"
+msgstr "Baris Scrollback"
+
+#: src/gtk/preferences-window.ui:335
+msgid "Command"
+msgstr "Perintah"
+
+#: src/gtk/preferences-window.ui:338
+msgid "Run Command as Login Shell"
+msgstr "Jalankan Perintah sebagai Login Shell"
+
+#: src/gtk/preferences-window.ui:343
+msgid "Use Custom Command"
+msgstr "Gunakan Perintah Kustom"
+
+#: src/gtk/preferences-window.ui:348
+msgid "Custom Command"
+msgstr "Perintah Kustom"
+
+#: src/gtk/preferences-window.ui:361
+msgid "Notification on Completed Task"
+msgstr "Notifikasi pada Tugas Selesai"
+
+#: src/gtk/preferences-window.ui:362
+msgid ""
+"Send a desktop notification when a command is completed on an unfocussed tab."
+msgstr ""
+"Kirim notifikasi desktop ketika perintah selesai pada tab yang tidak "
+"difokuskan."
+
+#: src/gtk/preferences-window.ui:370
+msgid "Appearance"
+msgstr "Tampilan"
+
+#: src/gtk/preferences-window.ui:373
+msgid "Application Style"
+msgstr "Gaya Aplikasi"
+
+#: src/gtk/preferences-window.ui:378
+msgid "Light"
+msgstr "Terang"
+
+#: src/gtk/preferences-window.ui:379
+msgid "Dark"
+msgstr "Gelap"
+
+#: src/gtk/preferences-window.ui:387
+msgid "Theme Integration"
+msgstr "Integrasi Tema"
+
+#: src/gtk/preferences-window.ui:388
+msgid "Paint the whole app with colors from your colorscheme."
+msgstr "Warnai seluruh aplikasi dengan warna dari skema warna Anda."
+
+#: src/gtk/preferences-window.ui:397
+msgid "Theme"
+msgstr "Tema"
+
+#: src/gtk/preferences-window.ui:398
+msgid "Set your preferred theme for light and dark styles."
+msgstr "Atur tema pilihan Anda untuk gaya terang dan gelap."
+
+#: src/gtk/preferences-window.ui:410
+msgid "Open themes folder"
+msgstr "Buka folder tema"
+
+#: src/gtk/preferences-window.ui:418
+msgid "Get more themes online"
+msgstr "Dapatkan lebih banyak tema secara online"
+
+#: src/gtk/preferences-window.ui:439
+msgid "Light Theme"
+msgstr "Tema Terang"
+
+#: src/gtk/preferences-window.ui:445
+msgid "Dark Theme"
+msgstr "Tema Gelap"
+
+#: src/gtk/preferences-window.ui:453
+msgid "Only display themes for the current style"
+msgstr "Hanya tampilkan tema untuk gaya saat ini"
+
+#: src/gtk/preferences-window.ui:461
+msgid ""
+"To ensure readability, \"Theme Integration\" will be disabled if you select "
+"a light color scheme while using the dark app style or a dark color scheme "
+"while using the light app style."
+msgstr ""
+"Untuk memastikan keterbacaan, \"Integrasi Tema\" akan dinonaktifkan jika "
+"Anda memilih skema warna terang saat menggunakan gaya aplikasi gelap atau "
+"skema warna gelap saat menggunakan gaya aplikasi terang."
+
+#: src/gtk/preferences-window.ui:494
+msgid "Advanced"
+msgstr "Lanjutan"
+
+#: src/gtk/preferences-window.ui:498
+msgid "Experimental"
+msgstr "Eksperimental"
+
+#: src/gtk/preferences-window.ui:499
+msgid ""
+"Features in this section are known to be unstable. Please feel free to test "
+"and <a href=\"https://gitlab.gnome.org/raggesilver/blackbox/-/"
+"issues\">report bugs</a>."
+msgstr ""
+"Fitur dalam bagian ini diketahui tidak stabil. Silakan uji dan <a "
+"href=\"https://gitlab.gnome.org/raggesilver/blackbox/-/issues\">laporkan "
+"bug</a>."
+
+#: src/gtk/preferences-window.ui:502
+msgid "Sixel Support"
+msgstr "Dukungan Sixel"
+
+#: src/gtk/preferences-window.ui:503
+msgid "Render sixel escape sequences."
+msgstr "Render urutan escape sixel."
+
+#: src/gtk/preferences-window.ui:512
+msgid ""
+"The VTE build you are using does not have support Sixel. Sixel is still an "
+"experimental feature in VTE. For this reason, most distros do not build VTE "
+"with Sixel support. Installing Black Box via Flatpak will enable this "
+"feature. <a href=\"https://gitlab.gnome.org/raggesilver/blackbox/-/issues/"
+"273\">See discussion in issue tracker.</a>"
+msgstr ""
+"Build VTE yang Anda gunakan tidak memiliki dukungan Sixel. Sixel masih "
+"merupakan fitur eksperimental di VTE. Karena alasan ini, sebagian besar "
+"distro tidak membangun VTE dengan dukungan Sixel. Menginstal Black Box "
+"melalui Flatpak akan mengaktifkan fitur ini. <a href=\"https://"
+"gitlab.gnome.org/raggesilver/blackbox/-/issues/273\">Lihat diskusi di "
+"pelacak isu.</a>"
+
+#: src/gtk/preferences-window.ui:522
+msgid "Danger Zone"
+msgstr "Zona Bahaya"
+
+#: src/gtk/preferences-window.ui:525 src/widgets/PreferencesWindow.vala:602
+#: src/widgets/PreferencesWindow.vala:606
+msgid "Reset Preferences"
+msgstr "Atur Ulang Preferensi"
+
+#: src/gtk/preferences-window.ui:526
+msgid ""
+"This will revert all settings back to default. Your extra themes will not be "
+"removed."
+msgstr ""
+"Ini akan mengembalikan semua pengaturan ke bawaan. Tema tambahan Anda tidak "
+"akan dihapus."
+
+#: src/gtk/preferences-window.ui:531
+msgid "Reset preferences"
+msgstr "Atur ulang preferensi"
+
+#: src/gtk/terminal-menu.ui:20
+msgid "Open Link"
+msgstr "Buka Tautan"
+
+#: src/gtk/terminal-menu.ui:28 src/gtk/header-bar.ui:58
+#: src/gtk/header-bar.ui:170 src/gtk/header-bar.ui:280
+#: src/widgets/ShortcutEditor.vala:137
+msgid "New Tab"
+msgstr "Tab Baru"
+
+#: src/gtk/terminal-menu.ui:32 src/gtk/header-bar.ui:62
+#: src/widgets/ShortcutEditor.vala:135
+msgid "New Window"
+msgstr "Jendela Baru"
+
+#: src/gtk/terminal-menu.ui:55 src/widgets/ShortcutEditor.vala:139
+msgid "Copy"
+msgstr "Salin"
+
+#: src/gtk/terminal-menu.ui:59
+msgid "Copy Link"
+msgstr "Salin Tautan"
+
+#: src/gtk/terminal-menu.ui:64 src/widgets/ShortcutEditor.vala:140
+msgid "Paste"
+msgstr "Tempel"
+
+#: src/gtk/terminal-menu.ui:71 src/gtk/header-bar.ui:72
+#: src/widgets/ShortcutEditor.vala:138
+msgid "Preferences"
+msgstr "Preferensi"
+
+#: src/gtk/terminal-menu.ui:78 src/gtk/header-bar.ui:78
+#: src/widgets/ShortcutEditor.vala:143
+msgid "Keyboard Shortcuts"
+msgstr "Pintasan Keyboard"
+
+#: src/gtk/terminal-menu.ui:82 src/gtk/header-bar.ui:82
+msgid "About Black Box"
+msgstr "Tentang Black Box"
+
+#: src/gtk/help-overlay.ui:10
+msgctxt "shortcut window"
+msgid "Window"
+msgstr "Jendela"
+
+#: src/gtk/help-overlay.ui:13
+msgctxt "shortcut window"
+msgid "New window"
+msgstr "Jendela baru"
+
+#: src/gtk/help-overlay.ui:19
+msgctxt "shortcut window"
+msgid "New tab"
+msgstr "Tab baru"
+
+#: src/gtk/help-overlay.ui:25
+msgctxt "shortcut window"
+msgid "Close tab"
+msgstr "Tutup tab"
+
+#: src/gtk/help-overlay.ui:31
+msgctxt "shortcut window"
+msgid "Rename tab"
+msgstr "Ubah nama tab"
+
+#: src/gtk/help-overlay.ui:37
+msgctxt "shortcut window"
+msgid "Switch headbar mode"
+msgstr "Beralih mode bilah header"
+
+#: src/gtk/help-overlay.ui:43
+msgctxt "shortcut window"
+msgid "Toggle fullscreen"
+msgstr "Alihkan layar penuh"
+
+#: src/gtk/help-overlay.ui:51
+msgctxt "shortcut window"
+msgid "Terminal"
+msgstr "Terminal"
+
+#: src/gtk/help-overlay.ui:54
+msgctxt "shortcut window"
+msgid "Search"
+msgstr "Cari"
+
+#: src/gtk/help-overlay.ui:60
+msgctxt "shortcut window"
+msgid "Copy"
+msgstr "Salin"
+
+#: src/gtk/help-overlay.ui:66
+msgctxt "shortcut window"
+msgid "Paste"
+msgstr "Tempel"
+
+#: src/gtk/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Zoom in"
+msgstr "Perbesar"
+
+#: src/gtk/help-overlay.ui:78
+msgctxt "shortcut window"
+msgid "Zoom out"
+msgstr "Perkecil"
+
+#: src/gtk/help-overlay.ui:84
+msgctxt "shortcut window"
+msgid "Reset zoom"
+msgstr "Atur ulang zoom"
+
+#: src/gtk/help-overlay.ui:92
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "Navigasi"
+
+#: src/gtk/help-overlay.ui:95
+msgctxt "shortcut window"
+msgid "Focus next tab"
+msgstr "Fokus ke tab berikutnya"
+
+#: src/gtk/help-overlay.ui:101
+msgctxt "shortcut window"
+msgid "Focus previous tab"
+msgstr "Fokus ke tab sebelumnya"
+
+#: src/gtk/help-overlay.ui:107
+msgctxt "shortcut window"
+msgid "Switch to Tab 1"
+msgstr "Beralih ke Tab 1"
+
+#: src/gtk/help-overlay.ui:113
+msgctxt "shortcut window"
+msgid "Switch to Tab 2"
+msgstr "Beralih ke Tab 2"
+
+#: src/gtk/help-overlay.ui:119
+msgctxt "shortcut window"
+msgid "Switch to Tab 3"
+msgstr "Beralih ke Tab 3"
+
+#: src/gtk/help-overlay.ui:125
+msgctxt "shortcut window"
+msgid "Switch to Tab 4"
+msgstr "Beralih ke Tab 4"
+
+#: src/gtk/help-overlay.ui:131
+msgctxt "shortcut window"
+msgid "Switch to Tab 5"
+msgstr "Beralih ke Tab 5"
+
+#: src/gtk/help-overlay.ui:137
+msgctxt "shortcut window"
+msgid "Switch to Tab 6"
+msgstr "Beralih ke Tab 6"
+
+#: src/gtk/help-overlay.ui:143
+msgctxt "shortcut window"
+msgid "Switch to Tab 7"
+msgstr "Beralih ke Tab 7"
+
+#: src/gtk/help-overlay.ui:149
+msgctxt "shortcut window"
+msgid "Switch to Tab 8"
+msgstr "Beralih ke Tab 8"
+
+#: src/gtk/help-overlay.ui:155
+msgctxt "shortcut window"
+msgid "Switch to Tab 9"
+msgstr "Beralih ke Tab 9"
+
+#: src/gtk/help-overlay.ui:161
+msgctxt "shortcut window"
+msgid "Switch to last Tab"
+msgstr "Beralih ke Tab terakhir"
+
+#: src/gtk/help-overlay.ui:169
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Umum"
+
+#: src/gtk/help-overlay.ui:172
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Tampilkan Pintasan"
+
+#: src/gtk/help-overlay.ui:178
+msgctxt "shortcut window"
+msgid "Edit Preferences"
+msgstr "Edit Preferensi"
+
+#: src/gtk/tab-menu.ui:9 src/widgets/ShortcutEditor.vala:149
+msgid "Move Tab Left"
+msgstr "Pindahkan Tab ke Kiri"
+
+#: src/gtk/tab-menu.ui:14 src/widgets/ShortcutEditor.vala:150
+msgid "Move Tab Right"
+msgstr "Pindahkan Tab ke Kanan"
+
+#: src/gtk/tab-menu.ui:21 src/widgets/ShortcutEditor.vala:148
+#: src/widgets/Window.vala:622
+msgid "Rename Tab"
+msgstr "Ubah Nama Tab"
+
+#: src/gtk/tab-menu.ui:25
+msgid "Move Tab to New Window"
+msgstr "Pindahkan Tab ke Jendela Baru"
+
+#: src/gtk/tab-menu.ui:32 src/widgets/ShortcutEditor.vala:147
+msgid "Close Tab"
+msgstr "Tutup Tab"
+
+#: src/gtk/header-bar.ui:23
+msgid "Remote Access"
+msgstr "Akses Jarak Jauh"
+
+#: src/gtk/header-bar.ui:25
+msgid "SSH Connections"
+msgstr "Koneksi SSH"
+
+#: src/gtk/header-bar.ui:35 src/gtk/header-bar.ui:43
+msgid "New Connection"
+msgstr "Koneksi Baru"
+
+#: src/gtk/header-bar.ui:41
+msgid "SFTP Servers"
+msgstr "Server SFTP"
+
+#: src/gtk/header-bar.ui:68 src/widgets/ShortcutEditor.vala:142
+msgid "Fullscreen"
+msgstr "Layar Penuh"
+
+#: src/gtk/header-bar.ui:178 src/gtk/header-bar.ui:288
+msgid "Exit Fullscreen"
+msgstr "Keluar dari Layar Penuh"
+
+#: src/gtk/header-bar.ui:193 src/gtk/header-bar.ui:303
+msgid "Menu"
+msgstr "Menu"
+
+#: src/gtk/style-switcher.ui:17
+msgid "Use System Colors"
+msgstr "Gunakan Warna Sistem"
+
+#: src/gtk/style-switcher.ui:46
+msgid "Use Light Colors"
+msgstr "Gunakan Warna Terang"
+
+#: src/gtk/style-switcher.ui:74
+msgid "Use Dark Colors"
+msgstr "Gunakan Warna Gelap"
+
+#: src/services/Shortcuts.vala:327
+msgid "Replace keybinding?"
+msgstr "Ganti pengikatan tombol?"
+
+#. FIXME: `to_action` is an action identifier (i.e. win.paste). Replace it
+#. with the user-friendly action name.
+#: src/services/Shortcuts.vala:330
+#, c-format
+msgid "%s is already assigned to %s"
+msgstr "%s sudah ditetapkan ke %s"
+
+#: src/utils/Constants.vala:34
+msgid "You can still access the menu by right-clicking any terminal."
+msgstr ""
+"Anda masih dapat mengakses menu dengan klik kanan pada terminal mana pun."
+
+#: src/utils/Constants.vala:36
+#, c-format
+msgid ""
+"%s uses an early Gtk 4 port of VTE as a terminal widget. While a lot of "
+"progress has been made on this port, copying has yet to be implemented. This "
+"means there's currently no way to copy text in %s."
+msgstr ""
+"%s menggunakan port awal Gtk 4 dari VTE sebagai widget terminal. Meskipun "
+"banyak kemajuan telah dibuat pada port ini, fungsi salin belum "
+"diimplementasikan. Ini berarti saat ini tidak ada cara untuk menyalin teks "
+"di %s."
+
+#: src/utils/Constants.vala:38
+msgid ""
+"Warning: unlimited scrollback saves content to disk, which may cause your "
+"system to run out of storage."
+msgstr ""
+"Peringatan: scrollback tak terbatas menyimpan konten ke disk, yang dapat "
+"menyebabkan sistem Anda kehabisan ruang penyimpanan."
+
+#: src/utils/Dialogs.vala:35
+msgid "No"
+msgstr "Tidak"
+
+#: src/utils/Dialogs.vala:35
+msgid "Yes"
+msgstr "Ya"
+
+#: src/utils/Dialogs.vala:36
+msgid "OK"
+msgstr "OK"
+
+#: src/utils/Dialogs.vala:37
+msgid "Keep"
+msgstr "Pertahankan"
+
+#: src/utils/Dialogs.vala:37
+msgid "Replace"
+msgstr "Ganti"
+
+#: src/utils/Dialogs.vala:38
+msgid "Close"
+msgstr "Tutup"
+
+#: src/utils/Dialogs.vala:119
+msgid "Close Tab?"
+msgstr "Tutup Tab?"
+
+#: src/utils/Dialogs.vala:120
+msgid "Close Window?"
+msgstr "Tutup Jendela?"
+
+#: src/utils/Dialogs.vala:123
+msgid ""
+"Some commands are still running. Closing this tab will kill them and may "
+"lead to unexpected outcomes."
+msgstr ""
+"Beberapa perintah masih berjalan. Menutup tab ini akan menghentikannya dan "
+"dapat menyebabkan hasil yang tidak diharapkan."
+
+#: src/utils/Dialogs.vala:124
+msgid ""
+"Some commands are still running. Closing this window will kill them and may "
+"lead to unexpected outcomes."
+msgstr ""
+"Beberapa perintah masih berjalan. Menutup jendela ini akan menghentikannya "
+"dan dapat menyebabkan hasil yang tidak diharapkan."
+
+#: src/utils/Shortcuts.vala:32
+msgid "invalid keybinding"
+msgstr "pengikatan tombol tidak valid"
+
+#: src/widgets/AboutDialog.vala:53
+msgid "Donate"
+msgstr "Donasi"
+
+#: src/widgets/AboutDialog.vala:54
+msgid "Full Changelog"
+msgstr "Catatan Perubahan Lengkap"
+
+#: src/widgets/PreferencesWindow.vala:577
+msgid "Terminal Font"
+msgstr "Font Terminal"
+
+#: src/widgets/PreferencesWindow.vala:603
+msgid "Are you sure you want to reset all settings?"
+msgstr "Apakah Anda yakin ingin mengatur ulang semua pengaturan?"
+
+#: src/widgets/PreferencesWindow.vala:647
+msgid "Reuse previous tab's directory."
+msgstr "Gunakan direktori tab sebelumnya."
+
+#: src/widgets/PreferencesWindow.vala:649
+msgid "Use the current user's home as working directory."
+msgstr "Gunakan home pengguna saat ini sebagai direktori kerja."
+
+#: src/widgets/PreferencesWindow.vala:651
+msgid "Use a custom path as working directory."
+msgstr "Gunakan jalur kustom sebagai direktori kerja."
+
+#: src/widgets/ShortcutDialog.vala:46
+msgid "Enter new shortcut"
+msgstr "Masukkan pintasan baru"
+
+#: src/widgets/ShortcutDialog.vala:47
+#, c-format
+msgid "Enter new shortcut for \"%s\""
+msgstr "Masukkan pintasan baru untuk \"%s\""
+
+#: src/widgets/ShortcutEditor.vala:59
+msgid "Add Keybinding"
+msgstr "Tambahkan Pengikatan Tombol"
+
+#: src/widgets/ShortcutEditor.vala:66
+msgid "Reset Keybindings"
+msgstr "Atur Ulang Pengikatan Tombol"
+
+#: src/widgets/ShortcutEditor.vala:81
+#, c-format
+msgid "Remove %s"
+msgstr "Hapus %s"
+
+#: src/widgets/ShortcutEditor.vala:133
+msgid "Focus Next Tab"
+msgstr "Fokus ke Tab Berikutnya"
+
+#: src/widgets/ShortcutEditor.vala:134
+msgid "Focus Previous Tab"
+msgstr "Fokus ke Tab Sebelumnya"
+
+#: src/widgets/ShortcutEditor.vala:136
+msgid "Toggle Header Bar"
+msgstr "Alihkan Bilah Header"
+
+#: src/widgets/ShortcutEditor.vala:141
+msgid "Search"
+msgstr "Cari"
+
+#: src/widgets/ShortcutEditor.vala:144
+msgid "Zoom In"
+msgstr "Perbesar"
+
+#: src/widgets/ShortcutEditor.vala:145
+msgid "Zoom Out"
+msgstr "Perkecil"
+
+#: src/widgets/ShortcutEditor.vala:146
+msgid "Reset Zoom"
+msgstr "Atur Ulang Zoom"
+
+#: src/widgets/ShortcutEditor.vala:152 src/widgets/ShortcutEditor.vala:153
+#: src/widgets/ShortcutEditor.vala:154 src/widgets/ShortcutEditor.vala:155
+#: src/widgets/ShortcutEditor.vala:156 src/widgets/ShortcutEditor.vala:157
+#: src/widgets/ShortcutEditor.vala:158 src/widgets/ShortcutEditor.vala:159
+#: src/widgets/ShortcutEditor.vala:160
+#, c-format
+msgid "Switch to Tab %u"
+msgstr "Beralih ke Tab %u"
+
+#: src/widgets/ShortcutEditor.vala:161
+msgid "Switch to Last Tab"
+msgstr "Beralih ke Tab Terakhir"
+
+#: src/widgets/ShortcutEditor.vala:243
+msgid "Reset All Shortcuts?"
+msgstr "Atur Ulang Semua Pintasan?"
+
+#: src/widgets/ShortcutEditor.vala:244
+msgid ""
+"This will reset all shortcuts to default and overwrite your config file. "
+"This action is irreversible."
+msgstr ""
+"Ini akan mengatur ulang semua pintasan ke bawaan dan menimpa berkas "
+"konfigurasi Anda. Tindakan ini tidak dapat dibatalkan."
+
+#: src/widgets/ShortcutEditor.vala:247
+msgid "Reset"
+msgstr "Atur Ulang"
+
+#: src/widgets/TerminalTab.vala:58
+msgid "tab"
+msgstr "tab"
+
+#: src/widgets/TerminalTab.vala:109
+msgid "Error"
+msgstr "Kesalahan"
+
+#: src/widgets/Window.vala:623
+msgid "Set a custom title for this tab"
+msgstr "Atur judul kustom untuk tab ini"
+
+#: src/widgets/Window.vala:626
+msgid "Enter a custom tab title"
+msgstr "Masukkan judul tab kustom"
+
+#: src/widgets/Window.vala:633
+msgid "Reset Title"
+msgstr "Atur Ulang Judul"
+
+#: src/widgets/Window.vala:634
+msgid "Set Title"
+msgstr "Atur Judul"
+
+#: src/widgets/Terminal.vala:631
+msgid "Command completed"
+msgstr "Perintah selesai"
+
+#: src/CommandLine.vala:47
+msgid "Show app version"
+msgstr "Tampilkan versi aplikasi"
+
+#: src/CommandLine.vala:56
+msgid "Set current working directory"
+msgstr "Atur direktori kerja saat ini"
+
+#: src/CommandLine.vala:65
+msgid "Execute command in a terminal"
+msgstr "Jalankan perintah di terminal"
+
+#: src/CommandLine.vala:74
+msgid "Show help"
+msgstr "Tampilkan bantuan"
+
+#: src/CommandLine.vala:121
+#, c-format
+msgid "Run %s --help to get help\n"
+msgstr "Jalankan %s --help untuk mendapatkan bantuan\n"

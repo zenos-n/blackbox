@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2022 Paulo Queiroz -->
+<component type="desktop">
+  <id>com.raggesilver.BlackBox</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+
+  <name>Black Box</name>
+  <summary>A beautiful GTK 4 terminal</summary>
+
+  <developer_name>Paulo Queiroz</developer_name>
+  <developer id="com.raggesilver">
+    <name>Paulo Queiroz</name>
+  </developer>
+
+  <recommends>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <display_length compare="ge">360</display_length>
+  </recommends>
+
+  <description>
+    <p>
+      Black Box is a native terminal emulator for GNOME that offers superb
+      theming options.
+    </p>
+    <p>With Black Box you can:</p>
+    <ul>
+      <li>Set colors schemes and integrate them with the rest of the window</li>
+      <li>Customize font and size</li>
+      <li>Customize keyboard shortcuts</li>
+      <li>Render Sixel escape sequences</li>
+      <li>Fully hide the window headerbar</li>
+      <li>Quickly open links and files by ctrl+clicking file paths and URLs</li>
+      <li>Easily paste file paths by dragging them into the window</li>
+    </ul>
+    <p>This app is written in Vala and uses GTK 4, libadwaita, and VTE.</p>
+  </description>
+
+  <screenshots>
+    <screenshot type="default">
+      <caption>Black Box screenshot</caption>
+      <image>https://i.imgur.com/38c2eX4.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Black Box with header bars turned off</caption>
+      <image>https://i.imgur.com/2zH4FIj.png</image>
+    </screenshot>
+  </screenshots>
+
+  <launchable type="desktop-id">com.raggesilver.BlackBox.desktop</launchable>
+
+  <categories>
+    <category>Utility</category>
+  </categories>
+
+  <content_rating type="oars-1.1" />
+
+  <kudos>
+    <kudo>ModernToolkit</kudo>
+    <kudo>HiDpiIcon</kudo>
+    <kudo>Notifications</kudo>
+  </kudos>
+
+  <releases>
+    <release date="2026-06-10" version="0.15.2">
+      <description>
+        <p>New features</p>
+        <ul>
+          <li>Open folders directly in Black Box from the Files app via the right-click context menu.</li>
+        </ul>
+        <p>Bug fixes</p>
+        <ul>
+          <li>Fixed missing "command completed" notifications when the context-aware sidebar was disabled.</li>
+        </ul>
+        <p>Translations</p>
+        <ul>
+          <li>Updated translations, including 9 new languages. Thank you to all Weblate contributors!</li>
+        </ul>
+      </description>
+    </release>
+    <release date="2026-06-07" version="0.15.1">
+      <description>
+        <p>Improvements</p>
+        <ul>
+          <li>Improved process watcher: uses less resources both in use and in idle mode</li>
+          <li>Renamed executable to blackbox-terminal to prevent name clashing with the Black Box desktop environment</li>
+        </ul>
+      </description>
+    </release>
+    <release date="2026-06-05" version="0.14.1">
+      <description>
+        <p>Dependency updates: GNOME runtime 50, VTE 0.84.0.</p>
+      </description>
+    </release>
+    <release date="2023-07-17" version="0.14.0">
+      <description>
+        <p>Features</p>
+        <ul>
+          <li>Added new default Adwaita and Adwaita Dark color schemes</li>
+          <li>You can now customize the working directory for new tabs. It can be set to persist the
+            last tab's directory, the user's home directory, or an arbitrary location</li>
+          <li>Closing a tab or a window that still has a running process will now prompt you for
+            confirmation</li>
+          <li>Black Box now uses the default Adwaita tab style. As consequence, some header bar
+            options, including "Show Borders" have been removed from the preferences window</li>
+          <li>Added the option to disable terminal bell</li>
+          <li>Added option to use bright colors for bold text</li>
+          <li>You can now get a desktop notification when a process completes on an unfocussed tab</li>
+          <li>Context-aware header bar: the header bar can now have special colors when the active
+            tab is running sudo or ssh</li>
+          <li>Added open and copy link options to the right-click menu</li>
+          <li>You can now rename tabs with the new tab right-click menu, or with a new shortcut
+            Shift + Control + R</li>
+          <li>Added a quick application style switcher to the window menu</li>
+        </ul>
+        <p>Improvements</p>
+        <ul>
+          <li>Some configuration options have been grouped together in the preferences
+            window</li>
+          <li>Application title is now bold when there's a single tab open</li>
+          <li>Performance and bundle size optimizations</li>
+          <li>Black Box now has more Flatpak permissions to overcome errors reported by users</li>
+        </ul>
+        <p>Bug fixes</p>
+        <ul>
+          <li>Fixed an issue that caused terminals not to be destroyed when their tabs were closed</li>
+          <li>Improved keybinding validation, allowing more valid key combinations to be used</li>
+          <li>The window title is now centered when there's only one tab</li>
+          <li>Sixel is now disabled for VTE builds that don't support it. This primarily affects non-Flatpak users, as all Flatpak builds ship VTE with Sixel support</li>
+          <li>Fixed an issue that caused windows launched with custom commands to not have a title</li>
+          <li>Black Box will now show an error banner if spawning a shell or custom command failed and will no longer close immediately</li>
+        </ul>
+      </description>
+    </release>
+    <release date="2023-01-19" version="0.13.2">
+      <description>
+        <p>Features</p>
+        <ul>
+          <li>Added support for setting multiple shortcuts for the same action</li>
+          <li>You can now reset one, or all custom shortcuts back to default</li>
+          <li>Added a warning if "Unlimited" scrollback mode is active</li>
+        </ul>
+        <p>Bug fixes</p>
+        <ul>
+          <li>Added workaround for an error that would cause Black Box to crash</li>
+        </ul>
+      </description>
+    </release>
+    <release date="2023-01-16" version="0.13.1">
+      <description>
+        <p>Features</p>
+        <ul>
+          <li>New Scrollback Mode allows you to set scrollback to a fixed number of lines, unlimited lines, or disable scrollback altogether</li>
+          <li>Allow setting font style (regular, light, bold, etc)</li>
+        </ul>
+        <p>Improvements:</p>
+        <ul>
+          <li>Updated French, Italian, and Turkish translations</li>
+        </ul>
+        <p>Bug fixes</p>
+        <ul>
+          <li>Added missing "Open Preferences" shortcut to help overlay</li>
+          <li>Header bar and tabs are now properly colored when the app is unfocussed</li>
+          <li>Fixed regression in window border color when "Show Borders" is enabled</li>
+          <li>Window border is no longer displayed when Black Box is docked left, right, or maximized</li>
+          <li>Improved keybinding validation, allowing more valid key combinations to be used</li>
+          <li>Tab navigation shortcuts now work as expected</li>
+          <li>Fixed default "Reset Zoom" keybinding</li>
+          <li>Fixed issue that prevented development builds of Black Box from running when installed via Flatpak</li>
+        </ul>
+      </description>
+    </release>
+    <release date="2023-01-13" version="0.13.0">
+      <description>
+        <p>
+          The latest version of Black Box brings much awaited new features and
+          bug fixes.
+        </p>
+        <p>Features</p>
+        <ul>
+          <li>Customizable keyboard shortcuts</li>
+          <li>Background transparency</li>
+          <li>Customizable cursor blinking mode</li>
+          <li>Experimental sixel support</li>
+        </ul>
+        <p>Bug fixes</p>
+        <ul>
+          <li>Manually set VTE_VERSION environment variable - fixes compatibility with a few terminal programs</li>
+          <li>Copying text outside the current scroll view now works correctly</li>
+          <li>Scrolling with a touchpad or touchscreen now works as intended</li>
+        </ul>
+      </description>
+    </release>
+    <release date="2022-11-16" version="0.12.2">
+      <description>
+        <p>Features:</p>
+        <ul>
+          <li>Added Turkish translation</li>
+        </ul>
+        <p>Improvements:</p>
+        <ul>
+          <li>UI consistency</li>
+          <li>Clear selection after copying text with easy copy/paste</li>
+        </ul>
+        <p>Bug fixes:</p>
+        <ul>
+          <li>Text selection was broken</li>
+        </ul>
+      </description>
+    </release>
+    <release date="2022-09-28" version="0.12.1">
+      <description>
+        <p>Features:</p>
+        <ul>
+          <li>Added Brazilian Portuguese translation</li>
+        </ul>
+        <p>Improvements:</p>
+        <ul>
+          <li>Updated French, Russian, Italian, Czech, and Swedish translations</li>
+        </ul>
+        <p>Bug fixes:</p>
+        <ul>
+          <li>Flatpak CLI 1.13>= had weird output</li>
+        </ul>
+      </description>
+    </release>
+    <release date="2022-08-16" version="0.12.0">
+      <description>
+        <p>Features:</p>
+        <ul>
+          <li>Added support for searching text from terminal output</li>
+          <li>Open a new tab by clicking on the header bar with the middle mouse button</li>
+          <li>Customizable number of lines to keep buffered</li>
+          <li>Added option to reserve an area in the header bar to drag the window</li>
+          <li>Added Spanish translation</li>
+        </ul>
+        <p>Improvements:</p>
+        <ul>
+          <li>UI tweaks, including the addition of toggle-able borders around the window and tabs</li>
+          <li>Theme integration now uses the red, green, blue, and yellow colors from your terminal color scheme to paint the rest of the app</li>
+          <li>Theme integration now uses a different approach to calculate colors based on your terminal theme's background color. This results in more aesthetically pleasing header bar colors</li>
+        </ul>
+        <p>Bug fixes:</p>
+        <ul>
+          <li>The primary clipboard now works as intended</li>
+          <li>The "Reset Preferences" button is now translatable</li>
+          <li>Lower CPU usage, thanks to an updated version of VTE</li>
+          <li>Fix right-click menu spawn position - closes</li>
+          <li>Fix long loading times</li>
+        </ul>
+      </description>
+    </release>
+    <release date="2022-07-21" version="0.11.3">
+      <description>
+        <p>Features:</p>
+        <ul>
+          <li>Use ctrl + click to open links</li>
+        </ul>
+      </description>
+    </release>
+    <release date="2022-07-17" version="0.11.2">
+      <description>
+        <p>Updates:</p>
+        <ul>
+          <li>Updated translations</li>
+          <li>Added Simplified Chinese translation</li>
+          <li>Black Box now sets the COLORTERM env variable to truecolor</li>
+        </ul>
+      </description>
+    </release>
+    <release date="2022-07-13" version="0.11.1">
+      <description>
+        <p>Features:</p>
+        <ul>
+          <li>Black Box will set the BLACKBOX_THEMES_DIR env variable to the user's Black Box theme folder</li>
+        </ul>
+        <p>Bugs:</p>
+        <ul>
+          <li>Fix opaque floating header bar</li>
+          <li>User themes dir is no longer hard-coded and will be different for host install vs Flatpak</li>
+        </ul>
+      </description>
+    </release>
+    <release date="2022-07-13" version="0.11.0">
+      <description>
+        <p>Features:</p>
+        <ul>
+          <li>The preferences window has a new layout that allows for more features/customization to be added</li>
+          <li>Added support for the system-wide dark style preference</li>
+          <li>Users can now set a terminal color scheme for dark style and another for light style</li>
+          <li>Black Box now uses the new libadwaita about window</li>
+          <li>New themes included with Black Box: one-dark, pencil-dark, pencil-light, tomorrow, and tommorrow-night</li>
+          <li>Black Box will also load themes from `~/.var/app/com.raggesilver.BlackBox/schemes`</li>
+          <li>You can customize which and how your shell is spawned in Black Box</li>
+        </ul>
+        <p>Deprecations:</p>
+        <ul>
+          <li>The Linux and Tango color schemes have been removed</li>
+          <li>All color schemes must now set `background-color` and `foreground-color`</li>
+        </ul>
+        <p>Bug fixes:</p>
+        <ul>
+          <li>Fixed a bug that prevented users from typing values in the preferences window</li>
+          <li>Middle-click paste will now paste from user selection</li>
+          <li>Color scheme sorting is now case insensitive</li>
+          <li>Long window title resizes window in single tab mode</li>
+          <li>Drag-n-drop now works with multiple files</li>
+          <li>Improved theme integration. Popovers, menus, and lists are now properly styled according to the user's terminal color scheme</li>
+        </ul>
+      </description>
+    </release>
+    <release date="2022-07-08" version="0.10.1">
+      <description>
+        <p>Features:</p>
+        <ul>
+          <li>Improved German translation</li>
+          <li>Added Czech translation</li>
+          <li>Added Russian translation</li>
+          <li>Added Swedish translation</li>
+        </ul>
+        <p>Bug fixes:</p>
+        <ul>
+          <li>Black Box now sets the TERM_PROGRAM env variable. This makes apps like neofetch report a correct terminal app in Flatpak</li>
+          <li>"Remember window size" will now remember fullscreen and maximized state</li>
+        </ul>
+      </description>
+    </release>
+    <release date="2022-07-04" version="0.10.0">
+      <description>
+        <p>Features:</p>
+        <ul>
+          <li>New single tab mode makes it easier to drag the window and the UI more aesthetically pleasing when there's a single tab open</li>
+          <li>Added middle-click paste (only if enabled system-wide)</li>
+          <li>Added French translation</li>
+          <li>Added Dutch translation</li>
+          <li>Added German translation</li>
+        </ul>
+        <p>Bug fixes:</p>
+        <ul>
+          <li>Buttons in headerbar are no longer focusable</li>
+          <li>Labels and titles in preferences window now follow GNOME HIG for typography</li>
+          <li>Disable unimplemented `app.quit` accelerator</li>
+        </ul>
+      </description>
+    </release>
+    <release date="2022-07-02" version="0.9.1">
+      <description>
+        <p>Use patched VTE to enable copying.</p>
+      </description>
+    </release>
+    <release date="2022-07-01" version="0.9.0">
+      <description>
+        <p>Features:</p>
+        <ul>
+          <li>Added cell spacing option</li>
+          <li>i18n support</li>
+        </ul>
+        <p>Bug fixes:</p>
+        <ul>
+          <li>Fixed floating controls action row cannot be activated</li>
+          <li>New custom headerbar fixes unwanted spacing with controls on left side</li>
+          <li>Flathub builds will no longer have "striped headerbar"</li>
+          <li>A button is now displayed in the headerbar to leave fullscreen</li>
+        </ul>
+      </description>
+    </release>
+    <release date="2022-06-27" version="0.8.2">
+      <description>
+        <p>
+          Removed more unnecessary Flatpak permissions.
+        </p>
+      </description>
+    </release>
+    <release date="2022-06-26" version="0.8.1">
+      <description>
+        <p>
+          Removed unnecessary Flatpak permissions.
+        </p>
+      </description>
+    </release>
+    <release date="2022-06-26" version="0.8.0">
+      <description>
+        <p>
+          New features:
+        </p>
+        <ul>
+          <li>Display scrollbars and overlay scrolling</li>
+          <li>Shortcuts window</li>
+          <li>Toggle-able menu button</li>
+          <li>Reset all settings</li>
+          <li>You can now add padding around the terminal</li>
+          <li>Floating controls in headerbar-less mode</li>
+          <li>Customizable cursor shape</li>
+          <li>Full screen mode</li>
+          <li>Keyboard based tab navigation</li>
+          <li>Command line options</li>
+        </ul>
+      </description>
+    </release>
+    <release date="2022-04-18" version="0.7.0">
+      <description>
+        <p>
+          Initial port to Gtk 4. This is an alpha release that has known bugs
+          and lacks support for copying text from the terminal. (renamed from
+          42.alpha0)
+        </p>
+      </description>
+    </release>
+    <release date="2021-11-02" version="0.6.1">
+      <description>
+        <p>
+          Updated icon, better Software app description, improved GitLab README,
+          and bug fixes.
+        </p>
+        <ul>
+          <li>New terminal tabs and windows are now correctly focussed</li>
+        </ul>
+      </description>
+    </release>
+    <release date="2021-11-02" version="0.6.0">
+      <description>
+        <p>First public release.</p>
+      </description>
+    </release>
+  </releases>
+
+  <url type="homepage">https://gitlab.gnome.org/raggesilver/blackbox</url>
+  <url type="bugtracker">https://gitlab.gnome.org/raggesilver/blackbox/issues</url>
+  <url type="donation">https://www.patreon.com/raggesilver</url>
+  <url type="help">https://gitlab.gnome.org/raggesilver/blackbox/issues</url>
+  <url type="vcs-browser">https://gitlab.gnome.org/raggesilver/blackbox</url>
+  <url type="translate">https://hosted.weblate.org/projects/blackbox/</url>
+  <url type="contribute">https://gitlab.gnome.org/raggesilver/blackbox/-/blob/main/CONTRIBUTING.md</url>
+  <update_contact>pvaqueiroz@gmail.com</update_contact>
+</component>

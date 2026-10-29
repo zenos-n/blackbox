@@ -1,0 +1,24 @@
+# Trash
+*.*~
+\#*#
+*.swp
+
+# Test files
+test*
+mocks/
+
+# Build dirs/files
+app/
+app_build/
+_build/
+.flatpak-builder/
+repo/
+*.flatpak
+.buildconfig
+
+# IDE dirs
+.vscode/
+.idea/
+
+# i18n
+po/*.pot

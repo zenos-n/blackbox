@@ -1,0 +1,1219 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the blackbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: blackbox\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-26 23:47-0300\n"
+"PO-Revision-Date: 2025-11-03 22:51+0000\n"
+"Last-Translator: Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>\n"
+"Language-Team: Romanian <https://hosted.weblate.org/projects/blackbox/"
+"blackbox/ro/>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : "
+"(n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2;\n"
+"X-Generator: Weblate 5.14.1-dev\n"
+
+#: data/com.raggesilver.BlackBox.desktop.in:2
+msgid "Black Box"
+msgstr "Black Box"
+
+#: data/com.raggesilver.BlackBox.desktop.in:8
+msgid "Terminal;terminal;shell;prompt;command;commandline;cmd;box;"
+msgstr "Terminal;terminal;shell;prompt;comandă;linie de comandă;cmd;casetă;"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:6
+msgid "Window width"
+msgstr "Lățimea ferestrei"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:10
+msgid "Window height"
+msgstr "Înălțimea ferestrei"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:14
+msgid "Whether or not to remember window size"
+msgstr "Dacă se reține sau nu dimensiunea ferestrei"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:24
+msgid "Font family and size"
+msgstr "Familia și dimensiunea fontului"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:28
+msgid "Whether the window should inherit terminal theme's colors"
+msgstr "Dacă fereastra ar trebui să moștenească culorile temei terminalului"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:32
+msgid "Terminal window background opacity"
+msgstr "Opacitatea fundalului ferestrei terminalului"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:36
+msgid "Whether or not tabs should expand to fill tab bar"
+msgstr "Dacă filele ar trebui să se extindă sau nu pentru a umple bara de file"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:40
+msgid "Whether the headerbar should be shown or not"
+msgstr "Dacă bara de antet ar trebui afișată sau nu"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:44
+msgid ""
+"If enabled, the header bar will be colored differently for root and ssh "
+"contexts"
+msgstr ""
+"Dacă este activată, bara de titlu va avea culori diferite pentru contextele "
+"«root» și «ssh»."
+
+#: data/com.raggesilver.BlackBox.gschema.xml:48
+msgid "Whether or not to display a menu button in the headerbar"
+msgstr "Dacă se afișează sau nu un buton de meniu în bara de antet"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:52
+msgid "Whether or not to reserve an area for dragging the header bar"
+msgstr "Dacă se rezervă sau nu o zonă pentru glisarea barei de antet"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:56
+msgid "Whether or not to show scrollbars"
+msgstr "Dacă se afișează sau nu barele de derulare."
+
+#: data/com.raggesilver.BlackBox.gschema.xml:60
+msgid "Whether overlay scrolling should be enabled"
+msgstr "Dacă trebuie să fie activată derularea suprapusă"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:64
+msgid "If enabled, terminals will scroll by pixels instead of rows"
+msgstr "Dacă este activată, terminalele vor derula pe pixeli în loc de rânduri."
+
+#: data/com.raggesilver.BlackBox.gschema.xml:68
+msgid "If enabled, terminals will render sixel escape sequences"
+msgstr "Dacă este activată, terminalele vor reda secvențe de eludare sixel"
+
+#. 0 = Fixed size, 1 = Unlimited, 2 = Disabled
+#: data/com.raggesilver.BlackBox.gschema.xml:73
+#: src/gtk/preferences-window.ui:308
+msgid "Scrollback mode"
+msgstr "Modul de derulare înapoi"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:77
+msgid "Number of lines stored in scrollback"
+msgstr "Numărul de linii stocate în derularea înapoi"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:81
+msgid "If enabled, floating controls will be shown in headerless mode"
+msgstr ""
+"Dacă este activată, elementele de control flotante vor fi afișate în modul "
+"fără antet."
+
+#: data/com.raggesilver.BlackBox.gschema.xml:85
+msgid ""
+"Hoverable area (in pixels) at the top of the window to trigger floating "
+"controls"
+msgstr ""
+"Zona de plasare a cursorului (în pixeli) în partea superioară a ferestrei "
+"pentru a activa comenzile flotante"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:89
+msgid "Delay time before showing floating controls"
+msgstr ""
+"Timpul de întârziere înainte de afișarea elementelor de control flotante"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:93
+msgid "The light color scheme for the terminal"
+msgstr "Schema de culori luminoasă pentru terminal"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:97
+msgid "The dark color scheme for the terminal"
+msgstr "Schema de culori întunecată pentru terminal"
+
+#. 0 = Follow system, 1 = Light Style, 2 = Dark Style
+#: data/com.raggesilver.BlackBox.gschema.xml:102
+msgid "Style preference"
+msgstr "Preferințe de stil"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:106
+msgid "Show bold text in bright colors"
+msgstr "Afișează textul în caractere aldine în culori vii"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:110
+msgid "Hide cursor while typing"
+msgstr "Ascunde cursorul în timpul tastării"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:114
+msgid "Amount of padding around terminal widgets (top, right, bottom, left)"
+msgstr ""
+"Cantitatea de umplere în jurul elementelor de control ale terminalului "
+"(sus, dreapta, jos, stânga)"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:118
+msgid "Terminal cell width"
+msgstr "Lățimea celulei terminalului"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:122
+msgid "Terminal cell height"
+msgstr "Înălțimea celulei terminalului"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:126
+msgid "Terminal bell"
+msgstr "Clopoțel de terminal"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:130
+msgid "Cursor shape"
+msgstr "Forma cursorului"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:134
+msgid "Whether or not the cursor should blink"
+msgstr "Dacă cursorul trebuie să clipească sau nu"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:138
+msgid "If enabled, ctrl+c and ctrl+v will work for copy/paste"
+msgstr ""
+"Dacă este activată, combinațiile de taste «Ctrl+C» și «Ctrl+V» vor funcționa "
+"pentru copiere/lipire."
+
+#: data/com.raggesilver.BlackBox.gschema.xml:142
+msgid "Whether to spawn shell in login mode"
+msgstr "Dacă să se lanseze shell-ul în modul de autentificare"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:146
+msgid "Whether to use a custom command instead of the user's shell"
+msgstr ""
+"Dacă să se utilizeze o comandă personalizată în locul shell-ului "
+"utilizatorului"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:150
+msgid "Custom command to use instead of the user's shell"
+msgstr ""
+"Comandă personalizată care se utilizează în locul shell-ului utilizatorului"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:154
+msgid ""
+"Send a desktop notification when a process is completed on an unfocussed tab"
+msgstr ""
+"Trimite o notificare pe birou când un proces este finalizat într-o filă ce "
+"nu este afișată"
+
+#. 0 = Previous terminal CWD, 1 = Home Directory, 2 = Custom
+#: data/com.raggesilver.BlackBox.gschema.xml:159
+msgid "Working directory mode"
+msgstr "Modul director de lucru"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:163
+msgid "Custom working directory for new terminals"
+msgstr "Director de lucru personalizat pentru terminale noi"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:171
+msgid ""
+"Whether clicking next on the last search result should return to the first"
+msgstr ""
+"Dacă apăsarea butonului „Următorul” pe ultimul rezultat al căutării ar "
+"trebui să revină la primul rezultat."
+
+#: data/com.raggesilver.BlackBox.gschema.xml:175
+msgid "Whether search should be case sensitive"
+msgstr ""
+"Dacă căutarea trebuie să fie sensibilă la diferența dintre majuscule și "
+"minuscule"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:179
+msgid "Whether search should only match entire words"
+msgstr "Dacă căutarea trebuie să corespundă numai cuvintelor întregi"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:183
+msgid "Whether search should be performed using regular expressions"
+msgstr "Dacă căutarea trebuie efectuată utilizând expresii regulate"
+
+#: src/gtk/shortcut-dialog.ui:6
+msgid "Edit Shortcut"
+msgstr "Editați o comandă rapidă"
+
+#: src/gtk/shortcut-dialog.ui:17 src/utils/Dialogs.vala:36
+#: src/utils/Dialogs.vala:38 src/widgets/PreferencesWindow.vala:606
+#: src/widgets/ShortcutEditor.vala:246 src/widgets/Window.vala:632
+msgid "Cancel"
+msgstr "Renunță"
+
+#: src/gtk/shortcut-dialog.ui:24
+msgid "Apply"
+msgstr "Aplică"
+
+#: src/gtk/shortcut-dialog.ui:65
+msgid "This shortcut is already in use"
+msgstr "Această comandă rapidă este deja utilizată"
+
+#: src/gtk/shortcut-dialog.ui:78
+msgid "Press Escape to cancel or Backspace to disable shortcut"
+msgstr ""
+"Apăsați tasta «Escape» pentru a anula sau tasta «Backspace» pentru a "
+"dezactiva comanda rapidă."
+
+#: src/gtk/shortcut-editor.ui:6
+msgid "Keyboard"
+msgstr "Tastatură"
+
+#: src/gtk/shortcut-editor.ui:10
+msgid "Shortcuts"
+msgstr "Taste de comenzi rapide"
+
+#: src/gtk/shortcut-editor.ui:29
+msgid "Reset All Shortcuts"
+msgstr "Reinițializați toate combinațiile de taste pentru comenzi rapide"
+
+#: src/gtk/shortcut-editor.ui:30
+msgid ""
+"This will reset all shortcuts to their default keybindings and overwrite "
+"your config file."
+msgstr ""
+"Aceasta va restabili toate comenzile rapide la combinațiile de taste "
+"implicite și va suprascrie fișierul de configurare."
+
+#: src/gtk/shortcut-editor.ui:34
+msgid "Reset All"
+msgstr "Reinițializați tot"
+
+#: src/gtk/search-toolbar.ui:20
+msgid "Find"
+msgstr "Găsește"
+
+#: src/gtk/search-toolbar.ui:41
+msgid "Previous result"
+msgstr "Rezultatul anterioar"
+
+#: src/gtk/search-toolbar.ui:47
+msgid "Next result"
+msgstr "Rezultatul următor"
+
+#: src/gtk/search-toolbar.ui:89
+msgid "Search wraps around"
+msgstr "Căutarea se repetă"
+
+#: src/gtk/search-toolbar.ui:94
+msgid "Match is case sensitive"
+msgstr "Potrivirea respectă diferența dintre majuscule și minuscule"
+
+#: src/gtk/search-toolbar.ui:99
+msgid "Match entire words only"
+msgstr "Potrivire numai cu cuvântul întreg"
+
+#: src/gtk/search-toolbar.ui:104
+msgid "Match using regular expression"
+msgstr "Potrivire utilizând expresii regulate"
+
+#: src/gtk/preferences-window.ui:11
+msgid "General"
+msgstr "Generale"
+
+#: src/gtk/preferences-window.ui:15
+msgid "Window"
+msgstr "Fereastră"
+
+#: src/gtk/preferences-window.ui:18
+msgid "Remember Window Size"
+msgstr "Reține dimensiunea ferestrei"
+
+#: src/gtk/preferences-window.ui:23
+msgid "Theme settings have been moved to Terminal > Appearance."
+msgstr "Configurările temei au fost mutate în Terminal > Aspect."
+
+#: src/gtk/preferences-window.ui:36
+msgid "Tabs"
+msgstr "File"
+
+#: src/gtk/preferences-window.ui:39
+msgid "Expand Tabs"
+msgstr "Extinde filele"
+
+#: src/gtk/preferences-window.ui:46
+msgid "Header Bar"
+msgstr "Bara de antet"
+
+#: src/gtk/preferences-window.ui:49
+msgid "Show Header Bar"
+msgstr "Afișează bara de antet"
+
+#: src/gtk/preferences-window.ui:54
+msgid "Context Aware"
+msgstr "Conform contextului"
+
+#: src/gtk/preferences-window.ui:55
+msgid ""
+"If enabled, the header bar will be colored differently when the active tab "
+"is running ssh or sudo."
+msgstr ""
+"Dacă această opțiune este activată, bara de antet va avea o culoare diferită "
+"atunci când fila activă rulează «ssh» sau «sudo»."
+
+#: src/gtk/preferences-window.ui:60
+msgid "Show Menu Button"
+msgstr "Afișeazăă butonul de meniu"
+
+#: src/gtk/preferences-window.ui:65
+msgid "Drag Area"
+msgstr "Zona de glisare"
+
+#: src/gtk/preferences-window.ui:66
+msgid "Enable to reserve some space on the left side to drag the window."
+msgstr ""
+"Activează rezervarea unui spațiu în partea stângă pentru a glisa fereastra."
+
+#: src/gtk/preferences-window.ui:71
+msgid "Floating Controls"
+msgstr "Elemente de control flotante"
+
+#: src/gtk/preferences-window.ui:74
+msgid "Show Floating Controls"
+msgstr "Afișează elemente de control flotante"
+
+#: src/gtk/preferences-window.ui:75
+msgid "Show floating controls when header bar is hidden."
+msgstr ""
+"Afișează elementele de control flotante când bara de antet este ascunsă."
+
+#: src/gtk/preferences-window.ui:81
+msgid "Floating Controls Hover Area"
+msgstr ""
+"Zona de plasare a cursorului pentru afișarea elementelor de control flotante"
+
+#: src/gtk/preferences-window.ui:82
+msgid ""
+"Hoverable area (in pixels) at the top of the window to trigger floating "
+"controls."
+msgstr ""
+"Zona de plasare a cursorului (în pixeli) în partea superioară a ferestrei "
+"pentru a activa elementele de control flotante."
+
+#: src/gtk/preferences-window.ui:89
+msgid "Delay Before Show Floating Controls"
+msgstr "Întârzierea înainte de afișarea elementelor de control flotante"
+
+#: src/gtk/preferences-window.ui:90
+msgid "Delay time (ms) before show floating controls."
+msgstr ""
+"Timpul de întârziere (în ms) înainte de afișarea elementelor de control "
+"flotante."
+
+#: src/gtk/preferences-window.ui:103 src/gtk/preferences-window.ui:157
+msgid "Terminal"
+msgstr "Terminal"
+
+#: src/gtk/preferences-window.ui:108
+msgid "Text"
+msgstr "Text"
+
+#: src/gtk/preferences-window.ui:112
+msgid "Font"
+msgstr "Font"
+
+#: src/gtk/preferences-window.ui:124
+msgid "Cell Spacing"
+msgstr "Spațierea celulelor"
+
+#: src/gtk/preferences-window.ui:127
+msgid "Width"
+msgstr "Lățime"
+
+#: src/gtk/preferences-window.ui:134
+msgid "Height"
+msgstr "Înălțime"
+
+#: src/gtk/preferences-window.ui:143
+msgid "Bright Bold Text"
+msgstr "Text în caractere aldine în culori vii"
+
+#: src/gtk/preferences-window.ui:144
+msgid "Use bright colors for bold text."
+msgstr "Utilizează culori vii pentru textul în caractere aldine."
+
+#: src/gtk/preferences-window.ui:149
+msgid "Easy Copy &amp; Paste"
+msgstr "Copiere și lipire ușoară"
+
+#: src/gtk/preferences-window.ui:150
+msgid "Use ctrl+c/ctrl+v for copy/paste."
+msgstr "Utilizați combinația de taste «Ctrl+C»/«Ctrl+V» pentru copiere/lipire."
+
+#: src/gtk/preferences-window.ui:161
+msgid "Audible Bell"
+msgstr "Clopoțel audibil"
+
+#: src/gtk/preferences-window.ui:162
+msgid "If enabled, terminals might use an audible bell to indicate events."
+msgstr ""
+"Dacă această opțiune este activată, terminalele pot utiliza un semnal sonor "
+"pentru a indica evenimente."
+
+#: src/gtk/preferences-window.ui:169
+msgid "Cursor"
+msgstr "Cursor"
+
+#: src/gtk/preferences-window.ui:170
+msgid "Adjust cursor shape and behavior."
+msgstr "Ajustează forma și comportamentul cursorului."
+
+#: src/gtk/preferences-window.ui:173
+msgid "Cursor Shape"
+msgstr "Forma cursorului"
+
+#: src/gtk/preferences-window.ui:177
+msgid "Block"
+msgstr "Bloc"
+
+#: src/gtk/preferences-window.ui:178
+msgid "IBeam"
+msgstr "Bară I"
+
+#: src/gtk/preferences-window.ui:179
+msgid "Underline"
+msgstr "Subliniere"
+
+#: src/gtk/preferences-window.ui:187
+msgid "Cursor Blinking"
+msgstr "Clipire cursor"
+
+#: src/gtk/preferences-window.ui:188
+msgid "Whether or not the cursor should blink."
+msgstr "Dacă cursorul trebuie să clipească sau nu."
+
+#: src/gtk/preferences-window.ui:192 src/gtk/preferences-window.ui:377
+msgid "Follow System"
+msgstr "Utilizează configurația sistemului"
+
+#: src/gtk/preferences-window.ui:193
+msgid "On"
+msgstr "Activat"
+
+#: src/gtk/preferences-window.ui:194
+msgid "Off"
+msgstr "Dezactivat"
+
+#: src/gtk/preferences-window.ui:202
+msgid "Autohide"
+msgstr "Ascundere automată"
+
+#: src/gtk/preferences-window.ui:203
+msgid "Enable to hide the cursor while typing"
+msgstr "Activează ascunderea cursorului în timpul tastării"
+
+#: src/gtk/preferences-window.ui:211
+msgid "Padding"
+msgstr "Completare"
+
+#: src/gtk/preferences-window.ui:220
+msgid "Opacity"
+msgstr "Opacitate"
+
+#: src/gtk/preferences-window.ui:221
+msgid "Terminal background opacity."
+msgstr "Opacitatea fundalului terminalului."
+
+#: src/gtk/preferences-window.ui:239
+msgid "Working Directory"
+msgstr "Directorul de lucru"
+
+#: src/gtk/preferences-window.ui:248
+msgid "Previous Session"
+msgstr "Sesiunea anterioară"
+
+#: src/gtk/preferences-window.ui:249
+msgid "Home Directory"
+msgstr "Directorul personal"
+
+#: src/gtk/preferences-window.ui:250
+msgid "Custom"
+msgstr "Personalizat"
+
+#: src/gtk/preferences-window.ui:259
+msgid "Custom Working Directory"
+msgstr "Director de lucru personalizat"
+
+#: src/gtk/preferences-window.ui:276
+msgid "Set to user's home"
+msgstr "Stabilește directorul personal al utilizatorului"
+
+#: src/gtk/preferences-window.ui:288
+msgid "Scrolling"
+msgstr "Derulare"
+
+#: src/gtk/preferences-window.ui:291
+msgid "Scrollbars"
+msgstr "Bare de derulare"
+
+#: src/gtk/preferences-window.ui:294
+msgid "Show Scrollbars"
+msgstr "Afișează barele de derulare"
+
+#: src/gtk/preferences-window.ui:299
+msgid "Use Overlay Scrolling"
+msgstr "Utilizează derularea suprapusă"
+
+#: src/gtk/preferences-window.ui:312
+msgid "Fixed Size"
+msgstr "Dimensiune fixă"
+
+#: src/gtk/preferences-window.ui:313
+msgid "Unlimited"
+msgstr "Nelimitat"
+
+#: src/gtk/preferences-window.ui:314 src/widgets/ShortcutEditor.vala:106
+msgid "Disabled"
+msgstr "Dezactivat"
+
+#: src/gtk/preferences-window.ui:323
+msgid "Scrollback Lines"
+msgstr "Linii de derulare înapoi"
+
+#: src/gtk/preferences-window.ui:335
+msgid "Command"
+msgstr "Comandă"
+
+#: src/gtk/preferences-window.ui:338
+msgid "Run Command as Login Shell"
+msgstr "Execută comanda ca un shell de autentificare"
+
+#: src/gtk/preferences-window.ui:343
+msgid "Use Custom Command"
+msgstr "Utilizează comandă personalizată"
+
+#: src/gtk/preferences-window.ui:348
+msgid "Custom Command"
+msgstr "Comandă personalizată"
+
+#: src/gtk/preferences-window.ui:361
+msgid "Notification on Completed Task"
+msgstr "Notificare la finalizarea sarcinii"
+
+#: src/gtk/preferences-window.ui:362
+msgid ""
+"Send a desktop notification when a command is completed on an unfocussed tab."
+msgstr ""
+"Trimite o notificare pe birou când un proces este finalizat într-o filă ce "
+"nu este afișată."
+
+#: src/gtk/preferences-window.ui:370
+msgid "Appearance"
+msgstr "Aspect"
+
+#: src/gtk/preferences-window.ui:373
+msgid "Application Style"
+msgstr "Stil aplicație"
+
+#: src/gtk/preferences-window.ui:378
+msgid "Light"
+msgstr "Luminoasă"
+
+#: src/gtk/preferences-window.ui:379
+msgid "Dark"
+msgstr "Întunecată"
+
+#: src/gtk/preferences-window.ui:387
+msgid "Theme Integration"
+msgstr "Integrarea temei"
+
+#: src/gtk/preferences-window.ui:388
+msgid "Paint the whole app with colors from your colorscheme."
+msgstr "Colorează întreaga aplicație cu culori din schema dvs. de culori."
+
+#: src/gtk/preferences-window.ui:397
+msgid "Theme"
+msgstr "Temă"
+
+#: src/gtk/preferences-window.ui:398
+msgid "Set your preferred theme for light and dark styles."
+msgstr "Stabiliți tema preferată pentru stilurile luminoase și întunecate."
+
+#: src/gtk/preferences-window.ui:410
+msgid "Open themes folder"
+msgstr "Deschide dosarul cu teme"
+
+#: src/gtk/preferences-window.ui:418
+msgid "Get more themes online"
+msgstr "Obțineți mai multe teme din Internet"
+
+#: src/gtk/preferences-window.ui:439
+msgid "Light Theme"
+msgstr "Temă luminoasă"
+
+#: src/gtk/preferences-window.ui:445
+msgid "Dark Theme"
+msgstr "Temă întunecată"
+
+#: src/gtk/preferences-window.ui:453
+msgid "Only display themes for the current style"
+msgstr "Afișează numai temele pentru stilul curent"
+
+#: src/gtk/preferences-window.ui:461
+msgid ""
+"To ensure readability, \"Theme Integration\" will be disabled if you select "
+"a light color scheme while using the dark app style or a dark color scheme "
+"while using the light app style."
+msgstr ""
+"Pentru a asigura lizibilitatea, «Integrarea temei» va fi dezactivată dacă "
+"selectați o schemă de culori deschise în timp ce utilizați stilul de "
+"aplicație întunecat sau o schemă de culori întunecate în timp ce utilizați "
+"stilul de aplicație luminos."
+
+#: src/gtk/preferences-window.ui:494
+msgid "Advanced"
+msgstr "Avansate"
+
+#: src/gtk/preferences-window.ui:498
+msgid "Experimental"
+msgstr "Experimental"
+
+#: src/gtk/preferences-window.ui:499
+msgid ""
+"Features in this section are known to be unstable. Please feel free to test "
+"and <a href=\"https://gitlab.gnome.org/raggesilver/blackbox/-/"
+"issues\">report bugs</a>."
+msgstr ""
+"Caracteristicile din această secțiune sunt cunoscute ca fiind instabile. Vă "
+"rugăm să le testați și să <a href="
+"\"https://gitlab.gnome.org/raggesilver/blackbox/-/issues\">raportați erorile "
+"găsite</a>."
+
+#: src/gtk/preferences-window.ui:502
+msgid "Sixel Support"
+msgstr "Suporrt sixel"
+
+#: src/gtk/preferences-window.ui:503
+msgid "Render sixel escape sequences."
+msgstr "Redă secvențele de eludare sixel."
+
+#: src/gtk/preferences-window.ui:512
+msgid ""
+"The VTE build you are using does not have support Sixel. Sixel is still an "
+"experimental feature in VTE. For this reason, most distros do not build VTE "
+"with Sixel support. Installing Black Box via Flatpak will enable this "
+"feature. <a href=\"https://gitlab.gnome.org/raggesilver/blackbox/-/issues/"
+"273\">See discussion in issue tracker.</a>"
+msgstr ""
+"Versiunea VTE pe care o utilizați nu are suport pentru Sixel. Sixel este "
+"încă o caracteristică experimentală în VTE. Din acest motiv, majoritatea "
+"distribuțiilor nu compilează VTE cu suport pentru Sixel. Instalarea BlackBox "
+"prin Flatpak va activa această caracteristică. <a href="
+"\"https://gitlab.gnome.org/raggesilver/blackbox/-/issues/273\">A se vedea "
+"discuția din sistemul de urmărire a problemelor.</a>"
+
+#: src/gtk/preferences-window.ui:522
+msgid "Danger Zone"
+msgstr "Zonă periculoasă"
+
+#: src/gtk/preferences-window.ui:525 src/widgets/PreferencesWindow.vala:602
+#: src/widgets/PreferencesWindow.vala:606
+msgid "Reset Preferences"
+msgstr "Reinițializare preferințe"
+
+#: src/gtk/preferences-window.ui:526
+msgid ""
+"This will revert all settings back to default. Your extra themes will not be "
+"removed."
+msgstr ""
+"Aceasta va readuce toate opțiunile la valorile implicite. Temele "
+"suplimentare nu vor fi eliminate."
+
+#: src/gtk/preferences-window.ui:531
+msgid "Reset preferences"
+msgstr "Reinițializare preferințe"
+
+#: src/gtk/terminal-menu.ui:20
+msgid "Open Link"
+msgstr "Deschide legătura"
+
+#: src/gtk/terminal-menu.ui:28 src/gtk/header-bar.ui:58
+#: src/gtk/header-bar.ui:170 src/gtk/header-bar.ui:280
+#: src/widgets/ShortcutEditor.vala:137
+msgid "New Tab"
+msgstr "Filă nouă"
+
+#: src/gtk/terminal-menu.ui:32 src/gtk/header-bar.ui:62
+#: src/widgets/ShortcutEditor.vala:135
+msgid "New Window"
+msgstr "Fereastră nouă"
+
+#: src/gtk/terminal-menu.ui:55 src/widgets/ShortcutEditor.vala:139
+msgid "Copy"
+msgstr "Copiază"
+
+#: src/gtk/terminal-menu.ui:59
+msgid "Copy Link"
+msgstr "Copiază legătura"
+
+#: src/gtk/terminal-menu.ui:64 src/widgets/ShortcutEditor.vala:140
+msgid "Paste"
+msgstr "Lipește"
+
+#: src/gtk/terminal-menu.ui:71 src/gtk/header-bar.ui:72
+#: src/widgets/ShortcutEditor.vala:138
+msgid "Preferences"
+msgstr "Preferințe"
+
+#: src/gtk/terminal-menu.ui:78 src/gtk/header-bar.ui:78
+#: src/widgets/ShortcutEditor.vala:143
+msgid "Keyboard Shortcuts"
+msgstr "Taste de comenzi rapide"
+
+#: src/gtk/terminal-menu.ui:82 src/gtk/header-bar.ui:82
+msgid "About Black Box"
+msgstr "Despre BlackBox"
+
+#: src/gtk/help-overlay.ui:10
+msgctxt "shortcut window"
+msgid "Window"
+msgstr "Fereastră"
+
+#: src/gtk/help-overlay.ui:13
+msgctxt "shortcut window"
+msgid "New window"
+msgstr "Fereastră nouă"
+
+#: src/gtk/help-overlay.ui:19
+msgctxt "shortcut window"
+msgid "New tab"
+msgstr "Filă nouă"
+
+#: src/gtk/help-overlay.ui:25
+msgctxt "shortcut window"
+msgid "Close tab"
+msgstr "Închide fila"
+
+#: src/gtk/help-overlay.ui:31
+msgctxt "shortcut window"
+msgid "Rename tab"
+msgstr "Redenumește fila"
+
+#: src/gtk/help-overlay.ui:37
+msgctxt "shortcut window"
+msgid "Switch headbar mode"
+msgstr "Activează/dezactivează modul barei de antet"
+
+#: src/gtk/help-overlay.ui:43
+msgctxt "shortcut window"
+msgid "Toggle fullscreen"
+msgstr "Activează/dezactivează modul de ecran complet"
+
+#: src/gtk/help-overlay.ui:51
+msgctxt "shortcut window"
+msgid "Terminal"
+msgstr "Terminal"
+
+#: src/gtk/help-overlay.ui:54
+msgctxt "shortcut window"
+msgid "Search"
+msgstr "Caută"
+
+#: src/gtk/help-overlay.ui:60
+msgctxt "shortcut window"
+msgid "Copy"
+msgstr "Copiază"
+
+#: src/gtk/help-overlay.ui:66
+msgctxt "shortcut window"
+msgid "Paste"
+msgstr "Lipește"
+
+#: src/gtk/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Zoom in"
+msgstr "Mărire"
+
+#: src/gtk/help-overlay.ui:78
+msgctxt "shortcut window"
+msgid "Zoom out"
+msgstr "Micșorare"
+
+#: src/gtk/help-overlay.ui:84
+msgctxt "shortcut window"
+msgid "Reset zoom"
+msgstr "Reinițializează scalarea"
+
+#: src/gtk/help-overlay.ui:92
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "Navigare"
+
+#: src/gtk/help-overlay.ui:95
+msgctxt "shortcut window"
+msgid "Focus next tab"
+msgstr "Focalizează fila următoare"
+
+#: src/gtk/help-overlay.ui:101
+msgctxt "shortcut window"
+msgid "Focus previous tab"
+msgstr "Focalizează fila precedentă"
+
+#: src/gtk/help-overlay.ui:107
+msgctxt "shortcut window"
+msgid "Switch to Tab 1"
+msgstr "Schimbă la fila 1"
+
+#: src/gtk/help-overlay.ui:113
+msgctxt "shortcut window"
+msgid "Switch to Tab 2"
+msgstr "Schimbă la fila 2"
+
+#: src/gtk/help-overlay.ui:119
+msgctxt "shortcut window"
+msgid "Switch to Tab 3"
+msgstr "Schimbă la fila 3"
+
+#: src/gtk/help-overlay.ui:125
+msgctxt "shortcut window"
+msgid "Switch to Tab 4"
+msgstr "Schimbă la fila 4"
+
+#: src/gtk/help-overlay.ui:131
+msgctxt "shortcut window"
+msgid "Switch to Tab 5"
+msgstr "Schimbă la fila 5"
+
+#: src/gtk/help-overlay.ui:137
+msgctxt "shortcut window"
+msgid "Switch to Tab 6"
+msgstr "Schimbă la fila 6"
+
+#: src/gtk/help-overlay.ui:143
+msgctxt "shortcut window"
+msgid "Switch to Tab 7"
+msgstr "Schimbă la fila 7"
+
+#: src/gtk/help-overlay.ui:149
+msgctxt "shortcut window"
+msgid "Switch to Tab 8"
+msgstr "Schimbă la fila 8"
+
+#: src/gtk/help-overlay.ui:155
+msgctxt "shortcut window"
+msgid "Switch to Tab 9"
+msgstr "Schimbă la fila 9"
+
+#: src/gtk/help-overlay.ui:161
+msgctxt "shortcut window"
+msgid "Switch to last Tab"
+msgstr "Schimbă la ultima filă"
+
+#: src/gtk/help-overlay.ui:169
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Generale"
+
+#: src/gtk/help-overlay.ui:172
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Afișeazǎ dialogul de comenzi rapide"
+
+#: src/gtk/help-overlay.ui:178
+msgctxt "shortcut window"
+msgid "Edit Preferences"
+msgstr "Editează preferințele"
+
+#: src/gtk/tab-menu.ui:9 src/widgets/ShortcutEditor.vala:149
+msgid "Move Tab Left"
+msgstr "Mută fila la stânga"
+
+#: src/gtk/tab-menu.ui:14 src/widgets/ShortcutEditor.vala:150
+msgid "Move Tab Right"
+msgstr "Mută fila la dreapta"
+
+#: src/gtk/tab-menu.ui:21 src/widgets/ShortcutEditor.vala:148
+#: src/widgets/Window.vala:622
+msgid "Rename Tab"
+msgstr "Redenumește fila"
+
+#: src/gtk/tab-menu.ui:25
+msgid "Move Tab to New Window"
+msgstr "Mută fila într-o fereastră nouă"
+
+#: src/gtk/tab-menu.ui:32 src/widgets/ShortcutEditor.vala:147
+msgid "Close Tab"
+msgstr "Închide fila"
+
+#: src/gtk/header-bar.ui:23
+msgid "Remote Access"
+msgstr "Acces la distanță"
+
+#: src/gtk/header-bar.ui:25
+msgid "SSH Connections"
+msgstr "Conexiuni SSH"
+
+#: src/gtk/header-bar.ui:35 src/gtk/header-bar.ui:43
+msgid "New Connection"
+msgstr "Conexiune nouă"
+
+#: src/gtk/header-bar.ui:41
+msgid "SFTP Servers"
+msgstr "Servere SFTP"
+
+#: src/gtk/header-bar.ui:68 src/widgets/ShortcutEditor.vala:142
+msgid "Fullscreen"
+msgstr "Ecran complet"
+
+#: src/gtk/header-bar.ui:178 src/gtk/header-bar.ui:288
+msgid "Exit Fullscreen"
+msgstr "Ieșire din modul de ecran complet"
+
+#: src/gtk/header-bar.ui:193 src/gtk/header-bar.ui:303
+msgid "Menu"
+msgstr "Meniu"
+
+#: src/gtk/style-switcher.ui:17
+msgid "Use System Colors"
+msgstr "Utilizează culorile temei de sistem"
+
+#: src/gtk/style-switcher.ui:46
+msgid "Use Light Colors"
+msgstr "Utilizează culori luminoase"
+
+#: src/gtk/style-switcher.ui:74
+msgid "Use Dark Colors"
+msgstr "Utilizează culori întunecate"
+
+#: src/services/Shortcuts.vala:327
+msgid "Replace keybinding?"
+msgstr "Înlocuiți combinația de taste?"
+
+#. FIXME: `to_action` is an action identifier (i.e. win.paste). Replace it
+#. with the user-friendly action name.
+#: src/services/Shortcuts.vala:330
+#, c-format
+msgid "%s is already assigned to %s"
+msgstr "%s este deja atribuită pentru %s"
+
+#: src/utils/Constants.vala:34
+msgid "You can still access the menu by right-clicking any terminal."
+msgstr ""
+"Puteți accesa în continuare meniul făcând clic cu butonul din dreapta al "
+"mouse-ului pe orice terminal."
+
+#: src/utils/Constants.vala:36
+#, c-format
+msgid ""
+"%s uses an early Gtk 4 port of VTE as a terminal widget. While a lot of "
+"progress has been made on this port, copying has yet to be implemented. This "
+"means there's currently no way to copy text in %s."
+msgstr ""
+"%s utilizează o adaptare inițială Gtk 4 a VTE ca element de control grafic "
+"de terminal. Deși s-au înregistrat progrese semnificative în ceea ce "
+"privește această adaptare, funcția de copiere nu a fost încă implementată. "
+"Acest lucru înseamnă că, în prezent, nu există nicio modalitate de a copia "
+"text în %s."
+
+#: src/utils/Constants.vala:38
+msgid ""
+"Warning: unlimited scrollback saves content to disk, which may cause your "
+"system to run out of storage."
+msgstr ""
+"Atenție: derularea nelimitată salvează conținutul pe disc, ceea ce poate "
+"duce la epuizarea spațiului de stocare al sistemului."
+
+#: src/utils/Dialogs.vala:35
+msgid "No"
+msgstr "Nu"
+
+#: src/utils/Dialogs.vala:35
+msgid "Yes"
+msgstr "Da"
+
+#: src/utils/Dialogs.vala:36
+msgid "OK"
+msgstr "Ok"
+
+#: src/utils/Dialogs.vala:37
+msgid "Keep"
+msgstr "Păstrează"
+
+#: src/utils/Dialogs.vala:37
+msgid "Replace"
+msgstr "Înlocuiește"
+
+#: src/utils/Dialogs.vala:38
+msgid "Close"
+msgstr "Închide"
+
+#: src/utils/Dialogs.vala:119
+msgid "Close Tab?"
+msgstr "Închideți fila?"
+
+#: src/utils/Dialogs.vala:120
+msgid "Close Window?"
+msgstr "Închideți fereastra?"
+
+#: src/utils/Dialogs.vala:123
+msgid ""
+"Some commands are still running. Closing this tab will kill them and may "
+"lead to unexpected outcomes."
+msgstr ""
+"Unele comenzi sunt încă în execuție. Închiderea acestei file le va opri și "
+"poate duce la rezultate neașteptate."
+
+#: src/utils/Dialogs.vala:124
+msgid ""
+"Some commands are still running. Closing this window will kill them and may "
+"lead to unexpected outcomes."
+msgstr ""
+"Unele comenzi sunt încă în execuție. Închiderea acestei ferestre le va opri "
+"și poate duce la rezultate neașteptate."
+
+#: src/utils/Shortcuts.vala:32
+msgid "invalid keybinding"
+msgstr "combinație de taste nevalidă"
+
+#: src/widgets/AboutDialog.vala:53
+msgid "Donate"
+msgstr "Donați"
+
+#: src/widgets/AboutDialog.vala:54
+msgid "Full Changelog"
+msgstr "Jurnalul complet al modificărilor"
+
+#: src/widgets/PreferencesWindow.vala:577
+msgid "Terminal Font"
+msgstr "Font terminal"
+
+#: src/widgets/PreferencesWindow.vala:603
+msgid "Are you sure you want to reset all settings?"
+msgstr "Sunteți sigur că doriți să reinițializați toți parametrii?"
+
+#: src/widgets/PreferencesWindow.vala:647
+msgid "Reuse previous tab's directory."
+msgstr "Reutilizează directorul filei anterioare."
+
+#: src/widgets/PreferencesWindow.vala:649
+msgid "Use the current user's home as working directory."
+msgstr ""
+"Utilizează directorul personal al utilizatorului curent ca director de lucru."
+
+#: src/widgets/PreferencesWindow.vala:651
+msgid "Use a custom path as working directory."
+msgstr "Utilizați o rută personalizată ca director de lucru."
+
+#: src/widgets/ShortcutDialog.vala:46
+msgid "Enter new shortcut"
+msgstr "Introduceți o nouă combinație de taste"
+
+#: src/widgets/ShortcutDialog.vala:47
+#, c-format
+msgid "Enter new shortcut for \"%s\""
+msgstr "Introduceți o nouă combinație de taste pentru „%s”"
+
+#: src/widgets/ShortcutEditor.vala:59
+msgid "Add Keybinding"
+msgstr "Adaugă o combinație de taste"
+
+#: src/widgets/ShortcutEditor.vala:66
+msgid "Reset Keybindings"
+msgstr "Reinițializează combinațiile de taste"
+
+#: src/widgets/ShortcutEditor.vala:81
+#, c-format
+msgid "Remove %s"
+msgstr "Elimină %s"
+
+#: src/widgets/ShortcutEditor.vala:133
+msgid "Focus Next Tab"
+msgstr "Focalizează fila următoare"
+
+#: src/widgets/ShortcutEditor.vala:134
+msgid "Focus Previous Tab"
+msgstr "Focalizează fila precedentă"
+
+#: src/widgets/ShortcutEditor.vala:136
+msgid "Toggle Header Bar"
+msgstr "Activează/dezactivează bara de antet"
+
+#: src/widgets/ShortcutEditor.vala:141
+msgid "Search"
+msgstr "Caută"
+
+#: src/widgets/ShortcutEditor.vala:144
+msgid "Zoom In"
+msgstr "Mărire"
+
+#: src/widgets/ShortcutEditor.vala:145
+msgid "Zoom Out"
+msgstr "Micșorare"
+
+#: src/widgets/ShortcutEditor.vala:146
+msgid "Reset Zoom"
+msgstr "Reinițializează scalarea"
+
+#: src/widgets/ShortcutEditor.vala:152 src/widgets/ShortcutEditor.vala:153
+#: src/widgets/ShortcutEditor.vala:154 src/widgets/ShortcutEditor.vala:155
+#: src/widgets/ShortcutEditor.vala:156 src/widgets/ShortcutEditor.vala:157
+#: src/widgets/ShortcutEditor.vala:158 src/widgets/ShortcutEditor.vala:159
+#: src/widgets/ShortcutEditor.vala:160
+#, c-format
+msgid "Switch to Tab %u"
+msgstr "Schimbă la fila %u"
+
+#: src/widgets/ShortcutEditor.vala:161
+msgid "Switch to Last Tab"
+msgstr "Schimbă la ultima filă"
+
+#: src/widgets/ShortcutEditor.vala:243
+msgid "Reset All Shortcuts?"
+msgstr "Reinițializați toate combinațiile de taste pentru comenzi rapide?"
+
+#: src/widgets/ShortcutEditor.vala:244
+msgid ""
+"This will reset all shortcuts to default and overwrite your config file. "
+"This action is irreversible."
+msgstr ""
+"Aceasta va restabili toate comenzile rapide la combinațiile de taste "
+"implicite și va suprascrie fișierul de configurare. Această acțiune este "
+"ireversibilă."
+
+#: src/widgets/ShortcutEditor.vala:247
+msgid "Reset"
+msgstr "Reinițializează"
+
+#: src/widgets/TerminalTab.vala:58
+msgid "tab"
+msgstr "filă"
+
+#: src/widgets/TerminalTab.vala:109
+msgid "Error"
+msgstr "Eroare"
+
+#: src/widgets/Window.vala:623
+msgid "Set a custom title for this tab"
+msgstr "Definiți un titlu personalizat pentru acestă filă"
+
+#: src/widgets/Window.vala:626
+msgid "Enter a custom tab title"
+msgstr "Introduceți un titlu personalizat pentru filă"
+
+#: src/widgets/Window.vala:633
+msgid "Reset Title"
+msgstr "Restabilește titlul"
+
+#: src/widgets/Window.vala:634
+msgid "Set Title"
+msgstr "Stabilește titlul"
+
+#: src/widgets/Terminal.vala:631
+msgid "Command completed"
+msgstr "Comandă finalizată"
+
+#: src/CommandLine.vala:47
+msgid "Show app version"
+msgstr "Afișează versiunea aplicației"
+
+#: src/CommandLine.vala:56
+msgid "Set current working directory"
+msgstr "Stabilește directorul de lucru curent"
+
+#: src/CommandLine.vala:65
+msgid "Execute command in a terminal"
+msgstr "Execută comanda într-un terminal"
+
+#: src/CommandLine.vala:74
+msgid "Show help"
+msgstr "Afișează ajutorul"
+
+#: src/CommandLine.vala:121
+#, c-format
+msgid "Run %s --help to get help\n"
+msgstr "Rulați «%s --help» pentru a obține ajutor\n"

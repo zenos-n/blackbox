@@ -1,0 +1,1208 @@
+# Chinese translations for blackbox package.
+# Copyright (C) 2022 THE blackbox'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the blackbox package.
+# Automatically generated, 2022.
+#
+# LuoYi <langisme@qq.com>, 2022
+msgid ""
+msgstr ""
+"Project-Id-Version: blackbox\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-29 03:28-0300\n"
+"PO-Revision-Date: 2024-03-01 11:00+0000\n"
+"Last-Translator: CloneWith <clonewith@users.noreply.hosted.weblate.org>\n"
+"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
+"blackbox/blackbox/zh_Hans/>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.5-dev\n"
+
+#: data/com.raggesilver.BlackBox.desktop.in:3
+msgid "Black Box"
+msgstr "Black Box"
+
+#: data/com.raggesilver.BlackBox.desktop.in:9
+msgid "Terminal;terminal;shell;prompt;command;commandline;cmd;box;"
+msgstr ""
+"终端;命令;命令行;外壳;Terminal;terminal;shell;prompt;command;commandline;cmd;"
+"box;"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:6
+msgid "Window width"
+msgstr "窗口宽度"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:10
+msgid "Window height"
+msgstr "窗口高度"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:14
+msgid "Whether or not to remember window size"
+msgstr "是否记住窗口大小"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:24
+msgid "Font family and size"
+msgstr "字体及字体大小"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:28
+msgid "Whether the window should inherit terminal theme's colors"
+msgstr "是否将终端主题的配色集成到应用窗口"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:32
+msgid "Terminal window background opacity"
+msgstr "终端窗口背景不透明度"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:36
+msgid "Whether or not tabs should expand to fill tab bar"
+msgstr "是否将标签页扩充至整个标题栏"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:40
+msgid "Whether the headerbar should be shown or not"
+msgstr "是否显示标题栏"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:44
+msgid ""
+"If enabled, the header bar will be colored differently for root and ssh "
+"contexts"
+msgstr "如果启用，标题栏将根据root和ssh上下文显示不同的颜色"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:48
+msgid "Whether or not to display a menu button in the headerbar"
+msgstr "是否在标题栏上显示菜单按钮"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:52
+msgid "Whether or not to reserve an area for dragging the header bar"
+msgstr "是否在标题栏上预留可拖拽区域"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:56
+msgid "Whether or not to show scrollbars"
+msgstr "是否显示滚动条"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:60
+msgid "Whether overlay scrolling should be enabled"
+msgstr "是否启用叠加滚动条"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:64
+msgid "If enabled, terminals will scroll by pixels instead of rows"
+msgstr "启用后，终端将按像素滚动，而非按行滚动"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:68
+msgid "If enabled, terminals will render sixel escape sequences"
+msgstr "启用后，终端将会渲染sixel像素序列"
+
+#. 0 = Fixed size, 1 = Unlimited, 2 = Disabled
+#: data/com.raggesilver.BlackBox.gschema.xml:73
+#: src/gtk/preferences-window.ui:404
+msgid "Scrollback mode"
+msgstr "回滚模式"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:77
+msgid "Number of lines stored in scrollback"
+msgstr "回滚中存储的行数"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:81
+msgid "If enabled, floating controls will be shown in headerless mode"
+msgstr "启用后，隐藏标题栏时将显示浮动控件"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:85
+msgid ""
+"Hoverable area (in pixels) at the top of the window to trigger floating "
+"controls"
+msgstr "窗口顶部的触发区域（以像素为单位），鼠标进入此区域时将显示浮动控件"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:89
+msgid "Delay time before showing floating controls"
+msgstr "显示浮动控件之前的延迟时间"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:93
+msgid "The light color scheme for the terminal"
+msgstr "终端浅色配色方案"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:97
+msgid "The dark color scheme for the terminal"
+msgstr "终端深色配色方案"
+
+#. 0 = Follow system, 1 = Light Style, 2 = Dark Style
+#: data/com.raggesilver.BlackBox.gschema.xml:102
+msgid "Style preference"
+msgstr "风格偏好"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:106
+msgid "Show bold text in bright colors"
+msgstr "用明亮的颜色显示粗体文字"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:110
+msgid "Amount of padding around terminal widgets (top, right, bottom, left)"
+msgstr "终端部件的（上、下、左、右）内边距"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:114
+msgid "Terminal cell width"
+msgstr "单元格宽度"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:118
+msgid "Terminal cell height"
+msgstr "单元格高度"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:122
+msgid "Terminal bell"
+msgstr "终端铃声"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:126
+msgid "Cursor shape"
+msgstr "光标形状"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:130
+msgid "Whether or not the cursor should blink"
+msgstr "光标是否闪烁"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:134
+msgid "If enabled, ctrl+c and ctrl+v will work for copy/paste"
+msgstr "启用后，使用 ctrl + c 和 ctrl + v 来复制/粘贴"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:138
+msgid "Whether to spawn shell in login mode"
+msgstr "是否在登录模式下创建 shell"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:142
+msgid "Whether to use a custom command instead of the user's shell"
+msgstr "是否使用自定义命令而不是用户的 shell"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:146
+msgid "Custom command to use instead of the user's shell"
+msgstr "使用自定义命令代替用户的 shell"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:150
+msgid ""
+"Send a desktop notification when a process is completed on an unfocussed tab"
+msgstr "当未聚焦的选项卡上的进程完成时发送桌面通知"
+
+#. 0 = Previous terminal CWD, 1 = Home Directory, 2 = Custom
+#: data/com.raggesilver.BlackBox.gschema.xml:155
+msgid "Working directory mode"
+msgstr "工作目录模式"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:159
+msgid "Custom working directory for new terminals"
+msgstr "新终端的自定义工作目录"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:167
+msgid ""
+"Whether clicking next on the last search result should return to the first"
+msgstr "在最后一个搜索结果上单击“下一个结果”是否应返回到第一个搜索结果"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:171
+msgid "Whether search should be case sensitive"
+msgstr "搜索是否应区分大小写"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:175
+msgid "Whether search should only match entire words"
+msgstr "搜索是否应仅匹配完整字词"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:179
+msgid "Whether search should be performed using regular expressions"
+msgstr "是否应使用正则表达式执行搜索"
+
+#: src/gtk/shortcut-dialog.ui:6
+msgid "Edit Shortcut"
+msgstr "编辑快捷键"
+
+#: src/gtk/shortcut-dialog.ui:21 src/utils/Dialogs.vala:36
+#: src/utils/Dialogs.vala:38 src/widgets/Window.vala:617
+msgid "Cancel"
+msgstr "取消"
+
+#: src/gtk/shortcut-dialog.ui:28
+msgid "Apply"
+msgstr "确定"
+
+#: src/gtk/shortcut-dialog.ui:68
+msgid "This shortcut is already in use"
+msgstr "该快捷键已被使用"
+
+#: src/gtk/shortcut-dialog.ui:81
+msgid "Press Escape to cancel or Backspace to disable shortcut"
+msgstr "按 Escape 键取消或按 Backspace 键禁用快捷键"
+
+#: src/gtk/shortcut-editor.ui:6
+msgid "Keyboard"
+msgstr "键盘"
+
+#: src/gtk/shortcut-editor.ui:10
+msgid "Shortcuts"
+msgstr "快捷键"
+
+#: src/gtk/shortcut-editor.ui:29
+msgid "Reset All Shortcuts"
+msgstr "重置全部快捷键"
+
+#: src/gtk/shortcut-editor.ui:30
+msgid ""
+"This will reset all shortcuts to their default keybindings and overwrite "
+"your config file."
+msgstr "这将把所有快捷方式重置为默认键盘绑定，并覆盖配置文件。"
+
+#: src/gtk/shortcut-editor.ui:34
+msgid "Reset All"
+msgstr "全部重置"
+
+#: src/gtk/search-toolbar.ui:20
+msgid "Find"
+msgstr "查找"
+
+#: src/gtk/search-toolbar.ui:41
+msgid "Previous result"
+msgstr "上一个结果"
+
+#: src/gtk/search-toolbar.ui:47
+msgid "Next result"
+msgstr "下一个结果"
+
+#: src/gtk/search-toolbar.ui:89
+msgid "Search wraps around"
+msgstr "搜索范围"
+
+#: src/gtk/search-toolbar.ui:94
+msgid "Match is case sensitive"
+msgstr "匹配区分大小写"
+
+#: src/gtk/search-toolbar.ui:99
+msgid "Match entire words only"
+msgstr "只匹配整个单词"
+
+#: src/gtk/search-toolbar.ui:104
+msgid "Match using regular expression"
+msgstr "使用正则表达式进行匹配"
+
+#: src/gtk/preferences-window.ui:12
+msgid "General"
+msgstr "常规"
+
+#: src/gtk/preferences-window.ui:16
+msgid "Window"
+msgstr "窗口"
+
+#: src/gtk/preferences-window.ui:20
+msgid "Remember Window Size"
+msgstr "记住窗口大小"
+
+#: src/gtk/preferences-window.ui:30
+msgid "Theme settings have been moved to Terminal > Appearance."
+msgstr "主题设置已移至终端 > 外观。"
+
+#: src/gtk/preferences-window.ui:43
+msgid "Tabs"
+msgstr "标签"
+
+#: src/gtk/preferences-window.ui:47
+msgid "Expand Tabs"
+msgstr "展开标签页"
+
+#: src/gtk/preferences-window.ui:59
+msgid "Header Bar"
+msgstr "标题栏"
+
+#: src/gtk/preferences-window.ui:63
+msgid "Show Header Bar"
+msgstr "显示标题栏"
+
+#: src/gtk/preferences-window.ui:74
+msgid "Context Aware"
+msgstr "上下文感知"
+
+#: src/gtk/preferences-window.ui:75
+msgid ""
+"If enabled, the header bar will be colored differently when the active tab "
+"is running ssh or sudo."
+msgstr "如果启用，则当活动选项卡运行 ssh 或 sudo 时，标题栏的颜色将不同。"
+
+#: src/gtk/preferences-window.ui:86
+msgid "Show Menu Button"
+msgstr "显示菜单按钮"
+
+#: src/gtk/preferences-window.ui:97
+msgid "Drag Area"
+msgstr "拖动区域"
+
+#: src/gtk/preferences-window.ui:98
+msgid "Enable to reserve some space on the left side to drag the window."
+msgstr "允许在左侧预留一些空间，以便拖动窗口。"
+
+#: src/gtk/preferences-window.ui:108
+msgid "Floating Controls"
+msgstr "浮动控件"
+
+#: src/gtk/preferences-window.ui:111
+msgid "Show Floating Controls"
+msgstr "显示浮动控件"
+
+#: src/gtk/preferences-window.ui:112
+msgid "Show floating controls when header bar is hidden."
+msgstr "在隐藏标题栏时显示浮动控件。"
+
+#: src/gtk/preferences-window.ui:124
+msgid "Floating Controls Hover Area"
+msgstr "触发区域"
+
+#: src/gtk/preferences-window.ui:125
+msgid ""
+"Hoverable area (in pixels) at the top of the window to trigger floating "
+"controls."
+msgstr "窗口顶部的可悬停区域（以像素为单位）会触发浮动控件。"
+
+#: src/gtk/preferences-window.ui:137
+msgid "Delay Before Show Floating Controls"
+msgstr "延迟时间"
+
+#: src/gtk/preferences-window.ui:138
+msgid "Delay time (ms) before show floating controls."
+msgstr "显示浮动控件之前的延迟时间（毫秒）。"
+
+#: src/gtk/preferences-window.ui:156 src/gtk/preferences-window.ui:232
+msgid "Terminal"
+msgstr "终端"
+
+#: src/gtk/preferences-window.ui:161
+msgid "Text"
+msgstr "文本"
+
+#: src/gtk/preferences-window.ui:165
+msgid "Font"
+msgstr "字体"
+
+#: src/gtk/preferences-window.ui:177
+msgid "Cell Spacing"
+msgstr "单元格间距"
+
+#: src/gtk/preferences-window.ui:180
+msgid "Width"
+msgstr "宽度"
+
+#: src/gtk/preferences-window.ui:192
+msgid "Height"
+msgstr "高度"
+
+#: src/gtk/preferences-window.ui:207
+msgid "Bright Bold Text"
+msgstr "高亮加粗文本"
+
+#: src/gtk/preferences-window.ui:208
+msgid "Use bright colors for bold text."
+msgstr "对粗体文本使用高亮颜色。"
+
+#: src/gtk/preferences-window.ui:219
+msgid "Easy Copy &amp; Paste"
+msgstr "快捷复制粘贴"
+
+#: src/gtk/preferences-window.ui:220
+msgid "Use ctrl+c/ctrl+v for copy/paste."
+msgstr "使用快捷键 Ctrl+c/ctrl+v 来复制/粘贴。"
+
+#: src/gtk/preferences-window.ui:236
+msgid "Audible Bell"
+msgstr "铃声"
+
+#: src/gtk/preferences-window.ui:237
+msgid "If enabled, terminals might use an audible bell to indicate events."
+msgstr "如果启用，终端可能会使用声音铃声来指示事件。"
+
+#: src/gtk/preferences-window.ui:250
+msgid "Cursor"
+msgstr "光标"
+
+#: src/gtk/preferences-window.ui:251
+msgid "Adjust cursor shape and behavior."
+msgstr "调整光标形状和行为。"
+
+#: src/gtk/preferences-window.ui:254
+msgid "Cursor Shape"
+msgstr "光标形状"
+
+#: src/gtk/preferences-window.ui:258
+msgid "Block"
+msgstr "方块"
+
+#: src/gtk/preferences-window.ui:259
+msgid "IBeam"
+msgstr "I光标"
+
+#: src/gtk/preferences-window.ui:260
+msgid "Underline"
+msgstr "下划线"
+
+#: src/gtk/preferences-window.ui:268
+msgid "Cursor Blinking"
+msgstr "光标闪烁"
+
+#: src/gtk/preferences-window.ui:269
+msgid "Whether or not the cursor should blink."
+msgstr "光标是否闪烁。"
+
+#: src/gtk/preferences-window.ui:273 src/gtk/preferences-window.ui:497
+msgid "Follow System"
+msgstr "跟随系统"
+
+#: src/gtk/preferences-window.ui:274
+msgid "On"
+msgstr "开启"
+
+#: src/gtk/preferences-window.ui:275
+msgid "Off"
+msgstr "关闭"
+
+#: src/gtk/preferences-window.ui:286
+msgid "Padding"
+msgstr "内边距"
+
+#: src/gtk/preferences-window.ui:300
+msgid "Opacity"
+msgstr "不透明度"
+
+#: src/gtk/preferences-window.ui:301
+msgid "Terminal background opacity."
+msgstr "终端背景不透明度。"
+
+#: src/gtk/preferences-window.ui:323
+msgid "Working Directory"
+msgstr "当前工作目录"
+
+#: src/gtk/preferences-window.ui:332
+msgid "Previous Session"
+msgstr "上个会话"
+
+#: src/gtk/preferences-window.ui:333
+msgid "Home Directory"
+msgstr "主目录"
+
+#: src/gtk/preferences-window.ui:334
+msgid "Custom"
+msgstr "自定义"
+
+#: src/gtk/preferences-window.ui:343
+msgid "Custom Working Directory"
+msgstr "自定义工作目录"
+
+#: src/gtk/preferences-window.ui:360
+msgid "Set to user's home"
+msgstr "设置为用户主目录"
+
+#: src/gtk/preferences-window.ui:372
+msgid "Scrolling"
+msgstr "滚动"
+
+#: src/gtk/preferences-window.ui:375
+msgid "Scrollbars"
+msgstr "滚动条"
+
+#: src/gtk/preferences-window.ui:378
+msgid "Show Scrollbars"
+msgstr "显示滚动条"
+
+#: src/gtk/preferences-window.ui:389
+msgid "Use Overlay Scrolling"
+msgstr "启用叠加滚动条"
+
+#: src/gtk/preferences-window.ui:408
+msgid "Fixed Size"
+msgstr "固定大小"
+
+#: src/gtk/preferences-window.ui:409
+msgid "Unlimited"
+msgstr "无限制"
+
+#: src/gtk/preferences-window.ui:410 src/widgets/ShortcutEditor.vala:106
+msgid "Disabled"
+msgstr "禁用"
+
+#: src/gtk/preferences-window.ui:419
+msgid "Scrollback Lines"
+msgstr "回滚行"
+
+#: src/gtk/preferences-window.ui:437
+msgid "Command"
+msgstr "命令"
+
+#: src/gtk/preferences-window.ui:441
+msgid "Run Command as Login Shell"
+msgstr "以登录 Shell 身份运行命令"
+
+#: src/gtk/preferences-window.ui:452
+msgid "Use Custom Command"
+msgstr "使用自定义命令"
+
+#: src/gtk/preferences-window.ui:462
+msgid "Custom Command"
+msgstr "自定义命令"
+
+#: src/gtk/preferences-window.ui:476
+msgid "Notification on Completed Task"
+msgstr "任务完成通知"
+
+#: src/gtk/preferences-window.ui:477
+msgid ""
+"Send a desktop notification when a command is completed on an unfocussed tab."
+msgstr "当未聚焦的选项卡上完成命令时发送桌面通知。"
+
+#: src/gtk/preferences-window.ui:490
+msgid "Appearance"
+msgstr "外观"
+
+#: src/gtk/preferences-window.ui:493
+msgid "Application Style"
+msgstr "应用风格"
+
+#: src/gtk/preferences-window.ui:498
+msgid "Light"
+msgstr "明亮"
+
+#: src/gtk/preferences-window.ui:499
+msgid "Dark"
+msgstr "黑暗"
+
+#: src/gtk/preferences-window.ui:508
+msgid "Theme Integration"
+msgstr "主题集成"
+
+#: src/gtk/preferences-window.ui:509
+msgid "Paint the whole app with colors from your colorscheme."
+msgstr "使用配色方案中的颜色绘制整个应用程序。"
+
+#: src/gtk/preferences-window.ui:523
+msgid "Theme"
+msgstr "主题"
+
+#: src/gtk/preferences-window.ui:524
+msgid "Set your preferred theme for light and dark styles."
+msgstr "设置您喜欢的浅色或深色的样式主题。"
+
+#: src/gtk/preferences-window.ui:536
+msgid "Open themes folder"
+msgstr "打开主题文件夹"
+
+#: src/gtk/preferences-window.ui:544
+msgid "Get more themes online"
+msgstr "在线获取更多主题"
+
+#: src/gtk/preferences-window.ui:565
+msgid "Light Theme"
+msgstr "浅色主题"
+
+#: src/gtk/preferences-window.ui:571
+msgid "Dark Theme"
+msgstr "深色主题"
+
+#: src/gtk/preferences-window.ui:579
+msgid "Only display themes for the current style"
+msgstr "只显示当前样式的主题"
+
+#: src/gtk/preferences-window.ui:587
+msgid ""
+"To ensure readability, \"Theme Integration\" will be disabled if you select "
+"a light color scheme while using the dark app style or a dark color scheme "
+"while using the light app style."
+msgstr "为了确保可读性，如果您在使用深色应用程序风格时选择浅色方案或在使用浅色应用程"
+"序风格时选择深色方案，“主题集成”将被禁用。"
+
+#: src/gtk/preferences-window.ui:621
+msgid "Advanced"
+msgstr "高级"
+
+#: src/gtk/preferences-window.ui:625
+msgid "Experimental"
+msgstr "实验功能"
+
+#: src/gtk/preferences-window.ui:626
+msgid ""
+"Features in this section are known to be unstable. Please feel free to test "
+"and <a href=\"https://gitlab.gnome.org/raggesilver/blackbox/-/"
+"issues\">report bugs</a>."
+msgstr ""
+"这里的功能还不太稳定。请随意测试，在遇到问题时可以<a href=\"https://gitlab."
+"gnome.org/raggesilver/blackbox/-/issues\">报告 bug</a>。"
+
+#: src/gtk/preferences-window.ui:630
+msgid "Sixel Support"
+msgstr "Sixel 支持"
+
+#: src/gtk/preferences-window.ui:631
+msgid "Render sixel escape sequences."
+msgstr "渲染 Sixel 像素序列。"
+
+#: src/gtk/preferences-window.ui:645
+msgid ""
+"The VTE build you are using does not have support Sixel. Sixel is still an "
+"experimental feature in VTE. For this reason, most distros do not build VTE "
+"with Sixel support. Installing Black Box via Flatpak will enable this "
+"feature. <a href=\"https://gitlab.gnome.org/raggesilver/blackbox/-/"
+"issues/273\">See discussion in issue tracker.</a>"
+msgstr ""
+"您使用的 VTE 版本不支持 Sixel。Sixel 仍是 VTE 的一项实验功能。因此，"
+"大多数发行版在构建 VTE 时都不支持 Sixel。通过 Flatpak 安装 Black Box "
+"将启用此功能。<a href=\"https://gitlab.gnome.org/raggesilver/blackbox/-/"
+"issues/273\">请参阅问题跟踪器中的讨论。</a>"
+
+#: src/gtk/preferences-window.ui:655
+msgid "Danger Zone"
+msgstr "危险区域"
+
+#: src/gtk/preferences-window.ui:658
+msgid "Reset Preferences"
+msgstr "重置设置"
+
+#: src/gtk/preferences-window.ui:659
+msgid ""
+"This will revert all settings back to default. Your extra themes will not be "
+"removed."
+msgstr "这将把所有设置还原为默认设置。您的扩展主题不会被删除。"
+
+#: src/gtk/preferences-window.ui:664
+msgid "Reset preferences"
+msgstr "重置设置"
+
+#: src/gtk/terminal-menu.ui:20
+msgid "Open Link"
+msgstr "打开链接"
+
+#: src/gtk/terminal-menu.ui:28 src/gtk/header-bar.ui:58
+#: src/gtk/header-bar.ui:170 src/gtk/header-bar.ui:280
+#: src/widgets/ShortcutEditor.vala:136
+msgid "New Tab"
+msgstr "新建标签页"
+
+#: src/gtk/terminal-menu.ui:32 src/gtk/header-bar.ui:62
+#: src/widgets/ShortcutEditor.vala:134
+msgid "New Window"
+msgstr "新建窗口"
+
+#: src/gtk/terminal-menu.ui:55 src/widgets/ShortcutEditor.vala:138
+msgid "Copy"
+msgstr "复制"
+
+#: src/gtk/terminal-menu.ui:59
+msgid "Copy Link"
+msgstr "复制链接"
+
+#: src/gtk/terminal-menu.ui:64 src/widgets/ShortcutEditor.vala:139
+msgid "Paste"
+msgstr "粘帖"
+
+#: src/gtk/terminal-menu.ui:71 src/gtk/header-bar.ui:72
+#: src/widgets/ShortcutEditor.vala:137
+msgid "Preferences"
+msgstr "首选项"
+
+#: src/gtk/terminal-menu.ui:78 src/gtk/header-bar.ui:78
+#: src/widgets/ShortcutEditor.vala:142
+msgid "Keyboard Shortcuts"
+msgstr "键盘快捷键"
+
+#: src/gtk/terminal-menu.ui:82 src/gtk/header-bar.ui:82
+msgid "About Black Box"
+msgstr "关于 Black Box"
+
+#: src/gtk/help-overlay.ui:10
+msgctxt "shortcut window"
+msgid "Window"
+msgstr "窗口"
+
+#: src/gtk/help-overlay.ui:13
+msgctxt "shortcut window"
+msgid "New window"
+msgstr "新建窗口"
+
+#: src/gtk/help-overlay.ui:19
+msgctxt "shortcut window"
+msgid "New tab"
+msgstr "新建标签页"
+
+#: src/gtk/help-overlay.ui:25
+msgctxt "shortcut window"
+msgid "Close tab"
+msgstr "关闭标签页"
+
+#: src/gtk/help-overlay.ui:31
+msgctxt "shortcut window"
+msgid "Rename tab"
+msgstr "重命名标签页"
+
+#: src/gtk/help-overlay.ui:37
+msgctxt "shortcut window"
+msgid "Switch headbar mode"
+msgstr "切换标题栏"
+
+#: src/gtk/help-overlay.ui:43
+msgctxt "shortcut window"
+msgid "Toggle fullscreen"
+msgstr "全屏"
+
+#: src/gtk/help-overlay.ui:51
+msgctxt "shortcut window"
+msgid "Terminal"
+msgstr "终端"
+
+#: src/gtk/help-overlay.ui:54
+msgctxt "shortcut window"
+msgid "Search"
+msgstr "搜索"
+
+#: src/gtk/help-overlay.ui:60
+msgctxt "shortcut window"
+msgid "Copy"
+msgstr "复制"
+
+#: src/gtk/help-overlay.ui:66
+msgctxt "shortcut window"
+msgid "Paste"
+msgstr "粘贴"
+
+#: src/gtk/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Zoom in"
+msgstr "缩小"
+
+#: src/gtk/help-overlay.ui:78
+msgctxt "shortcut window"
+msgid "Zoom out"
+msgstr "放大"
+
+#: src/gtk/help-overlay.ui:84
+msgctxt "shortcut window"
+msgid "Reset zoom"
+msgstr "重置缩放"
+
+#: src/gtk/help-overlay.ui:92
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "导航"
+
+#: src/gtk/help-overlay.ui:95
+msgctxt "shortcut window"
+msgid "Focus next tab"
+msgstr "将焦点切换到下一个标签页"
+
+#: src/gtk/help-overlay.ui:101
+msgctxt "shortcut window"
+msgid "Focus previous tab"
+msgstr "将焦点切换到上一个标签页"
+
+#: src/gtk/help-overlay.ui:107
+msgctxt "shortcut window"
+msgid "Switch to Tab 1"
+msgstr "切换到标签页 1"
+
+#: src/gtk/help-overlay.ui:113
+msgctxt "shortcut window"
+msgid "Switch to Tab 2"
+msgstr "切换到标签页 2"
+
+#: src/gtk/help-overlay.ui:119
+msgctxt "shortcut window"
+msgid "Switch to Tab 3"
+msgstr "切换到标签页 3"
+
+#: src/gtk/help-overlay.ui:125
+msgctxt "shortcut window"
+msgid "Switch to Tab 4"
+msgstr "切换到标签页 4"
+
+#: src/gtk/help-overlay.ui:131
+msgctxt "shortcut window"
+msgid "Switch to Tab 5"
+msgstr "切换到标签页 5"
+
+#: src/gtk/help-overlay.ui:137
+msgctxt "shortcut window"
+msgid "Switch to Tab 6"
+msgstr "切换到标签页 6"
+
+#: src/gtk/help-overlay.ui:143
+msgctxt "shortcut window"
+msgid "Switch to Tab 7"
+msgstr "切换到标签页 7"
+
+#: src/gtk/help-overlay.ui:149
+msgctxt "shortcut window"
+msgid "Switch to Tab 8"
+msgstr "切换到标签页 8"
+
+#: src/gtk/help-overlay.ui:155
+msgctxt "shortcut window"
+msgid "Switch to Tab 9"
+msgstr "切换到标签页 9"
+
+#: src/gtk/help-overlay.ui:161
+msgctxt "shortcut window"
+msgid "Switch to last Tab"
+msgstr "切换到最后的标签页"
+
+#: src/gtk/help-overlay.ui:169
+msgctxt "shortcut window"
+msgid "General"
+msgstr "常规"
+
+#: src/gtk/help-overlay.ui:172
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "显示快捷键"
+
+#: src/gtk/help-overlay.ui:178
+msgctxt "shortcut window"
+msgid "Edit Preferences"
+msgstr "设置"
+
+#: src/gtk/tab-menu.ui:9
+msgid "Move Tab Left"
+msgstr "向左移动标签页"
+
+#: src/gtk/tab-menu.ui:14
+msgid "Move Tab Right"
+msgstr "向右移动标签页"
+
+#: src/gtk/tab-menu.ui:21 src/widgets/ShortcutEditor.vala:147
+#: src/widgets/Window.vala:607
+msgid "Rename Tab"
+msgstr "重命名标签页"
+
+#: src/gtk/tab-menu.ui:25
+msgid "Move Tab to New Window"
+msgstr "将标签页移至新窗口"
+
+#: src/gtk/tab-menu.ui:32 src/widgets/ShortcutEditor.vala:146
+msgid "Close Tab"
+msgstr "关闭标签页"
+
+#: src/gtk/header-bar.ui:23
+msgid "Remote Access"
+msgstr "远程访问"
+
+#: src/gtk/header-bar.ui:25
+msgid "SSH Connections"
+msgstr "SSH 连接"
+
+#: src/gtk/header-bar.ui:35 src/gtk/header-bar.ui:43
+msgid "New Connection"
+msgstr "新建连接"
+
+#: src/gtk/header-bar.ui:41
+msgid "SFTP Servers"
+msgstr "SFTP 服务器"
+
+#: src/gtk/header-bar.ui:68 src/widgets/ShortcutEditor.vala:141
+msgid "Fullscreen"
+msgstr "全屏"
+
+#: src/gtk/header-bar.ui:178 src/gtk/header-bar.ui:288
+msgid "Exit Fullscreen"
+msgstr "退出全屏"
+
+#: src/gtk/header-bar.ui:193 src/gtk/header-bar.ui:303
+msgid "Menu"
+msgstr "菜单"
+
+#: src/gtk/style-switcher.ui:17
+msgid "Use System Colors"
+msgstr "使用系统颜色"
+
+#: src/gtk/style-switcher.ui:46
+msgid "Use Light Colors"
+msgstr "使用浅色"
+
+#: src/gtk/style-switcher.ui:74
+msgid "Use Dark Colors"
+msgstr "使用深色"
+
+#: src/services/Shortcuts.vala:321
+msgid "Replace keybinding?"
+msgstr "替换键盘绑定？"
+
+#. FIXME: `to_action` is an action identifier (i.e. win.paste). Replace it
+#. with the user-friendly action name.
+#: src/services/Shortcuts.vala:324
+#, c-format
+msgid "%s is already assigned to %s"
+msgstr "%s 已分配给 %s"
+
+#: src/utils/Constants.vala:34
+msgid "You can still access the menu by right-clicking any terminal."
+msgstr "您仍然可以通过右键单击任何终端来访问菜单。"
+
+#: src/utils/Constants.vala:36
+#, c-format
+msgid ""
+"%s uses an early Gtk 4 port of VTE as a terminal widget. While a lot of "
+"progress has been made on this port, copying has yet to be implemented. This "
+"means there's currently no way to copy text in %s."
+msgstr ""
+"%s 的终端部件使用的是 VTE 向 Gtk4 迁移的早期版本，虽然 VTE 向 Gtk4 "
+"的迁移已经取得了很多进展，但复制功能还没有实现。这意味着目前无法在 %s "
+"中复制文本。"
+
+#: src/utils/Constants.vala:38
+msgid ""
+"Warning: unlimited scrollback saves content to disk, which may cause your "
+"system to run out of storage."
+msgstr "警告：无限制的回滚会将内容保存到磁盘，这可能会导致系统存储空间不足。"
+
+#: src/utils/Dialogs.vala:35
+msgid "No"
+msgstr "否"
+
+#: src/utils/Dialogs.vala:35
+msgid "Yes"
+msgstr "是"
+
+#: src/utils/Dialogs.vala:36
+msgid "OK"
+msgstr "好的"
+
+#: src/utils/Dialogs.vala:37
+msgid "Keep"
+msgstr "保持"
+
+#: src/utils/Dialogs.vala:37
+msgid "Replace"
+msgstr "替换"
+
+#: src/utils/Dialogs.vala:38
+msgid "Close"
+msgstr "关闭"
+
+#: src/utils/Dialogs.vala:120
+msgid "Close Tab?"
+msgstr "关闭标签页？"
+
+#: src/utils/Dialogs.vala:121
+msgid "Close Window?"
+msgstr "关闭窗口？"
+
+#: src/utils/Dialogs.vala:124
+msgid ""
+"Some commands are still running. Closing this tab will kill them and may "
+"lead to unexpected outcomes."
+msgstr "某些命令仍在运行。关闭此选项卡将杀死这些命令，并可能导致意想不到的结果。"
+
+#: src/utils/Dialogs.vala:125
+msgid ""
+"Some commands are still running. Closing this window will kill them and may "
+"lead to unexpected outcomes."
+msgstr "某些命令仍在运行。关闭该窗口将杀死这些命令，并可能导致意想不到的结果。"
+
+#: src/utils/Shortcuts.vala:32
+msgid "invalid keybinding"
+msgstr "无效的键绑定"
+
+#: src/widgets/AboutDialog.vala:73
+msgid "Donate"
+msgstr "捐赠"
+
+#: src/widgets/AboutDialog.vala:74
+msgid "Full Changelog"
+msgstr "完整更新日志"
+
+#: src/widgets/PreferencesWindow.vala:571
+msgid "Terminal Font"
+msgstr "终端字体"
+
+#: src/widgets/PreferencesWindow.vala:647
+msgid "Reuse previous tab's directory."
+msgstr "重新使用前一个选项卡的目录。"
+
+#: src/widgets/PreferencesWindow.vala:649
+msgid "Use the current user's home as working directory."
+msgstr "使用当前用户的主目录作为工作目录。"
+
+#: src/widgets/PreferencesWindow.vala:651
+msgid "Use a custom path as working directory."
+msgstr "使用自定义路径作为工作目录。"
+
+#: src/widgets/ShortcutDialog.vala:46
+msgid "Enter new shortcut"
+msgstr "输入新快捷方式"
+
+#: src/widgets/ShortcutDialog.vala:47
+#, c-format
+msgid "Enter new shortcut for \"%s\""
+msgstr "输入“%s”的新快捷方式"
+
+#: src/widgets/ShortcutEditor.vala:59
+msgid "Add Keybinding"
+msgstr "添加按键绑定"
+
+#: src/widgets/ShortcutEditor.vala:66
+msgid "Reset Keybindings"
+msgstr "重置按键绑定"
+
+#: src/widgets/ShortcutEditor.vala:81
+#, c-format
+msgid "Remove %s"
+msgstr "删除 %s"
+
+#: src/widgets/ShortcutEditor.vala:132
+msgid "Focus Next Tab"
+msgstr "将焦点切换到下一个标签页"
+
+#: src/widgets/ShortcutEditor.vala:133
+msgid "Focus Previous Tab"
+msgstr "将焦点切换到上一个标签页"
+
+#: src/widgets/ShortcutEditor.vala:135
+msgid "Toggle Header Bar"
+msgstr "切换标题栏"
+
+#: src/widgets/ShortcutEditor.vala:140
+msgid "Search"
+msgstr "搜索"
+
+#: src/widgets/ShortcutEditor.vala:143
+msgid "Zoom In"
+msgstr "放大"
+
+#: src/widgets/ShortcutEditor.vala:144
+msgid "Zoom Out"
+msgstr "缩小"
+
+#: src/widgets/ShortcutEditor.vala:145
+msgid "Reset Zoom"
+msgstr "重置缩放"
+
+#: src/widgets/ShortcutEditor.vala:149 src/widgets/ShortcutEditor.vala:150
+#: src/widgets/ShortcutEditor.vala:151 src/widgets/ShortcutEditor.vala:152
+#: src/widgets/ShortcutEditor.vala:153 src/widgets/ShortcutEditor.vala:154
+#: src/widgets/ShortcutEditor.vala:155 src/widgets/ShortcutEditor.vala:156
+#: src/widgets/ShortcutEditor.vala:157
+#, c-format
+msgid "Switch to Tab %u"
+msgstr "切换到标签页 %u"
+
+#: src/widgets/ShortcutEditor.vala:158
+msgid "Switch to Last Tab"
+msgstr "切换到最后的标签页"
+
+#: src/widgets/ShortcutEditor.vala:242
+msgid "Reset all Shortcuts?"
+msgstr "重置所有快捷方式？"
+
+#: src/widgets/ShortcutEditor.vala:243
+msgid ""
+"This will reset all shortcuts to default and overwrite your config file. "
+"This action is irreversible."
+msgstr "这将把所有快捷方式重置为默认设置，并覆盖配置文件。此操作不可逆。"
+
+#: src/widgets/TerminalTab.vala:57
+msgid "tab"
+msgstr "标签页"
+
+#: src/widgets/TerminalTab.vala:107
+msgid "Error"
+msgstr "错误"
+
+#: src/widgets/Window.vala:608
+msgid "Set a custom title for this tab"
+msgstr "为该标签页设置自定义标题"
+
+#: src/widgets/Window.vala:611
+msgid "Enter a custom tab title"
+msgstr "输入自定义标签页标题"
+
+#: src/widgets/Window.vala:618
+msgid "Reset Title"
+msgstr "重置标题"
+
+#: src/widgets/Window.vala:619
+msgid "Set Title"
+msgstr "设置标题"
+
+#: src/widgets/Terminal.vala:500
+msgid "Command completed"
+msgstr "命令补全"
+
+#: src/CommandLine.vala:47
+msgid "Show app version"
+msgstr "显示应用版本"
+
+#: src/CommandLine.vala:56
+msgid "Set current working directory"
+msgstr "设置当前工作目录"
+
+#: src/CommandLine.vala:65
+msgid "Execute command in a terminal"
+msgstr "在终端内运行命令"
+
+#: src/CommandLine.vala:74
+msgid "Show help"
+msgstr "显示帮助信息"
+
+#: src/CommandLine.vala:121
+#, c-format
+msgid "Run %s --help to get help\n"
+msgstr "运行 %s --help 以显示帮助信息\n"
+
+#, fuzzy
+#~ msgid "Whether or not to display borders around the window and tabs"
+#~ msgstr "在否在标题栏上显示菜单按钮"
+
+#~ msgid "If enabled, a single open tab will blend with the headerbar color"
+#~ msgstr "启用后，单个打开的标签页将与标题栏颜色混合"
+
+#, fuzzy
+#~ msgid "Show Borders"
+#~ msgstr "显示标题栏"
+
+#, fuzzy
+#~ msgid "Style window with terminal theme colors."
+#~ msgstr "是否将终端主题的配色集成到应用窗口"
+
+#, fuzzy
+#~ msgid "Style Preference"
+#~ msgstr "首选项"
+
+#~ msgid "Single Tab Mode"
+#~ msgstr "单标签页模式"
+
+#~ msgid "Hide Single Tab"
+#~ msgstr "隐藏单个标签页"
+
+#~ msgid ""
+#~ "Replace tab bar with a title label when a single tab is open. Easier to "
+#~ "drag the window."
+#~ msgstr "在只有一个标签页时将标签页替换成标题栏文本，以更方便地拖拽窗口"
+
+#~ msgid "Stealth Single Tab"
+#~ msgstr "隐藏单个标签页"
+
+#, fuzzy
+#~ msgid "Blend single tab with header bar."
+#~ msgstr "将单个标签页的颜色与标题栏混合"
+
+#~ msgid "About"
+#~ msgstr "关于"
+
+#~ msgid "Show headerbar"
+#~ msgstr "显示标题栏"
+
+#~ msgid "Pixel Scrolling"
+#~ msgstr "像素滚动"
+
+#~ msgid ""
+#~ "Scroll by pixel units instead of scrolling by lines. \"Show scrollbars\" "
+#~ "must be enabled."
+#~ msgstr "按像素单位滚动，而不是按行滚动。 必须启用 \"显示滚动条\" "
+
+#~ msgid "Help"
+#~ msgstr "帮助"
+
+#~ msgid "Tabs and Headerbar"
+#~ msgstr "标签页与标题栏"
+
+#, c-format
+#~ msgid ""
+#~ "Open <a href=\"file://%s\">themes folder</a>. Get more themes <a "
+#~ "href=\"%s\">online</a>."
+#~ msgstr ""
+#~ "打开<a href=\"file://%s\">主题文件夹</a>。获取更多<a href=\"%s\">在线</a>"
+#~ "主题"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Quit"
+#~ msgstr "退出"

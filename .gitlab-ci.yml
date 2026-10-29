@@ -1,0 +1,42 @@
+stages:
+  - build
+
+.build:
+  stage: build
+  image: fedora:latest
+  variables:
+    MESON_FLAGS: "-Ddevel=true"
+  before_script:
+    - dnf install -y
+        vala
+        meson
+        ninja-build
+        gcc
+        gettext
+        glib2-devel
+        gtk4-devel
+        libadwaita-devel
+        vte291-gtk4-devel
+        json-glib-devel
+        pcre2-devel
+        libxml2-devel
+        librsvg2-devel
+        libgee-devel
+        graphene-devel
+  script:
+    - meson setup builddir $MESON_FLAGS
+    - meson compile -C builddir
+    - meson test -C builddir
+  rules:
+    - if: $CI_COMMIT_TAG
+      variables:
+        MESON_FLAGS: ""
+    - when: always
+
+build-x86_64:
+  extends: .build
+
+build-aarch64:
+  extends: .build
+  tags:
+    - aarch64

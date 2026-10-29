@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0" />
+  <requires lib="libadwaita" version="1.0" />
+  <template class="TerminalPreferencesWindow" parent="AdwPreferencesDialog">
+    <property name="content-width">640</property>
+    <property name="content-height">800</property>
+    <child>
+      <object class="AdwPreferencesPage">
+        <property name="name">general</property>
+        <property name="title" translatable="yes">General</property>
+        <property name="icon-name">settings-symbolic</property>
+        <child>
+          <object class="AdwPreferencesGroup">
+            <property name="title" translatable="yes">Window</property>
+            <child>
+              <object class="AdwSwitchRow" id="remember_window_size_switch_row">
+                <property name="title" translatable="yes">Remember Window Size</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="label" translatable="yes">Theme settings have been moved to Terminal &gt; Appearance.</property>
+                <property name="wrap">true</property>
+                <property name="xalign">0</property>
+                <property name="margin-top">16</property>
+                <style>
+                  <class name="dim-label" />
+                </style>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="AdwPreferencesGroup">
+            <property name="title" translatable="yes">Tabs</property>
+            <child>
+              <object class="AdwSwitchRow" id="fill_tabs_switch_row">
+                <property name="title" translatable="yes">Expand Tabs</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="AdwPreferencesGroup">
+            <property name="title" translatable="yes">Header Bar</property>
+            <child>
+              <object class="AdwSwitchRow" id="show_headerbar_switch_row">
+                <property name="title" translatable="yes">Show Header Bar</property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwSwitchRow" id="context_aware_header_bar_switch_row">
+                <property name="title" translatable="yes">Context Aware</property>
+                <property name="subtitle" translatable="yes">If enabled, the header bar will be colored differently when the active tab is running ssh or sudo.</property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwSwitchRow" id="show_menu_button_switch_row">
+                <property name="title" translatable="yes">Show Menu Button</property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwSwitchRow" id="drag_area_switch_row">
+                <property name="title" translatable="yes">Drag Area</property>
+                <property name="subtitle" translatable="yes">Enable to reserve some space on the left side to drag the window.</property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwExpanderRow" id="floating_controls_expander_row">
+                <property name="title" translatable="yes">Floating Controls</property>
+                <child>
+                  <object class="AdwSwitchRow" id="floating_controls_switch_row">
+                    <property name="title" translatable="yes">Show Floating Controls</property>
+                    <property name="subtitle" translatable="yes">Show floating controls when header bar is hidden.</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwSpinRow">
+                    <property name="sensitive" bind-source="floating_controls_switch_row" bind-property="active" bind-flags="sync-create" />
+                    <property name="title" translatable="yes">Floating Controls Hover Area</property>
+                    <property name="subtitle" translatable="yes">Hoverable area (in pixels) at the top of the window to trigger floating controls.</property>
+                    <property name="adjustment">floating_controls_hover_area_adjustment</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwSpinRow">
+                    <property name="sensitive" bind-source="floating_controls_switch_row" bind-property="active" bind-flags="sync-create" />
+                    <property name="title" translatable="yes">Delay Before Show Floating Controls</property>
+                    <property name="subtitle" translatable="yes">Delay time (ms) before show floating controls.</property>
+                    <property name="adjustment">floating_controls_delay_adjustment</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="AdwPreferencesPage">
+        <property name="name">terminal</property>
+        <property name="title" translatable="yes">Terminal</property>
+        <property name="icon-name">utilities-terminal-symbolic</property>
+        <!-- Text section -->
+        <child>
+          <object class="AdwPreferencesGroup">
+            <property name="title" translatable="yes">Text</property>
+            <child>
+              <object class="AdwActionRow">
+                <property name="activatable">True</property>
+                <property name="title" translatable="yes">Font</property>
+                <signal name="activated" handler="on_font_row_activated" swapped="no" />
+                <child>
+                  <object class="GtkLabel" id="font_label">
+                    <property name="valign">center</property>
+                    <property name="label" translatable="no">Monospace 10</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="AdwExpanderRow" id="cell_spacing_expander_row">
+                <property name="title" translatable="yes">Cell Spacing</property>
+                <child>
+                  <object class="AdwSpinRow">
+                    <property name="title" translatable="yes">Width</property>
+                    <property name="digits">2</property>
+                    <property name="adjustment">cell_width_spacing_adjustment</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwSpinRow">
+                    <property name="title" translatable="yes">Height</property>
+                    <property name="digits">2</property>
+                    <property name="adjustment">cell_height_spacing_adjustment</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="AdwSwitchRow" id="bold_is_bright_switch_row">
+                <property name="title" translatable="yes">Bright Bold Text</property>
+                <property name="subtitle" translatable="yes">Use bright colors for bold text.</property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwSwitchRow" id="easy_copy_paste_switch_row">
+                <property name="title" translatable="yes">Easy Copy &amp;amp; Paste</property>
+                <property name="subtitle" translatable="yes">Use ctrl+c/ctrl+v for copy/paste.</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="AdwPreferencesGroup">
+            <property name="title" translatable="yes">Terminal</property>
+
+            <child>
+              <object class="AdwSwitchRow" id="terminal_bell_switch_row">
+                <property name="title" translatable="yes">Audible Bell</property>
+                <property name="subtitle" translatable="yes">If enabled, terminals might use an audible bell to indicate events.</property>
+              </object>
+            </child>
+
+
+            <child>
+              <object class="AdwExpanderRow">
+                <property name="title" translatable="yes">Cursor</property>
+                <property name="subtitle" translatable="yes">Adjust cursor shape and behavior.</property>
+                <child>
+                  <object class="AdwComboRow" id="cursor_shape_combo_row">
+                    <property name="title" translatable="yes">Cursor Shape</property>
+                    <property name="model">
+                      <object class="GtkStringList">
+                        <items>
+                          <item translatable="yes">Block</item>
+                          <item translatable="yes">IBeam</item>
+                          <item translatable="yes">Underline</item>
+                        </items>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwComboRow" id="cursor_blink_mode_combo_row">
+                    <property name="title" translatable="yes">Cursor Blinking</property>
+                    <property name="subtitle" translatable="yes">Whether or not the cursor should blink.</property>
+                    <property name="model">
+                      <object class="GtkStringList">
+                        <items>
+                          <item translatable="yes">Follow System</item>
+                          <item translatable="yes">On</item>
+                          <item translatable="yes">Off</item>
+                        </items>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwSwitchRow" id="hide_cursor_while_typing_row">
+                    <property name="title" translatable="yes">Autohide</property>
+                    <property name="subtitle" translatable="yes">Enable to hide the cursor while typing</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+
+            <child>
+              <object class="AdwSpinRow" id="padding_spin_row">
+                <property name="title" translatable="yes">Padding</property>
+                <property name="adjustment">padding_spin_row_adjustment</property>
+                <property name="climb-rate">1</property>
+                <property name="numeric">1</property>
+                <property name="snap-to-ticks">True</property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwSpinRow" id="opacity_spin_row">
+                <property name="title" translatable="yes">Opacity</property>
+                <property name="subtitle" translatable="yes">Terminal background opacity.</property>
+                <property name="adjustment">opacity_spin_row_adjustment</property>
+                <property name="climb-rate">1</property>
+                <property name="numeric">1</property>
+                <property name="snap-to-ticks">False</property>
+                <property name="valign">center</property>
+              </object>
+            </child>
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwPreferencesGroup">
+            <!-- This is too repetitive. Keep commented for now. -->
+            <!-- <property name="title" translatable="yes">Working Directory</property> -->
+            <!-- <property name="description" translatable="yes">Set a directory to be used for new tabs and windows.</property> -->
+            <child>
+              <object class="AdwComboRow" id="working_directory_mode_combo_row">
+                <property name="title" translatable="yes">Working Directory</property>
+                <binding name="subtitle">
+                  <closure type="gchararray" function="explain_working_directory_mode">
+                    <lookup name="selected">working_directory_mode_combo_row</lookup>
+                  </closure>
+                </binding>
+                <property name="model">
+                  <object class="GtkStringList">
+                    <items>
+                      <item translatable="yes">Previous Session</item>
+                      <item translatable="yes">Home Directory</item>
+                      <item translatable="yes">Custom</item>
+                    </items>
+                  </object>
+                </property>
+              </object>
+            </child>
+
+            <child>
+              <object class="AdwEntryRow" id="custom_working_directory_entry_row">
+                <property name="title" translatable="yes">Custom Working Directory</property>
+                <binding name="visible">
+                  <closure type="gboolean" function="show_custom_working_directory_entry_row">
+                    <lookup name="selected">working_directory_mode_combo_row</lookup>
+                  </closure>
+                </binding>
+
+                <child>
+                  <object class="GtkButton">
+                    <property name="valign">center</property>
+                    <signal name="clicked" handler="set_custom_working_dir_to_home" swapped="no" />
+                    <style>
+                      <class name="flat" />
+                    </style>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="icon-name">user-home-symbolic</property>
+                        <property name="tooltip-text" translatable="yes">Set to user's home</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwPreferencesGroup">
+            <property name="title" translatable="yes">Scrolling</property>
+            <child>
+              <object class="AdwExpanderRow" id="scrollbars_expander_row">
+                <property name="title" translatable="yes">Scrollbars</property>
+                <child>
+                  <object class="AdwSwitchRow" id="show_scrollbars_switch_row">
+                    <property name="title" translatable="yes">Show Scrollbars</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwSwitchRow" id="use_overlay_scrolling_switch_row">
+                    <property name="title" translatable="yes">Use Overlay Scrolling</property>
+                    <property name="sensitive" bind-source="show_scrollbars_switch_row" bind-property="active" bind-flags="sync-create" />
+                  </object>
+                </child>
+              </object>
+            </child>
+
+            <child>
+              <object class="AdwComboRow" id="scrollback_mode_combo_row">
+                <property name="title" translatable="yes">Scrollback mode</property>
+                <property name="model">
+                  <object class="GtkStringList">
+                    <items>
+                      <item translatable="yes">Fixed Size</item>
+                      <item translatable="yes">Unlimited</item>
+                      <item translatable="yes">Disabled</item>
+                    </items>
+                  </object>
+                </property>
+              </object>
+            </child>
+
+            <child>
+              <object class="AdwSpinRow" id="custom_scrollback_spin_row">
+                <property name="title" translatable="yes">Scrollback Lines</property>
+                <property name="visible" bind-source="TerminalPreferencesWindow" bind-property="show-custom-scrollback-row" bind-flags="sync-create" />
+                <property name="width-chars">6</property>
+                <property name="adjustment">custom_scrollback_adjustment</property>
+              </object>
+            </child>
+
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwPreferencesGroup">
+            <property name="title" translatable="yes">Command</property>
+            <child>
+              <object class="AdwSwitchRow" id="run_command_as_login_switch_row">
+                <property name="title" translatable="yes">Run Command as Login Shell</property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwSwitchRow" id="use_custom_shell_command_switch_row">
+                <property name="title" translatable="yes">Use Custom Command</property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwEntryRow" id="custom_command_entry_row">
+                <property name="title" translatable="yes">Custom Command</property>
+              </object>
+            </child>
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwPreferencesGroup">
+            <!-- This is too repetitive. Keep commented for now. -->
+            <!-- <property name="title" translatable="yes">Desktop Integration</property> -->
+            <!-- <property name="description" translatable="yes">Integrate Black Box with your desktop environment.</property> -->
+            <child>
+              <object class="AdwSwitchRow" id="notify_process_completion_switch_row">
+                <property name="title" translatable="yes">Notification on Completed Task</property>
+                <property name="subtitle" translatable="yes">Send a desktop notification when a command is completed on an unfocussed tab.</property>
+              </object>
+            </child>
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwPreferencesGroup">
+            <property name="title" translatable="yes">Appearance</property>
+            <child>
+              <object class="AdwComboRow" id="style_preference_combo_row">
+                <property name="title" translatable="yes">Application Style</property>
+                <property name="model">
+                  <object class="GtkStringList">
+                    <items>
+                      <item translatable="yes">Follow System</item>
+                      <item translatable="yes">Light</item>
+                      <item translatable="yes">Dark</item>
+                    </items>
+                  </object>
+                </property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwSwitchRow" id="pretty_switch_row">
+                <property name="title" translatable="yes">Theme Integration</property>
+                <property name="subtitle" translatable="yes">Paint the whole app with colors from your colorscheme.</property>
+              </object>
+            </child>
+          </object>
+        </child>
+
+
+        <child>
+          <object class="AdwPreferencesGroup">
+            <property name="title" translatable="yes">Theme</property>
+            <property name="description" translatable="yes">Set your preferred theme for light and dark styles.</property>
+            <child type="header-suffix">
+              <object class="GtkBox">
+                <property name="valign">center</property>
+                <property name="halign">end</property>
+                <style>
+                  <class name="linked" />
+                  <class name="suggested-action" />
+                </style>
+                <child>
+                  <object class="GtkButton">
+                    <property name="icon-name">folder-symbolic</property>
+                    <property name="tooltip-text" translatable="yes">Open themes folder</property>
+                    <signal name="clicked" handler="on_open_themes_folder" swapped="no" />
+                    <style />
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkButton">
+                    <property name="icon-name">web-browser-symbolic</property>
+                    <property name="tooltip-text" translatable="yes">Get more themes online</property>
+                    <signal name="clicked" handler="on_get_more_themes_online" swapped="no" />
+                    <style />
+                  </object>
+                </child>
+              </object>
+            </child>
+
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <property name="spacing">15</property>
+                <child>
+                  <object class="GtkBox">
+                    <property name="hexpand">True</property>
+                    <property name="homogeneous">True</property>
+                    <style>
+                      <class name="linked" />
+                    </style>
+                    <child>
+                      <object class="GtkToggleButton" id="light_theme_toggle">
+                        <property name="label" translatable="yes">Light Theme</property>
+                        <property name="active">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkToggleButton" id="dark_theme_toggle">
+                        <property name="label" translatable="yes">Dark Theme</property>
+                        <property name="group">light_theme_toggle</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkCheckButton" id="filter_themes_check_button">
+                    <property name="label" translatable="yes">Only display themes for the current style</property>
+                    <property name="active">True</property>
+                    <property name="halign">start</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="xalign">0</property>
+                    <property name="label" translatable="yes">To ensure readability, "Theme Integration" will be disabled if you select a light color scheme while using the dark app style or a dark color scheme while using the light app style.</property>
+                    <property name="wrap">True</property>
+                    <property name="visible" bind-source="filter_themes_check_button" bind-property="active" bind-flags="sync-create|invert-boolean" />
+                    <style>
+                      <class name="warning" />
+                    </style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkFlowBox" id="preview_flow_box">
+                    <property name="hexpand">True</property>
+                    <property name="column-spacing">12</property>
+                    <property name="row-spacing">12</property>
+                    <property name="max-children-per-line">4</property>
+                    <property name="max-children-per-line">4</property>
+                    <property name="selection-mode">none</property>
+                    <property name="homogeneous">True</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+
+    <child>
+      <object class="TerminalShortcutEditor" id="shortcut_editor">
+      </object>
+    </child>
+    <child>
+      <object class="AdwPreferencesPage">
+        <property name="name">advanced</property>
+        <property name="title" translatable="yes">Advanced</property>
+        <property name="icon-name">applications-science-symbolic</property>
+        <child>
+          <object class="AdwPreferencesGroup">
+            <property name="title" translatable="yes">Experimental</property>
+            <property name="description" translatable="yes">Features in this section are known to be unstable. Please feel free to test and &lt;a href=&quot;https://gitlab.gnome.org/raggesilver/blackbox/-/issues&quot;&gt;report bugs&lt;/a&gt;.</property>
+            <child>
+              <object class="AdwSwitchRow" id="use_sixel_switch_row">
+                <property name="title" translatable="yes">Sixel Support</property>
+                <property name="subtitle" translatable="yes">Render sixel escape sequences.</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel" id="no_sixel_support_label">
+                <property name="visible">False</property>
+                <property name="wrap">True</property>
+                <property name="margin-top">6</property>
+                <property name="use-markup">True</property>
+                <property name="label" translatable="yes">The VTE build you are using does not support Sixel. Sixel is still an experimental feature in VTE. For this reason, most distros do not build VTE with Sixel support. Installing Black Box via Flatpak will enable this feature. &lt;a href=&quot;https://gitlab.gnome.org/raggesilver/blackbox/-/issues/273&quot;&gt;See discussion in issue tracker.&lt;/a&gt;</property>
+                <style>
+                  <class name="caption" />
+                </style>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="AdwPreferencesGroup">
+            <property name="title" translatable="yes">Danger Zone</property>
+            <child>
+              <object class="AdwActionRow">
+                <property name="title" translatable="yes">Reset Preferences</property>
+                <property name="subtitle" translatable="yes">This will revert all settings back to default. Your extra themes will not be removed.</property>
+                <child>
+                  <object class="GtkButton" id="reset_all_button">
+                    <property name="valign">center</property>
+                    <property name="halign">end</property>
+                    <property name="label" translatable="yes">Reset preferences</property>
+                    <signal name="clicked" handler="on_reset_request" swapped="no" />
+                    <style>
+                      <class name="destructive-action" />
+                    </style>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+  <object class="GtkAdjustment" id="floating_controls_hover_area_adjustment">
+    <property name="lower">2</property>
+    <property name="upper">100</property>
+    <property name="step-increment">1</property>
+  </object>
+  <object class="GtkAdjustment" id="floating_controls_delay_adjustment">
+    <property name="lower">100</property>
+    <property name="upper">5000</property>
+    <property name="step-increment">50</property>
+  </object>
+  <object class="GtkAdjustment" id="cell_width_spacing_adjustment">
+    <property name="lower">1</property>
+    <property name="upper">2</property>
+    <property name="step-increment">0.05</property>
+  </object>
+  <object class="GtkAdjustment" id="cell_height_spacing_adjustment">
+    <property name="lower">1</property>
+    <property name="upper">2</property>
+    <property name="step-increment">0.05</property>
+  </object>
+  <object class="GtkAdjustment" id="padding_spin_row_adjustment">
+    <property name="upper">100</property>
+    <property name="step-increment">1</property>
+  </object>
+  <object class="GtkAdjustment" id="opacity_spin_row_adjustment">
+    <property name="lower">0</property>
+    <property name="upper">100</property>
+    <property name="step-increment">1</property>
+  </object>
+  <object class="GtkAdjustment" id="custom_scrollback_adjustment">
+    <property name="step-increment">1</property>
+  </object>
+</interface>
+

@@ -1,0 +1,1247 @@
+# Spanish translations for blackbox package.
+# Copyright (C) 2022 THE blackbox'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the blackbox package.
+# Automatically generated, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: blackbox\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-29 03:28-0300\n"
+"PO-Revision-Date: 2026-03-07 11:09+0000\n"
+"Last-Translator: Deleted User <noreply+48943@weblate.org>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/blackbox/"
+"blackbox/es/>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.17-dev\n"
+
+#: data/com.raggesilver.BlackBox.desktop.in:3
+msgid "Black Box"
+msgstr "Black Box"
+
+#: data/com.raggesilver.BlackBox.desktop.in:9
+msgid "Terminal;terminal;shell;prompt;command;commandline;cmd;box;"
+msgstr ""
+"Terminal;terminal;shell;prompt;command;commandline;cmd;box;comando;línea;consola;caja;"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:6
+msgid "Window width"
+msgstr "Ancho de ventana"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:10
+msgid "Window height"
+msgstr "Alto de ventana"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:14
+msgid "Whether or not to remember window size"
+msgstr "Recordar o no el tamaño de la ventana"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:24
+msgid "Font family and size"
+msgstr "Tamaño y fuentes"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:28
+msgid "Whether the window should inherit terminal theme's colors"
+msgstr "Si la ventana debe heredar los colores del tema del terminal"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:32
+msgid "Terminal window background opacity"
+msgstr "Opacidad del fondo de la ventana de terminal"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:36
+msgid "Whether or not tabs should expand to fill tab bar"
+msgstr "Si las pestañas deben expandirse o no para llenar la barra de pestañas"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:40
+msgid "Whether the headerbar should be shown or not"
+msgstr "Si la barra de encabezado debe mostrarse o no"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:44
+msgid ""
+"If enabled, the header bar will be colored differently for root and ssh "
+"contexts"
+msgstr ""
+"Si está habilitado, la barra de encabezado tendrá un color diferente para "
+"los contextos root y ssh"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:48
+msgid "Whether or not to display a menu button in the headerbar"
+msgstr "Mostrar o no un botón de menú en la barra de encabezado"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:52
+msgid "Whether or not to reserve an area for dragging the header bar"
+msgstr "Reservar o no un área para arrastrar la barra del encabezado"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:56
+msgid "Whether or not to show scrollbars"
+msgstr "Mostrar o no las barras de desplazamiento"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:60
+msgid "Whether overlay scrolling should be enabled"
+msgstr "Si se debe activar el desplazamiento superpuesto"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:64
+msgid "If enabled, terminals will scroll by pixels instead of rows"
+msgstr ""
+"Si se activa, los terminales se desplazarán por píxeles en lugar de por filas"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:68
+msgid "If enabled, terminals will render sixel escape sequences"
+msgstr "Si se activa, los terminales mostrarán las secuencias de escape sixel"
+
+#. 0 = Fixed size, 1 = Unlimited, 2 = Disabled
+#: data/com.raggesilver.BlackBox.gschema.xml:73
+#: src/gtk/preferences-window.ui:404
+msgid "Scrollback mode"
+msgstr "Modo de retroceso"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:77
+msgid "Number of lines stored in scrollback"
+msgstr "Número de líneas almacenadas en el barrido de la pantalla"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:81
+msgid "If enabled, floating controls will be shown in headerless mode"
+msgstr ""
+"Si se activa, los controles flotantes se mostrarán en modo sin encabezado"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:85
+msgid ""
+"Hoverable area (in pixels) at the top of the window to trigger floating "
+"controls"
+msgstr ""
+"Área de desplazamiento (en píxeles) en la parte superior de la ventana para "
+"activar los controles flotantes"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:89
+msgid "Delay time before showing floating controls"
+msgstr "Tiempo de retardo antes de mostrar los controles flotantes"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:93
+msgid "The light color scheme for the terminal"
+msgstr "El esquema de color claro para el terminal"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:97
+msgid "The dark color scheme for the terminal"
+msgstr "El esquema de color oscuro para el terminal"
+
+#. 0 = Follow system, 1 = Light Style, 2 = Dark Style
+#: data/com.raggesilver.BlackBox.gschema.xml:102
+msgid "Style preference"
+msgstr "Preferencia de estilo"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:106
+msgid "Show bold text in bright colors"
+msgstr "Mostrar el texto en negrita en colores brillantes"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:110
+msgid "Amount of padding around terminal widgets (top, right, bottom, left)"
+msgstr ""
+"Cantidad de relleno alrededor de los widgets del terminal (arriba, derecha, "
+"abajo, izquierda)"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:114
+msgid "Terminal cell width"
+msgstr "Ancho de celda del terminal"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:118
+msgid "Terminal cell height"
+msgstr "Alto de celda del terminal"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:122
+msgid "Terminal bell"
+msgstr "Campana de terminal"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:126
+msgid "Cursor shape"
+msgstr "Forma del cursor"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:130
+msgid "Whether or not the cursor should blink"
+msgstr "Si el cursor debería parpadear o no"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:134
+msgid "If enabled, ctrl+c and ctrl+v will work for copy/paste"
+msgstr "Si se activa, ctrl+c y ctrl+v funcionarán para copiar/pegar"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:138
+msgid "Whether to spawn shell in login mode"
+msgstr "Si se genera el intérprete de comandos en el modo de inicio de sesión"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:142
+msgid "Whether to use a custom command instead of the user's shell"
+msgstr "Si se usa un comando personalizado en lugar del shell del usuario"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:146
+msgid "Custom command to use instead of the user's shell"
+msgstr "Comando personalizado para usar en lugar del shell del usuario"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:150
+msgid ""
+"Send a desktop notification when a process is completed on an unfocussed tab"
+msgstr ""
+"Mandar una notificación de escritorio cuando un proceso sea completado en "
+"una pestaña desatendida"
+
+#. 0 = Previous terminal CWD, 1 = Home Directory, 2 = Custom
+#: data/com.raggesilver.BlackBox.gschema.xml:155
+msgid "Working directory mode"
+msgstr "Modo del directorio de trabajo"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:159
+msgid "Custom working directory for new terminals"
+msgstr "Directorio de trabajo personalizado para nuevos terminales"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:167
+msgid ""
+"Whether clicking next on the last search result should return to the first"
+msgstr ""
+"Si al hacer clic en siguiente en el último resultado de la búsqueda se debe "
+"volver al primero"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:171
+msgid "Whether search should be case sensitive"
+msgstr "Si la búsqueda debe distinguir entre mayúsculas y minúsculas"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:175
+msgid "Whether search should only match entire words"
+msgstr "Si la búsqueda debe coincidir sólo con palabras enteras"
+
+#: data/com.raggesilver.BlackBox.gschema.xml:179
+msgid "Whether search should be performed using regular expressions"
+msgstr "Si la búsqueda debe realizarse mediante expresiones regulares"
+
+#: src/gtk/shortcut-dialog.ui:6
+msgid "Edit Shortcut"
+msgstr "Editar atajos"
+
+#: src/gtk/shortcut-dialog.ui:21 src/utils/Dialogs.vala:36
+#: src/utils/Dialogs.vala:38 src/widgets/Window.vala:617
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: src/gtk/shortcut-dialog.ui:28
+msgid "Apply"
+msgstr "Aplicar"
+
+#: src/gtk/shortcut-dialog.ui:68
+msgid "This shortcut is already in use"
+msgstr "Este atajo ya está en uso"
+
+#: src/gtk/shortcut-dialog.ui:81
+msgid "Press Escape to cancel or Backspace to disable shortcut"
+msgstr "Presiona Esc para cancelar o Retroceso para inhabilitar el atajo"
+
+#: src/gtk/shortcut-editor.ui:6
+msgid "Keyboard"
+msgstr "Teclado"
+
+#: src/gtk/shortcut-editor.ui:10
+msgid "Shortcuts"
+msgstr "Atajos"
+
+#: src/gtk/shortcut-editor.ui:29
+msgid "Reset All Shortcuts"
+msgstr "Restablecer todos los atajos"
+
+#: src/gtk/shortcut-editor.ui:30
+msgid ""
+"This will reset all shortcuts to their default keybindings and overwrite "
+"your config file."
+msgstr ""
+"Esto restablecerá todos los accesos directos a sus combinaciones de teclas "
+"predeterminadas y sobrescribirá su archivo de configuración."
+
+#: src/gtk/shortcut-editor.ui:34
+msgid "Reset All"
+msgstr "Restaurar todo"
+
+#: src/gtk/search-toolbar.ui:20
+msgid "Find"
+msgstr "Encontrar"
+
+#: src/gtk/search-toolbar.ui:41
+msgid "Previous result"
+msgstr "Resultado anterior"
+
+#: src/gtk/search-toolbar.ui:47
+msgid "Next result"
+msgstr "Resultado siguiente"
+
+#: src/gtk/search-toolbar.ui:89
+msgid "Search wraps around"
+msgstr "La búsqueda envuelve"
+
+#: src/gtk/search-toolbar.ui:94
+msgid "Match is case sensitive"
+msgstr "Distinguir entre mayúsculas y minúsculas"
+
+#: src/gtk/search-toolbar.ui:99
+msgid "Match entire words only"
+msgstr "Solo buscar palabras enteras"
+
+#: src/gtk/search-toolbar.ui:104
+msgid "Match using regular expression"
+msgstr "Emparejar usando expresión regular"
+
+#: src/gtk/preferences-window.ui:12
+msgid "General"
+msgstr "General"
+
+#: src/gtk/preferences-window.ui:16
+msgid "Window"
+msgstr "Ventana"
+
+#: src/gtk/preferences-window.ui:20
+msgid "Remember Window Size"
+msgstr "Recordar el tamaño de la ventana"
+
+#: src/gtk/preferences-window.ui:30
+msgid "Theme settings have been moved to Terminal > Appearance."
+msgstr "La configuración de tema se movió a Terminal > Apariencia."
+
+#: src/gtk/preferences-window.ui:43
+msgid "Tabs"
+msgstr "Pestañas"
+
+#: src/gtk/preferences-window.ui:47
+msgid "Expand Tabs"
+msgstr "Expandir pestañas"
+
+#: src/gtk/preferences-window.ui:59
+msgid "Header Bar"
+msgstr "Barra de la cabecera"
+
+#: src/gtk/preferences-window.ui:63
+msgid "Show Header Bar"
+msgstr "Mostrar barra de la ventana"
+
+#: src/gtk/preferences-window.ui:74
+msgid "Context Aware"
+msgstr "Conciencia del contexto"
+
+#: src/gtk/preferences-window.ui:75
+msgid ""
+"If enabled, the header bar will be colored differently when the active tab "
+"is running ssh or sudo."
+msgstr ""
+"Si se activa, la barra de pestañas tendrá un color distinto si la pestaña "
+"activa está corriendo ssh o sudo."
+
+#: src/gtk/preferences-window.ui:86
+msgid "Show Menu Button"
+msgstr "Mostrar botón de menú"
+
+#: src/gtk/preferences-window.ui:97
+msgid "Drag Area"
+msgstr "Área de arrastre"
+
+#: src/gtk/preferences-window.ui:98
+msgid "Enable to reserve some space on the left side to drag the window."
+msgstr "Reservar espacio a la izquierda para arrastrar la ventana."
+
+#: src/gtk/preferences-window.ui:108
+msgid "Floating Controls"
+msgstr "Controles flotantes"
+
+#: src/gtk/preferences-window.ui:111
+msgid "Show Floating Controls"
+msgstr "Mostrar controles flotantes"
+
+#: src/gtk/preferences-window.ui:112
+msgid "Show floating controls when header bar is hidden."
+msgstr "Mostrar controles flotantes cuando la barra de cabecera está oculta."
+
+#: src/gtk/preferences-window.ui:124
+msgid "Floating Controls Hover Area"
+msgstr "Área de controles flotantes"
+
+#: src/gtk/preferences-window.ui:125
+msgid ""
+"Hoverable area (in pixels) at the top of the window to trigger floating "
+"controls."
+msgstr ""
+"Área de desplazamiento (en píxeles) en la parte superior de la ventana para "
+"activar los controles flotantes."
+
+#: src/gtk/preferences-window.ui:137
+msgid "Delay Before Show Floating Controls"
+msgstr "Retardo antes de mostrar los controles flotantes"
+
+#: src/gtk/preferences-window.ui:138
+msgid "Delay time (ms) before show floating controls."
+msgstr "Tiempo de retardo (ms) antes de mostrar los controles flotantes."
+
+#: src/gtk/preferences-window.ui:156 src/gtk/preferences-window.ui:232
+msgid "Terminal"
+msgstr "Terminal"
+
+#: src/gtk/preferences-window.ui:161
+msgid "Text"
+msgstr "Texto"
+
+#: src/gtk/preferences-window.ui:165
+msgid "Font"
+msgstr "Tipografía"
+
+#: src/gtk/preferences-window.ui:177
+msgid "Cell Spacing"
+msgstr "Espacio entre celdas"
+
+#: src/gtk/preferences-window.ui:180
+msgid "Width"
+msgstr "Ancho"
+
+#: src/gtk/preferences-window.ui:192
+msgid "Height"
+msgstr "Alto"
+
+#: src/gtk/preferences-window.ui:207
+msgid "Bright Bold Text"
+msgstr "Texto brillante y en negrita"
+
+#: src/gtk/preferences-window.ui:208
+msgid "Use bright colors for bold text."
+msgstr "Usar colores brillantes para texto en negrita."
+
+#: src/gtk/preferences-window.ui:219
+msgid "Easy Copy &amp; Paste"
+msgstr "Copiar y pegar sencillo"
+
+#: src/gtk/preferences-window.ui:220
+msgid "Use ctrl+c/ctrl+v for copy/paste."
+msgstr "Usa ctrl+c/ctrl+v para copiar/pegar."
+
+#: src/gtk/preferences-window.ui:236
+msgid "Audible Bell"
+msgstr "Campana sonora"
+
+#: src/gtk/preferences-window.ui:237
+msgid "If enabled, terminals might use an audible bell to indicate events."
+msgstr ""
+"Si están activados, los terminales pueden utilizar un timbre con sonido para "
+"indicar eventos."
+
+#: src/gtk/preferences-window.ui:250
+msgid "Cursor"
+msgstr "Cursor"
+
+#: src/gtk/preferences-window.ui:251
+msgid "Adjust cursor shape and behavior."
+msgstr "Ajustar forma y comportamiento del cursor."
+
+#: src/gtk/preferences-window.ui:254
+msgid "Cursor Shape"
+msgstr "Forma del Cursor"
+
+#: src/gtk/preferences-window.ui:258
+msgid "Block"
+msgstr "Bloque"
+
+#: src/gtk/preferences-window.ui:259
+msgid "IBeam"
+msgstr "Barra"
+
+#: src/gtk/preferences-window.ui:260
+msgid "Underline"
+msgstr "Subrayado"
+
+#: src/gtk/preferences-window.ui:268
+msgid "Cursor Blinking"
+msgstr "Parpadeo del cursor"
+
+#: src/gtk/preferences-window.ui:269
+msgid "Whether or not the cursor should blink."
+msgstr "Si el cursor debe parpadear o no."
+
+#: src/gtk/preferences-window.ui:273 src/gtk/preferences-window.ui:497
+msgid "Follow System"
+msgstr "Seguir sistema"
+
+#: src/gtk/preferences-window.ui:274
+msgid "On"
+msgstr "Encender"
+
+#: src/gtk/preferences-window.ui:275
+msgid "Off"
+msgstr "Apagar"
+
+#: src/gtk/preferences-window.ui:286
+msgid "Padding"
+msgstr "Relleno"
+
+#: src/gtk/preferences-window.ui:300
+msgid "Opacity"
+msgstr "Opacidad"
+
+#: src/gtk/preferences-window.ui:301
+msgid "Terminal background opacity."
+msgstr "Opacidad del fondo de la terminal."
+
+#: src/gtk/preferences-window.ui:323
+msgid "Working Directory"
+msgstr "Directorio de trabajo actual"
+
+#: src/gtk/preferences-window.ui:332
+msgid "Previous Session"
+msgstr "Sesión anterior"
+
+#: src/gtk/preferences-window.ui:333
+msgid "Home Directory"
+msgstr "Directorio principal"
+
+#: src/gtk/preferences-window.ui:334
+msgid "Custom"
+msgstr "Personalizado"
+
+#: src/gtk/preferences-window.ui:343
+msgid "Custom Working Directory"
+msgstr "Directorio de trabajo personalizado"
+
+#: src/gtk/preferences-window.ui:360
+msgid "Set to user's home"
+msgstr "Utilice el directorio de inicio del usuario"
+
+#: src/gtk/preferences-window.ui:372
+msgid "Scrolling"
+msgstr "Desplazamiento"
+
+#: src/gtk/preferences-window.ui:375
+msgid "Scrollbars"
+msgstr "Barras de desplazamiento"
+
+#: src/gtk/preferences-window.ui:378
+msgid "Show Scrollbars"
+msgstr "Mostrar barras de desplazamiento"
+
+#: src/gtk/preferences-window.ui:389
+msgid "Use Overlay Scrolling"
+msgstr "Usar desplazamiento superpuesto"
+
+#: src/gtk/preferences-window.ui:408
+msgid "Fixed Size"
+msgstr "Tamaño fijo"
+
+#: src/gtk/preferences-window.ui:409
+msgid "Unlimited"
+msgstr "Ilimitado"
+
+#: src/gtk/preferences-window.ui:410 src/widgets/ShortcutEditor.vala:106
+msgid "Disabled"
+msgstr "Desactivado"
+
+#: src/gtk/preferences-window.ui:419
+msgid "Scrollback Lines"
+msgstr "Líneas de retroceso"
+
+#: src/gtk/preferences-window.ui:437
+msgid "Command"
+msgstr "Comando"
+
+#: src/gtk/preferences-window.ui:441
+msgid "Run Command as Login Shell"
+msgstr "Ejecutar el comando como shell de inicio de sesión"
+
+#: src/gtk/preferences-window.ui:452
+msgid "Use Custom Command"
+msgstr "Usar comando personalizado"
+
+#: src/gtk/preferences-window.ui:462
+msgid "Custom Command"
+msgstr "Comando personalizado"
+
+#: src/gtk/preferences-window.ui:476
+msgid "Notification on Completed Task"
+msgstr "Notificación de tarea finalizada"
+
+#: src/gtk/preferences-window.ui:477
+msgid ""
+"Send a desktop notification when a command is completed on an unfocussed tab."
+msgstr ""
+"Enviar una notificación al escritorio cuando se completa un comando en una "
+"pestaña desenfocada."
+
+#: src/gtk/preferences-window.ui:490
+msgid "Appearance"
+msgstr "Apariencia"
+
+#: src/gtk/preferences-window.ui:493
+msgid "Application Style"
+msgstr "Estilo de la aplicación"
+
+#: src/gtk/preferences-window.ui:498
+msgid "Light"
+msgstr "Claro"
+
+#: src/gtk/preferences-window.ui:499
+msgid "Dark"
+msgstr "Oscuro"
+
+#: src/gtk/preferences-window.ui:508
+msgid "Theme Integration"
+msgstr "Integración del tema"
+
+#: src/gtk/preferences-window.ui:509
+msgid "Paint the whole app with colors from your colorscheme."
+msgstr "Pinta toda la aplicación con los colores de tu esquema de colores."
+
+#: src/gtk/preferences-window.ui:523
+msgid "Theme"
+msgstr "Tema"
+
+#: src/gtk/preferences-window.ui:524
+msgid "Set your preferred theme for light and dark styles."
+msgstr "Configure su tema preferido para los estilos claro y oscuro."
+
+#: src/gtk/preferences-window.ui:536
+msgid "Open themes folder"
+msgstr "Abrir la carpeta de los temas"
+
+#: src/gtk/preferences-window.ui:544
+msgid "Get more themes online"
+msgstr "Obtener más temas en línea"
+
+#: src/gtk/preferences-window.ui:565
+msgid "Light Theme"
+msgstr "Tema claro"
+
+#: src/gtk/preferences-window.ui:571
+msgid "Dark Theme"
+msgstr "Tema oscuro"
+
+#: src/gtk/preferences-window.ui:579
+msgid "Only display themes for the current style"
+msgstr "Mostrar sólo los temas del estilo actual"
+
+#: src/gtk/preferences-window.ui:587
+msgid ""
+"To ensure readability, \"Theme Integration\" will be disabled if you select "
+"a light color scheme while using the dark app style or a dark color scheme "
+"while using the light app style."
+msgstr ""
+"Para garantizar la legibilidad, la \"Integración de temas\" se desactivará "
+"si selecciona un esquema de color claro mientras usa el estilo de aplicación "
+"oscuro o un esquema de color oscuro mientras usa el estilo de aplicación "
+"claro."
+
+#: src/gtk/preferences-window.ui:621
+msgid "Advanced"
+msgstr "Avanzado"
+
+#: src/gtk/preferences-window.ui:625
+msgid "Experimental"
+msgstr "Experimental"
+
+#: src/gtk/preferences-window.ui:626
+msgid ""
+"Features in this section are known to be unstable. Please feel free to test "
+"and <a href=\"https://gitlab.gnome.org/raggesilver/blackbox/-/"
+"issues\">report bugs</a>."
+msgstr ""
+"Se sabe que las características de esta sección son inestables. Por favor, "
+"no dude en probarlo y <a href=\"https://gitlab.gnome.org/raggesilver/"
+"blackbox/-/issues\">notificar errores</a>."
+
+#: src/gtk/preferences-window.ui:630
+msgid "Sixel Support"
+msgstr "Asistencia para Sixel"
+
+#: src/gtk/preferences-window.ui:631
+msgid "Render sixel escape sequences."
+msgstr "Renderiza secuencias de escape sixel."
+
+#: src/gtk/preferences-window.ui:645
+msgid ""
+"The VTE build you are using does not have support Sixel. Sixel is still an "
+"experimental feature in VTE. For this reason, most distros do not build VTE "
+"with Sixel support. Installing Black Box via Flatpak will enable this "
+"feature. <a href=\"https://gitlab.gnome.org/raggesilver/blackbox/-/"
+"issues/273\">See discussion in issue tracker.</a>"
+msgstr ""
+"La versión de VTE que estás utilizando no es compatible con Sixel. Sixel "
+"sigue siendo un elemento experimental en la ETV. Por esta razón, la mayoría "
+"de las distros no construyen VTE con soporte Sixel. La instalación de Black "
+"Box a través de Flatpak habilitará esta función. <a href=\"https://gitlab."
+"gnome.org/raggesilver/blackbox/-/issues/273\">Ver discusión en rastreador de "
+"problemas.</a>"
+
+#: src/gtk/preferences-window.ui:655
+msgid "Danger Zone"
+msgstr "Zona de peligro"
+
+#: src/gtk/preferences-window.ui:658
+msgid "Reset Preferences"
+msgstr "Restablecer preferencias"
+
+#: src/gtk/preferences-window.ui:659
+msgid ""
+"This will revert all settings back to default. Your extra themes will not be "
+"removed."
+msgstr ""
+"Esto revertirá todos los ajustes a los valores predeterminados. Sus temas "
+"adicionales no se eliminarán."
+
+#: src/gtk/preferences-window.ui:664
+msgid "Reset preferences"
+msgstr "Restablecer preferencias"
+
+#: src/gtk/terminal-menu.ui:20
+msgid "Open Link"
+msgstr "Abrir el enlace"
+
+#: src/gtk/terminal-menu.ui:28 src/gtk/header-bar.ui:58
+#: src/gtk/header-bar.ui:170 src/gtk/header-bar.ui:280
+#: src/widgets/ShortcutEditor.vala:136
+msgid "New Tab"
+msgstr "Pestaña nueva"
+
+#: src/gtk/terminal-menu.ui:32 src/gtk/header-bar.ui:62
+#: src/widgets/ShortcutEditor.vala:134
+msgid "New Window"
+msgstr "Ventana nueva"
+
+#: src/gtk/terminal-menu.ui:55 src/widgets/ShortcutEditor.vala:138
+msgid "Copy"
+msgstr "Copiar"
+
+#: src/gtk/terminal-menu.ui:59
+msgid "Copy Link"
+msgstr "Copiar el enlace"
+
+#: src/gtk/terminal-menu.ui:64 src/widgets/ShortcutEditor.vala:139
+msgid "Paste"
+msgstr "Pegar"
+
+#: src/gtk/terminal-menu.ui:71 src/gtk/header-bar.ui:72
+#: src/widgets/ShortcutEditor.vala:137
+msgid "Preferences"
+msgstr "Preferencias"
+
+#: src/gtk/terminal-menu.ui:78 src/gtk/header-bar.ui:78
+#: src/widgets/ShortcutEditor.vala:142
+msgid "Keyboard Shortcuts"
+msgstr "Atajos de teclado"
+
+#: src/gtk/terminal-menu.ui:82 src/gtk/header-bar.ui:82
+msgid "About Black Box"
+msgstr "Acerca de Black Box"
+
+#: src/gtk/help-overlay.ui:10
+msgctxt "shortcut window"
+msgid "Window"
+msgstr "Ventana"
+
+#: src/gtk/help-overlay.ui:13
+msgctxt "shortcut window"
+msgid "New window"
+msgstr "Ventana nueva"
+
+#: src/gtk/help-overlay.ui:19
+msgctxt "shortcut window"
+msgid "New tab"
+msgstr "Pestaña nueva"
+
+#: src/gtk/help-overlay.ui:25
+msgctxt "shortcut window"
+msgid "Close tab"
+msgstr "Cerrar pestaña"
+
+#: src/gtk/help-overlay.ui:31
+msgctxt "shortcut window"
+msgid "Rename tab"
+msgstr "Cambiar el nombre de la pestaña"
+
+#: src/gtk/help-overlay.ui:37
+msgctxt "shortcut window"
+msgid "Switch headbar mode"
+msgstr "Cambiar el modo de la barra de encabezado"
+
+#: src/gtk/help-overlay.ui:43
+msgctxt "shortcut window"
+msgid "Toggle fullscreen"
+msgstr "Conmutar pantalla completa"
+
+#: src/gtk/help-overlay.ui:51
+msgctxt "shortcut window"
+msgid "Terminal"
+msgstr "Terminal"
+
+#: src/gtk/help-overlay.ui:54
+msgctxt "shortcut window"
+msgid "Search"
+msgstr "Buscar"
+
+#: src/gtk/help-overlay.ui:60
+msgctxt "shortcut window"
+msgid "Copy"
+msgstr "Copiar"
+
+#: src/gtk/help-overlay.ui:66
+msgctxt "shortcut window"
+msgid "Paste"
+msgstr "Pegar"
+
+#: src/gtk/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Zoom in"
+msgstr "Acercar"
+
+#: src/gtk/help-overlay.ui:78
+msgctxt "shortcut window"
+msgid "Zoom out"
+msgstr "Alejar"
+
+#: src/gtk/help-overlay.ui:84
+msgctxt "shortcut window"
+msgid "Reset zoom"
+msgstr "Restablecer el zoom"
+
+#: src/gtk/help-overlay.ui:92
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "Navegación"
+
+#: src/gtk/help-overlay.ui:95
+msgctxt "shortcut window"
+msgid "Focus next tab"
+msgstr "Enfocar la pestaña siguiente"
+
+#: src/gtk/help-overlay.ui:101
+msgctxt "shortcut window"
+msgid "Focus previous tab"
+msgstr "Enfocar la pestaña anterior"
+
+#: src/gtk/help-overlay.ui:107
+msgctxt "shortcut window"
+msgid "Switch to Tab 1"
+msgstr "Cambiar a la pestaña 1"
+
+#: src/gtk/help-overlay.ui:113
+msgctxt "shortcut window"
+msgid "Switch to Tab 2"
+msgstr "Cambiar a la pestaña 2"
+
+#: src/gtk/help-overlay.ui:119
+msgctxt "shortcut window"
+msgid "Switch to Tab 3"
+msgstr "Cambiar a la pestaña 3"
+
+#: src/gtk/help-overlay.ui:125
+msgctxt "shortcut window"
+msgid "Switch to Tab 4"
+msgstr "Cambiar a la pestaña 4"
+
+#: src/gtk/help-overlay.ui:131
+msgctxt "shortcut window"
+msgid "Switch to Tab 5"
+msgstr "Cambiar a la pestaña 5"
+
+#: src/gtk/help-overlay.ui:137
+msgctxt "shortcut window"
+msgid "Switch to Tab 6"
+msgstr "Cambiar a la pestaña 6"
+
+#: src/gtk/help-overlay.ui:143
+msgctxt "shortcut window"
+msgid "Switch to Tab 7"
+msgstr "Cambiar a la pestaña 7"
+
+#: src/gtk/help-overlay.ui:149
+msgctxt "shortcut window"
+msgid "Switch to Tab 8"
+msgstr "Cambiar a la pestaña 8"
+
+#: src/gtk/help-overlay.ui:155
+msgctxt "shortcut window"
+msgid "Switch to Tab 9"
+msgstr "Cambiar a la pestaña 9"
+
+#: src/gtk/help-overlay.ui:161
+msgctxt "shortcut window"
+msgid "Switch to last Tab"
+msgstr "Cambiar a la última pestaña"
+
+#: src/gtk/help-overlay.ui:169
+msgctxt "shortcut window"
+msgid "General"
+msgstr "General"
+
+#: src/gtk/help-overlay.ui:172
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Mostrar atajos"
+
+#: src/gtk/help-overlay.ui:178
+msgctxt "shortcut window"
+msgid "Edit Preferences"
+msgstr "Editar las preferencias"
+
+#: src/gtk/tab-menu.ui:9
+msgid "Move Tab Left"
+msgstr "Mover pestaña a la izquierda"
+
+#: src/gtk/tab-menu.ui:14
+msgid "Move Tab Right"
+msgstr "Mover pestaña a la derecha"
+
+#: src/gtk/tab-menu.ui:21 src/widgets/ShortcutEditor.vala:147
+#: src/widgets/Window.vala:607
+msgid "Rename Tab"
+msgstr "Renombrar la pestaña"
+
+#: src/gtk/tab-menu.ui:25
+msgid "Move Tab to New Window"
+msgstr "Mover la pestaña a una nueva ventana"
+
+#: src/gtk/tab-menu.ui:32 src/widgets/ShortcutEditor.vala:146
+msgid "Close Tab"
+msgstr "Cerrar la pestaña"
+
+#: src/gtk/header-bar.ui:23
+msgid "Remote Access"
+msgstr "Acceso remoto"
+
+#: src/gtk/header-bar.ui:25
+msgid "SSH Connections"
+msgstr "Conexiones SSH"
+
+#: src/gtk/header-bar.ui:35 src/gtk/header-bar.ui:43
+msgid "New Connection"
+msgstr "Nueva conexión"
+
+#: src/gtk/header-bar.ui:41
+msgid "SFTP Servers"
+msgstr "Servidores SFTP"
+
+#: src/gtk/header-bar.ui:68 src/widgets/ShortcutEditor.vala:141
+msgid "Fullscreen"
+msgstr "Pantalla completa"
+
+#: src/gtk/header-bar.ui:178 src/gtk/header-bar.ui:288
+msgid "Exit Fullscreen"
+msgstr "Salir de la pantalla completa"
+
+#: src/gtk/header-bar.ui:193 src/gtk/header-bar.ui:303
+msgid "Menu"
+msgstr "Menú"
+
+#: src/gtk/style-switcher.ui:17
+msgid "Use System Colors"
+msgstr "Usar los colores del sistema"
+
+#: src/gtk/style-switcher.ui:46
+msgid "Use Light Colors"
+msgstr "Utilice colores claros"
+
+#: src/gtk/style-switcher.ui:74
+msgid "Use Dark Colors"
+msgstr "Utilice colores oscuros"
+
+#: src/services/Shortcuts.vala:321
+msgid "Replace keybinding?"
+msgstr "¿Sustituir la combinación de teclas?"
+
+#. FIXME: `to_action` is an action identifier (i.e. win.paste). Replace it
+#. with the user-friendly action name.
+#: src/services/Shortcuts.vala:324
+#, c-format
+msgid "%s is already assigned to %s"
+msgstr "%s ya está asignado a %s"
+
+#: src/utils/Constants.vala:34
+msgid "You can still access the menu by right-clicking any terminal."
+msgstr ""
+"Todavía puede acceder al menú haciendo clic con el botón derecho del ratón "
+"en cualquier terminal."
+
+#: src/utils/Constants.vala:36
+#, c-format
+msgid ""
+"%s uses an early Gtk 4 port of VTE as a terminal widget. While a lot of "
+"progress has been made on this port, copying has yet to be implemented. This "
+"means there's currently no way to copy text in %s."
+msgstr ""
+"%s usa un port inicial de Gtk 4 de VTE como widget de terminal. Aunque se "
+"han hecho muchos progresos en este port, todavía no se ha implementado el "
+"copiado. Esto significa que actualmente no hay forma de copiar texto en %s."
+
+#: src/utils/Constants.vala:38
+msgid ""
+"Warning: unlimited scrollback saves content to disk, which may cause your "
+"system to run out of storage."
+msgstr ""
+"Advertencia: el scrollback ilimitado guarda el contenido en el disco, lo que "
+"puede hacer que el sistema se quede sin espacio de almacenamiento."
+
+#: src/utils/Dialogs.vala:35
+msgid "No"
+msgstr "No"
+
+#: src/utils/Dialogs.vala:35
+msgid "Yes"
+msgstr "Sí"
+
+#: src/utils/Dialogs.vala:36
+msgid "OK"
+msgstr "DE ACUERDO"
+
+#: src/utils/Dialogs.vala:37
+msgid "Keep"
+msgstr "Mantener"
+
+#: src/utils/Dialogs.vala:37
+msgid "Replace"
+msgstr "Sustituir"
+
+#: src/utils/Dialogs.vala:38
+msgid "Close"
+msgstr "Cerrar"
+
+#: src/utils/Dialogs.vala:120
+msgid "Close Tab?"
+msgstr "¿Cerrar la pestaña?"
+
+#: src/utils/Dialogs.vala:121
+msgid "Close Window?"
+msgstr "¿Cerrar la ventana?"
+
+#: src/utils/Dialogs.vala:124
+msgid ""
+"Some commands are still running. Closing this tab will kill them and may "
+"lead to unexpected outcomes."
+msgstr ""
+"Algunos comandos siguen ejecutándose. Si cierra esta pestaña, se eliminarán "
+"y pueden producirse resultados inesperados."
+
+#: src/utils/Dialogs.vala:125
+msgid ""
+"Some commands are still running. Closing this window will kill them and may "
+"lead to unexpected outcomes."
+msgstr ""
+"Algunos comandos siguen ejecutándose. Si cierra esta ventana, se eliminarán "
+"y pueden producirse resultados inesperados."
+
+#: src/utils/Shortcuts.vala:32
+msgid "invalid keybinding"
+msgstr "combinación de teclas no válida"
+
+#: src/widgets/AboutDialog.vala:73
+msgid "Donate"
+msgstr "Donar"
+
+#: src/widgets/AboutDialog.vala:74
+msgid "Full Changelog"
+msgstr "Lista de cambios completos"
+
+#: src/widgets/PreferencesWindow.vala:571
+msgid "Terminal Font"
+msgstr "Tipografía de la terminal"
+
+#: src/widgets/PreferencesWindow.vala:647
+msgid "Reuse previous tab's directory."
+msgstr "Reutilizar el directorio de la pestaña anterior."
+
+#: src/widgets/PreferencesWindow.vala:649
+msgid "Use the current user's home as working directory."
+msgstr "Establezca la carpeta de inicio como directorio de trabajo."
+
+#: src/widgets/PreferencesWindow.vala:651
+msgid "Use a custom path as working directory."
+msgstr "Utilizar una ruta personalizada como directorio de trabajo."
+
+#: src/widgets/ShortcutDialog.vala:46
+msgid "Enter new shortcut"
+msgstr "Introducir un nuevo acceso directo"
+
+#: src/widgets/ShortcutDialog.vala:47
+#, c-format
+msgid "Enter new shortcut for \"%s\""
+msgstr "Introduzca un nuevo acceso directo para \"%s\""
+
+#: src/widgets/ShortcutEditor.vala:59
+msgid "Add Keybinding"
+msgstr "Añadir combinaciones de teclas"
+
+#: src/widgets/ShortcutEditor.vala:66
+msgid "Reset Keybindings"
+msgstr "Restablecer las combinaciones de teclas"
+
+#: src/widgets/ShortcutEditor.vala:81
+#, c-format
+msgid "Remove %s"
+msgstr "Eliminar %s"
+
+#: src/widgets/ShortcutEditor.vala:132
+msgid "Focus Next Tab"
+msgstr "Centrarse en la siguiente pestaña"
+
+#: src/widgets/ShortcutEditor.vala:133
+msgid "Focus Previous Tab"
+msgstr "Centrarse en la pestaña anterior"
+
+#: src/widgets/ShortcutEditor.vala:135
+msgid "Toggle Header Bar"
+msgstr "Alternar barra de encabezado"
+
+#: src/widgets/ShortcutEditor.vala:140
+msgid "Search"
+msgstr "Buscar"
+
+#: src/widgets/ShortcutEditor.vala:143
+msgid "Zoom In"
+msgstr "Acercarse"
+
+#: src/widgets/ShortcutEditor.vala:144
+msgid "Zoom Out"
+msgstr "Alejarse"
+
+#: src/widgets/ShortcutEditor.vala:145
+msgid "Reset Zoom"
+msgstr "Reiniciar el zoom"
+
+#: src/widgets/ShortcutEditor.vala:149 src/widgets/ShortcutEditor.vala:150
+#: src/widgets/ShortcutEditor.vala:151 src/widgets/ShortcutEditor.vala:152
+#: src/widgets/ShortcutEditor.vala:153 src/widgets/ShortcutEditor.vala:154
+#: src/widgets/ShortcutEditor.vala:155 src/widgets/ShortcutEditor.vala:156
+#: src/widgets/ShortcutEditor.vala:157
+#, c-format
+msgid "Switch to Tab %u"
+msgstr "Cambiar a la pestaña %u"
+
+#: src/widgets/ShortcutEditor.vala:158
+msgid "Switch to Last Tab"
+msgstr "Cambiar a la última pestaña"
+
+#: src/widgets/ShortcutEditor.vala:242
+msgid "Reset all Shortcuts?"
+msgstr "¿Restablecer todos los accesos directos?"
+
+#: src/widgets/ShortcutEditor.vala:243
+msgid ""
+"This will reset all shortcuts to default and overwrite your config file. "
+"This action is irreversible."
+msgstr ""
+"Esto restablecerá todos los accesos directos a los valores predeterminados y "
+"sobrescribirá su archivo de configuración. Esta acción es irreversible."
+
+#: src/widgets/TerminalTab.vala:57
+msgid "tab"
+msgstr "pestaña"
+
+#: src/widgets/TerminalTab.vala:107
+msgid "Error"
+msgstr "Error"
+
+#: src/widgets/Window.vala:608
+msgid "Set a custom title for this tab"
+msgstr "Establecer un título personalizado para esta pestaña"
+
+#: src/widgets/Window.vala:611
+msgid "Enter a custom tab title"
+msgstr "Introduzca un título para la pestaña personalizado"
+
+#: src/widgets/Window.vala:618
+msgid "Reset Title"
+msgstr "Restaurar el título"
+
+#: src/widgets/Window.vala:619
+msgid "Set Title"
+msgstr "Establecer título"
+
+#: src/widgets/Terminal.vala:500
+msgid "Command completed"
+msgstr "Comando completado"
+
+#: src/CommandLine.vala:47
+msgid "Show app version"
+msgstr "Mostrar versión de la aplicación"
+
+#: src/CommandLine.vala:56
+msgid "Set current working directory"
+msgstr "Establecer directorio de trabajo actual"
+
+#: src/CommandLine.vala:65
+msgid "Execute command in a terminal"
+msgstr "Ejecutar comando en un terminal"
+
+#: src/CommandLine.vala:74
+msgid "Show help"
+msgstr "Mostrar ayuda"
+
+#: src/CommandLine.vala:121
+#, c-format
+msgid "Run %s --help to get help\n"
+msgstr "Ejecute %s --help para obtener ayuda\n"
+
+#, fuzzy
+#~ msgid "Whether or not to display borders around the window and tabs"
+#~ msgstr "Mostrar o no un botón de menú en la barra de encabezado"
+
+#~ msgid "Enable to limit terminal scrollback"
+#~ msgstr "Activar para limitar el retroceso del terminal"
+
+#~ msgid "If enabled, a single open tab will blend with the headerbar color"
+#~ msgstr ""
+#~ "Si se activa, una sola pestaña abierta se mezclará con el color de la "
+#~ "barra de encabezado"
+
+#, fuzzy
+#~ msgid "Show Borders"
+#~ msgstr "Mostrar barra de encabezado"
+
+#~ msgid "Style window with terminal theme colors."
+#~ msgstr "Estilizar la ventana con los colores del tema de la terminal."
+
+#~ msgid "Style Preference"
+#~ msgstr "Preferencia de estilo"
+
+#~ msgid "Light Style"
+#~ msgstr "Estilo claro"
+
+#~ msgid "Dark Style"
+#~ msgstr "Estilo oscuro"
+
+#~ msgid "Single Tab Mode"
+#~ msgstr "Modo de pestaña única"
+
+#~ msgid "Hide Single Tab"
+#~ msgstr "Ocultar pestaña única"
+
+#~ msgid ""
+#~ "Replace tab bar with a title label when a single tab is open. Easier to "
+#~ "drag the window."
+#~ msgstr ""
+#~ "Sustituir la barra de pestañas por una etiqueta de título cuando se abre "
+#~ "una única pestaña. Más fácil de arrastrar la ventana."
+
+#~ msgid "Stealth Single Tab"
+#~ msgstr "Pestaña única discreta"
+
+#, fuzzy
+#~ msgid "Blend single tab with header bar."
+#~ msgstr "Integra la pestaña única con la barra de encabezado."
+
+#~ msgid "Set Scrollback Limit"
+#~ msgstr "Establecer límite de retroceso"
+
+#~ msgid "About"
+#~ msgstr "Acerca de"
+
+#~ msgid "Show headerbar"
+#~ msgstr "Mostrar barra de encabezado"
+
+#~ msgid "Pixel Scrolling"
+#~ msgstr "Desplazamiento de píxeles"
+
+#~ msgid ""
+#~ "Scroll by pixel units instead of scrolling by lines. \"Show scrollbars\" "
+#~ "must be enabled."
+#~ msgstr ""
+#~ "Desplazamiento por unidades de píxeles en lugar de desplazarse por "
+#~ "líneas. \"Mostrar barras de desplazamiento\" debe estar activado."
+
+#~ msgid "Help"
+#~ msgstr "Ayuda"
