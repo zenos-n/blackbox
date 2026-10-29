@@ -49,7 +49,7 @@ stdenv.mkDerivation {
   doCheck = true;
   checkPhase = ''
     runHook preCheck
-    dbus-run-session -- xvfb-run -a meson test --print-errorlogs
+    dbus-run-session --config-file=${dbus}/share/dbus-1/session.conf -- xvfb-run -a meson test --print-errorlogs
     runHook postCheck
   '';
 
