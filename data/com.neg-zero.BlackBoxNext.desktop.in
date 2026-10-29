@@ -1,17 +1,17 @@
 [Desktop Entry]
-Name=Black Box
-Exec=blackbox-terminal
+Name=Black Box Next
+Exec=blackbox-next
 Actions=new-tab;
 Terminal=false
 Type=Application
 Categories=GNOME;GTK;System;TerminalEmulator;
 StartupNotify=false
 Keywords=Terminal;terminal;shell;prompt;command;commandline;cmd;box;run;
-Icon=com.raggesilver.BlackBox
+Icon=com.neg-zero.BlackBoxNext
 X-GNOME-UsesNotifications=true
 X-ExecArg=--
 X-TerminalArgDir=--working-directory
 
 [Desktop Action new-tab]
 Name=New Tab
-Exec=blackbox-terminal --tab
+Exec=blackbox-next --tab

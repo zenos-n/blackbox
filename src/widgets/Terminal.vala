@@ -126,7 +126,8 @@ public class Terminal.Terminal : Vte.Terminal {
     try {
       this.spawn(command, cwd);
     } catch (Error e) {
-      warning("%s", e.message);
+      string error_message = e.message;
+      Idle.add_once(() => this.spawn_failed(error_message));
     }
   }
 
@@ -439,6 +440,9 @@ public class Terminal.Terminal : Vte.Terminal {
     }
 
     shell = Environ.get_variable(envv.data, "SHELL");
+    if (shell == null || shell == "") {
+      shell = Vte.get_user_shell() ?? "/bin/sh";
+    }
 
     if (custom_shell_commandv != null) {
       foreach (unowned string s in custom_shell_commandv) {
@@ -541,9 +545,7 @@ public class Terminal.Terminal : Vte.Terminal {
   private void on_child_exited(int status) {
     debug("Child exited with code %d", status);
     this.pid = -1;
-    //  This is not a good idea. Another thread might be modifying this field
-    //  as well.
-    //  this.process.ended = true;
+    if (this.process != null) this.process.ended = true;
     this.process = null;
     this.exit();
   }
@@ -633,7 +635,7 @@ public class Terminal.Terminal : Vte.Terminal {
     var clipboard = Gdk.Display.get_default().get_primary_clipboard();
     try {
       var text = yield clipboard.read_text_async(null);
-      this.paste_text(text);
+      if (text != null) this.paste_text(text);
     } catch (Error e) {
       warning("%s", e.message);
     }
@@ -679,6 +681,11 @@ public class Terminal.Terminal : Vte.Terminal {
   }
 
   public void on_before_close() {
+    if (this.process != null) this.process.ended = true;
+    if (this.attention_timer > 0) {
+      Source.remove(this.attention_timer);
+      this.attention_timer = 0;
+    }
     this.withdraw_command_completed_notification();
   }
 

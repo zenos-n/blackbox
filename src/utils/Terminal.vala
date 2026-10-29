@@ -45,13 +45,16 @@ namespace Terminal {
   {
     string proc_file = @"/proc/$pid";
     Posix.Stat? buf = null;
-    Posix.stat (proc_file, out buf);
+    if (pid <= 0 || Posix.stat (proc_file, out buf) != 0) {
+      throw new IOError.NOT_FOUND ("Process %d is no longer available", pid);
+    }
 
     return (int) buf.st_uid;
   }
 
   public bool check_pid_running (int pid) {
+    if (pid <= 0) return false;
     int status = Posix.kill (pid, 0);
-    return (status == 0);
+    return status == 0 || Posix.errno == Posix.EPERM;
   }
 }

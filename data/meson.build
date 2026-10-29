@@ -1,10 +1,10 @@
 subdir('icons')
 
-install_subdir('schemes', install_dir: join_paths(get_option('datadir'), 'blackbox'))
+install_subdir('schemes', install_dir: join_paths(get_option('datadir'), 'blackbox-next'))
 
 desktop_file = i18n.merge_file(
-  input: 'com.raggesilver.BlackBox.desktop.in',
-  output: 'com.raggesilver.BlackBox.desktop',
+  input: 'com.neg-zero.BlackBoxNext.desktop.in',
+  output: 'com.neg-zero.BlackBoxNext.desktop',
   type: 'desktop',
   po_dir: '../po',
   install: true,
@@ -17,8 +17,8 @@ if desktop_utils.found()
 endif
 
 appstream_file = i18n.merge_file(
-  input: 'com.raggesilver.BlackBox.metainfo.xml.in',
-  output: 'com.raggesilver.BlackBox.metainfo.xml',
+  input: 'com.neg-zero.BlackBoxNext.metainfo.xml.in',
+  output: 'com.neg-zero.BlackBoxNext.metainfo.xml',
   po_dir: '../po',
   install: true,
   install_dir: join_paths(get_option('datadir'), 'metainfo'),
@@ -39,13 +39,13 @@ endif
 # and realizes they have no access to the extension.
 if host_machine.system() == 'linux'
   install_data(
-    'nautilus/open-blackbox.py',
+    'nautilus/open-blackbox-next.py',
     install_dir: join_paths(get_option('datadir'), 'nautilus-python/extensions'),
   )
 endif
 
 install_data(
-  'com.raggesilver.BlackBox.gschema.xml',
+  'com.neg-zero.BlackBoxNext.gschema.xml',
   install_dir: join_paths(get_option('datadir'), 'glib-2.0/schemas'),
 )
 

@@ -1,3 +1,7 @@
+> **Black Box Next development fork:** GNOME 50 and stability work based on
+> Black Box 0.15.2. Run `blackbox-next`. See [FORK.md](FORK.md) for the current
+> scope and [PERFORMANCE.md](PERFORMANCE.md) for validation. Kitty parity is planned.
+
 <div align="center">
   <h1><img src="./data/icons/hicolor/scalable/apps/com.raggesilver.BlackBox.svg" height="64"/>Black Box</h1>
   <h4>An elegant and customizable terminal for GNOME</h4>
@@ -39,7 +43,7 @@
 - Desktop notifications - get notified when a command is finished in the background
 - Customizable UI
 
-## Install
+## Upstream installation
 
 Black Box is packaged by the community for several distributions. See
 [Repology](https://repology.org/project/blackbox-terminal/versions) for the
@@ -63,10 +67,10 @@ Check out the [releases page](https://gitlab.gnome.org/raggesilver/blackbox/-/re
 ### Dependencies
 
 - `valac` (Vala compiler)
-- `meson` >= 0.50
-- `gtk4` >= 4.12.0
-- `libadwaita-1` >= 1.4
-- `vte-2.91-gtk4` >= 0.69.0
+- `meson` >= 0.59
+- `gtk4` >= 4.22.0
+- `libadwaita-1` >= 1.9
+- `vte-2.91-gtk4` >= 0.84.0
 - `json-glib-1.0` >= 1.4.4
 - `gee-0.8` >= 0.20
 - `libpcre2-8`

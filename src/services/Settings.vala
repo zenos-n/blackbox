@@ -79,7 +79,7 @@ public class Terminal.Settings : SettingsBinder {
   private static Settings instance = null;
 
   private Settings () {
-    base ("com.raggesilver.BlackBox");
+    base ("com.neg-zero.BlackBoxNext");
   }
 
   public static Settings get_default () {
@@ -107,7 +107,7 @@ public class Terminal.SearchSettings : SettingsBinder {
   private static SearchSettings instance = null;
 
   private SearchSettings () {
-    base ("com.raggesilver.BlackBox.terminal.search");
+    base ("com.neg-zero.BlackBoxNext.terminal.search");
   }
 
   public static SearchSettings get_default () {

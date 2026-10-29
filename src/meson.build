@@ -1,9 +1,8 @@
-blackbox_cli = 'blackbox-terminal'
+blackbox_cli = 'blackbox-next'
 
 blackbox_sources = files(
   'Application.vala',
   'CommandLine.vala',
-  'main.vala',
 )
 
 subdir('widgets')
@@ -24,9 +23,9 @@ config_header = configure_file(input: 'config.vala.in', output: 'config.vala', c
 
 blackbox_deps = [
   dependency('gio-2.0', version: '>= 2.50'),
-  dependency('gtk4', version: '>= 4.12.0'),
-  dependency('libadwaita-1', version: '>= 1.4'),
-  dependency('vte-2.91-gtk4', version: '>= 0.69.0'),
+  dependency('gtk4', version: '>= 4.22.0'),
+  dependency('libadwaita-1', version: '>= 1.9'),
+  dependency('vte-2.91-gtk4', version: '>= 0.84.0'),
   dependency('json-glib-1.0', version: '>= 1.4.4'),
   dependency('libpcre2-8'),
   dependency('libxml-2.0', version: '>= 2.9.12'),
@@ -41,9 +40,6 @@ vapi_dir = meson.current_source_dir() / 'vapi'
 add_project_arguments('--vapidir=' + vapi_dir, language: 'vala')
 add_project_arguments('-DPCRE2_CODE_UNIT_WIDTH=0', language: 'c')
 
-# This is required until VTE 0.70 is out
-add_project_arguments('--disable-since-check', language: 'vala')
-
 gnome = import('gnome')
 
 blackbox_sources += gnome.compile_resources('blackbox-resources', 'blackbox.gresource.xml', c_name: 'blackbox')
@@ -55,8 +51,23 @@ endif
 executable(
   blackbox_cli,
   blackbox_sources,
+  files('main.vala'),
   config_header,
   vala_args: '--target-glib=2.50',
   dependencies: blackbox_deps,
   install: true,
+)
+
+gui_tests = executable(
+  'gui-tests',
+  files('tests/gui.vala'),
+  blackbox_sources,
+  config_header,
+  dependencies: blackbox_deps,
+)
+
+core_tests = executable(
+  'core-tests',
+  files('tests/core.vala', 'utils/File.vala', 'utils/Terminal.vala'),
+  dependencies: [dependency('gio-2.0'), meson.get_compiler('vala').find_library('posix')],
 )

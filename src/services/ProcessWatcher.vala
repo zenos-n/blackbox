@@ -62,6 +62,17 @@ public class Terminal.Process : Object {
   public bool ended { get; set; default = false; }
 
   public ProcessContext context { get; set; default = ProcessContext.DEFAULT; }
+
+  private int command_pid = -1;
+  private string? command = null;
+
+  internal string? get_command(int pid) {
+    if (pid != this.command_pid || this.command == null) {
+      this.command = get_process_cmdline(pid);
+      this.command_pid = pid;
+    }
+    return this.command;
+  }
 }
 
 namespace Terminal {
@@ -73,14 +84,12 @@ public class Terminal.ProcessWatcher : Object {
   private static ProcessWatcher?   instance = null;
   private Gee.ArrayList<Process>   process_list;
   private Gee.ArrayList<Process>   pending_process_list;
-  private Gee.HashMap<int, string> cmdline_cache;
   private bool watching = false;
   private bool fast_mode = false;
 
   private ProcessWatcher () {
     this.process_list = new Gee.ArrayList<Process> ();
     this.pending_process_list = new Gee.ArrayList<Process> ();
-    this.cmdline_cache = new Gee.HashMap<int, string> ();
   }
 
   public static ProcessWatcher get_instance() {
@@ -120,11 +129,11 @@ public class Terminal.ProcessWatcher : Object {
 
     if (this.requires_process_watching()) {
       foreach (var process in this.process_list) {
-        this.check_process(process);
+        if (!process.ended) this.check_process(process);
       }
     } else {
       foreach (var process in this.process_list) {
-        this.check_process_minimal(process);
+        if (!process.ended) this.check_process_minimal(process);
         process.context = ProcessContext.DEFAULT;
       }
     }
@@ -167,17 +176,6 @@ public class Terminal.ProcessWatcher : Object {
     return check_pid_running(pid);
   }
 
-  private string? get_cached_cmdline(int pid) {
-    if (this.cmdline_cache.has_key(pid)) {
-      return this.cmdline_cache[pid];
-    }
-    var cmdline = get_process_cmdline(pid);
-    if (cmdline != null && cmdline != "") {
-      this.cmdline_cache[pid] = cmdline;
-    }
-    return cmdline;
-  }
-
   // Like check_process, but skips cmdline/context tracking — only watches
   // foreground PID lifecycle for notifications.
   private void check_process_minimal(Process process) {
@@ -185,7 +183,6 @@ public class Terminal.ProcessWatcher : Object {
       process.foreground_pid >= 0 &&
       !is_process_still_running(process.foreground_pid)
     ) {
-      this.cmdline_cache.unset(process.foreground_pid);
       process.foreground_task_finished();
       process.foreground_pid = -1;
     }
@@ -199,13 +196,11 @@ public class Terminal.ProcessWatcher : Object {
         foreground_pid != process.foreground_pid
       ) {
         process.foreground_pid = foreground_pid;
+        process.last_foreground_task_command = process.get_command(foreground_pid);
       }
     });
 
     process.ended = !check_pid_running(process.pid);
-    if (process.ended) {
-      this.cmdline_cache.unset(process.pid);
-    }
   }
 
   private void check_process(Process process) {
@@ -213,7 +208,6 @@ public class Terminal.ProcessWatcher : Object {
       process.foreground_pid >= 0 &&
       !is_process_still_running(process.foreground_pid)
     ) {
-      this.cmdline_cache.unset(process.foreground_pid);
       process.foreground_task_finished();
       process.foreground_pid = -1;
     }
@@ -226,7 +220,7 @@ public class Terminal.ProcessWatcher : Object {
         foreground_pid != process.pid &&
         foreground_pid != process.foreground_pid
       ) {
-        var cmdline = this.get_cached_cmdline(foreground_pid);
+        var cmdline = process.get_command(foreground_pid);
 
         if (cmdline == null || cmdline == "") {
           return;
@@ -239,7 +233,6 @@ public class Terminal.ProcessWatcher : Object {
 
     process.ended = !check_pid_running(process.pid);
     if (process.ended) {
-      this.cmdline_cache.unset(process.pid);
       return;
     }
 
@@ -253,7 +246,7 @@ public class Terminal.ProcessWatcher : Object {
       if (euid == 0) {
         process.context = ProcessContext.ROOT;
       } else {
-        var command = this.get_cached_cmdline(source_pid);
+        var command = process.get_command(source_pid);
 
         if (command != null && command.has_prefix("ssh")) {
           process.context = ProcessContext.SSH;
@@ -261,6 +254,8 @@ public class Terminal.ProcessWatcher : Object {
           process.context = ProcessContext.DEFAULT;
         }
       }
+    } catch (IOError.NOT_FOUND e) {
+      process.context = ProcessContext.DEFAULT;
     } catch (GLib.Error e) {
       warning(e.message);
     }

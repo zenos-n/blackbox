@@ -79,7 +79,6 @@ public class Terminal.SearchToolbar : Gtk.Widget {
     this.revealer.reveal_child = false;
     this.search_entry.text = "";
     this.terminal.unselect_all ();
-    this.terminal.match_remove_all ();
     this.terminal.search_set_regex (null, 0);
   }
 
@@ -166,15 +165,13 @@ public class Terminal.SearchToolbar : Gtk.Widget {
 
   private void do_search () {
     var text = this.search_entry.text;
+    this.search_entry.remove_css_class ("error");
 
     if (text == null || text == "") {
       this.terminal.unselect_all ();
-      this.terminal.match_remove_all ();
       this.terminal.search_set_regex (null, 0);
       return;
     }
-
-    this.terminal.search_find_next ();
 
     string search_string = null;
     var ssettings = SearchSettings.get_default ();
@@ -205,7 +202,8 @@ public class Terminal.SearchToolbar : Gtk.Widget {
       this.terminal.search_find_previous ();
     }
     catch (Error e) {
-      warning ("%s", e.message);
+      this.terminal.search_set_regex (null, 0);
+      this.search_entry.add_css_class ("error");
     }
   }
 

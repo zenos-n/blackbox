@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schemalist gettext-domain="blackbox">
-  <schema id="com.raggesilver.BlackBox" path="/com/raggesilver/BlackBox/">
+<schemalist gettext-domain="blackbox-next">
+  <schema id="com.neg-zero.BlackBoxNext" path="/com/neg-zero/BlackBoxNext/">
     <key name="window-width" type="u">
       <default>600</default>
       <summary>Window width</summary>
@@ -164,8 +164,8 @@
     </key>
   </schema>
 
-  <schema id="com.raggesilver.BlackBox.terminal.search"
-    path="/com/raggesilver/BlackBox/terminal/search/">
+  <schema id="com.neg-zero.BlackBoxNext.terminal.search"
+    path="/com/neg-zero/BlackBoxNext/terminal/search/">
     <key name="wrap-around" type="b">
       <default>true</default>
       <summary>Whether clicking next on the last search result should return to the first</summary>

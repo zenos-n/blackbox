@@ -1,8 +1,8 @@
 project(
-  'blackbox',
+  'blackbox-next',
   ['c', 'vala'],
-  version: '0.15.2',
-  meson_version: '>= 0.50.0',
+  version: '0.15.2.1',
+  meson_version: '>= 0.59.0',
   default_options: [
     'warning_level=2',
   ],
@@ -14,6 +14,7 @@ add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name()), lan
 
 subdir('data')
 subdir('src')
+subdir('tests')
 subdir('po')
 
 meson.add_install_script('build-aux/meson/postinstall.py')

@@ -1,5 +1,5 @@
-data/com.raggesilver.BlackBox.desktop.in
-data/com.raggesilver.BlackBox.gschema.xml
+data/com.neg-zero.BlackBoxNext.desktop.in
+data/com.neg-zero.BlackBoxNext.gschema.xml
 src/gtk/shortcut-dialog.ui
 src/gtk/shortcut-editor.ui
 src/gtk/shortcut-row.ui

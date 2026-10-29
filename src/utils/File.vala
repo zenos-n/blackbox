@@ -41,31 +41,17 @@ public class Terminal.File : Object {
   }
 
   public string? read_all (out size_t bytes_read) throws Error {
-    bytes_read = 0;
+    uint8[] contents;
+    this.file.load_contents (null, out contents, null);
+    bytes_read = contents.length;
 
-    var @is = FileStream.open (this.path, "r");
-    @is.seek (0, FileSeek.END);
-
-    size_t size = @is.tell ();
-    @is.rewind ();
-
-    var buf = new uint8[size];
-    var read = @is.read (buf, 1);
-
-    bytes_read = read;
-
-    if (read != size) {
-      warning ("Invalid read size");
-    }
-
-    return read == 0
+    return bytes_read == 0
       ? null
-      : ((string) buf).make_valid ((ssize_t) read);
+      : ((string) contents).make_valid ((ssize_t) bytes_read);
   }
 
   public void write_plus (string str) throws Error {
-    var iostream = this.file.replace_readwrite (null, false, FileCreateFlags.NONE);
-    var os = iostream.output_stream;
-    os.write_all (str.data, null, null);
+    this.file.replace_contents (str.data, null, false, FileCreateFlags.NONE,
+                               null, null);
   }
 }

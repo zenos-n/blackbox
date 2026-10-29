@@ -2,10 +2,7 @@
 *.*~
 \#*#
 *.swp
-
-# Test files
-test*
-mocks/
+__pycache__/
 
 # Build dirs/files
 app/
