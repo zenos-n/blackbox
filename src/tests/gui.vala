@@ -207,14 +207,22 @@ void test_tab_overview() {
   assert(window.tab_view.n_pages == count + 1);
   assert(created == window.tab_view.selected_page);
   wait_frames(650);
+  var paintable = new Gtk.WidgetPaintable(window.tab_overview);
+  var snapshot = new Gtk.Snapshot();
+  paintable.snapshot(snapshot, window.tab_overview.get_width(), window.tab_overview.get_height());
+  var node = snapshot.to_node();
+  assert(node != null);
+  var texture = window.get_renderer().render_texture(node, null);
+  int width = texture.get_width();
+  var pixels = new uint8[width * texture.get_height() * 4];
+  texture.download(pixels, width * 4);
+  int header = (24 * width + width / 2 - 80) * 4;
+  int body = (texture.get_height() / 2 * width + 8) * 4;
+  for (int channel = 0; channel < 3; channel++) {
+    assert(((int) pixels[header + channel] - pixels[body + channel]).abs() <= 1);
+  }
   if (Environment.get_variable("BLACKBOX_TEST_SCREENSHOT") != null) {
-    var paintable = new Gtk.WidgetPaintable(window.tab_overview);
-    var snapshot = new Gtk.Snapshot();
-    paintable.snapshot(snapshot, window.tab_overview.get_width(), window.tab_overview.get_height());
-    var node = snapshot.to_node();
-    assert(node != null);
-    assert(window.get_renderer().render_texture(node, null)
-      .save_to_png("/tmp/blackbox-tab-overview.png"));
+    assert(texture.save_to_png("/tmp/blackbox-tab-overview.png"));
   }
   for (int i = 0; i < window.tab_view.n_pages; i++) {
     ((Terminal.TerminalTab) window.tab_view.get_nth_page(i).child).on_before_close();

@@ -28,7 +28,6 @@
   background: @window_bg_color;
 }
 
-window:not(.about) headerbar,
 .custom-headerbar {
   background-color: @window_bg_color;
 }

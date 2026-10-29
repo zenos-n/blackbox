@@ -4,7 +4,7 @@ This is a development fork of [Black Box](https://gitlab.gnome.org/raggesilver/b
 starting with performance, reliability, and GNOME 50. Kitty compatibility is
 the longer-term target, not a feature claim for this first version.
 
-Version: **0.15.2.3**. Executable: `blackbox-next`. Desktop application and
+Version: **0.15.2.4**. Executable: `blackbox-next`. Desktop application and
 GSettings ID: `com.neg-zero.BlackBoxNext`. Themes and keybindings live in
 `$XDG_DATA_HOME/blackbox-next/` (normally `~/.local/share/blackbox-next/`).
 The fork can coexist with upstream and does not migrate its settings.
@@ -49,6 +49,9 @@ The original GPL-3.0-or-later license and attribution are preserved.
 - Add a native tab overview button beside New Tab in both header layouts, with
   6px gaps between the controls. The overview supports thumbnails, tab search,
   switching, closing, and creating tabs through the existing tab lifecycle.
+- Scope terminal header recoloring to the custom header. Native overview and
+  dialog header bars retain their own styling; the overview header and body
+  backgrounds are checked against the rendered pixels.
 
 ## Compatibility work still required
 
