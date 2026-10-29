@@ -66,6 +66,12 @@ public class Terminal.StyleSwitcher : Gtk.Widget {
     this.thaw_notify ();
   }
 
+  public override void dispose () {
+    var child = this.get_first_child ();
+    if (child != null) child.unparent ();
+    base.dispose ();
+  }
+
   [GtkCallback]
   private void theme_check_active_changed () {
     if (this.system_selector.active) {

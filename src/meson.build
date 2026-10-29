@@ -32,6 +32,7 @@ blackbox_deps = [
   dependency('librsvg-2.0', version: '>= 2.54.0'),
   dependency('gee-0.8', version: '>=0.20'),
   dependency('graphene-gobject-1.0'),
+  meson.get_compiler('c').find_library('m'),
   meson.get_compiler('vala').find_library('posix'),
 ]
 

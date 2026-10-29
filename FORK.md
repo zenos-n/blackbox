@@ -4,7 +4,7 @@ This is a development fork of [Black Box](https://gitlab.gnome.org/raggesilver/b
 starting with performance, reliability, and GNOME 50. Kitty compatibility is
 the longer-term target, not a feature claim for this first version.
 
-Version: **0.15.2.1**. Executable: `blackbox-next`. Desktop application and
+Version: **0.15.2.2**. Executable: `blackbox-next`. Desktop application and
 GSettings ID: `com.neg-zero.BlackBoxNext`. Themes and keybindings live in
 `$XDG_DATA_HOME/blackbox-next/` (normally `~/.local/share/blackbox-next/`).
 The fork can coexist with upstream and does not migrate its settings.
@@ -36,12 +36,21 @@ The original GPL-3.0-or-later license and attribution are preserved.
 - Fall back to the user's login shell when `SHELL` is unset, report malformed
   custom commands in the error banner, and ignore empty primary clipboard reads.
 - Add regression tests, a parser-throughput benchmark, and Fedora 44 CI.
+- Restore automatic stylesheet, icon and help-overlay discovery after the fork's
+  application ID change. Use CSS media queries for dark mode on libadwaita 1.9.
+- Follow the desktop accent instead of replacing it with terminal-palette blue.
+- Animate large cursor movements with an accent-colored, tapered GSK trail.
+  Disable it under Preferences → Cursor → Cursor Trail. It respects disabled
+  desktop animations, stops in scrollback and hidden tabs, and runs no animation
+  callback at idle. It uses VTE's accessibility caret geometry; disabling VTE
+  accessibility also disables the trail. This is not Kitty's shader/plugin API.
 
 ## Compatibility work still required
 
 | Area | Status |
 |---|---|
-| GPU text rendering | VTE 0.84 GSK path; hardware acceleration requires runtime verification |
+| GPU text rendering | VTE 0.84 GSK path; Vulkan observed in desktop tests |
+| Cursor trail | Implemented; Vulkan rendering and animation cleanup tested on the desktop |
 | Inline images | Inherited Sixel; graphical smoke test still required |
 | Kitty graphics protocol | Not implemented: transmission, placement, deletion, animation, limits and cleanup need a backend implementation |
 | Kitty keyboard protocol | Not implemented in this fork; requires backend capability work |
@@ -69,7 +78,11 @@ The Nix recipe is `package.nix`. It builds against the package set supplied by
 the caller; Meson rejects an older GNOME stack. Tests use temporary user data
 and memory-backed GSettings. Without a display, graphical tests report a skip.
 The local sandbox build used GTK 4.22.4, libadwaita 1.9.3, VTE 0.84.1, Vala
-0.56.19, and GCC 16.2. Core, process-lifetime and benchmark checks pass. GUI tests and real GPU performance were
-not runnable in that sandbox; a build is not a claim of complete desktop validation.
+0.56.19, and GCC 16.2. Core, process-lifetime and benchmark checks pass. The six
+graphical/process checks also passed through a temporary user service in the
+real Wayland session, using `GskVulkanRenderer` and the desktop's purple accent.
+Those checks cover styles, accent, search, Unicode/scrollback cursor geometry,
+trail rendering and cleanup, and process lifetime. GPU throughput and input
+latency have not been measured; other desktop features still need validation.
 
 See [PERFORMANCE.md](PERFORMANCE.md) for measurements and remaining validation.

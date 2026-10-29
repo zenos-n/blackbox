@@ -83,6 +83,9 @@ public class Terminal.Terminal : Vte.Terminal {
   private uint  original_scrollback_lines;
   private static uint next_id = 0;
   private uint attention_timer = 0;
+  private CursorTrail cursor_trail = new CursorTrail();
+  private uint cursor_trail_tick = 0;
+  internal bool cursor_trail_animating { get { return this.cursor_trail_tick != 0; } }
 
   // FIXME: either get rid of this field, or stop creating a local copy of
   // settings every time we need to use it
@@ -114,6 +117,7 @@ public class Terminal.Terminal : Vte.Terminal {
     this.settings.notify["font"].connect(this.on_font_changed);
     this.settings.notify["terminal-padding"].connect(this.on_padding_changed);
     this.settings.notify["opacity"].connect(this.on_theme_changed);
+    Adw.StyleManager.get_default().notify["accent-color"].connect(this.on_theme_changed);
 
     this.setup_drag_drop();
     this.setup_regexes();
@@ -139,6 +143,7 @@ public class Terminal.Terminal : Vte.Terminal {
 #endif
 
   public override void dispose() {
+    this.stop_cursor_trail();
 #if BLACKBOX_DEBUG_MEMORY
     message("Terminal dispose");
 #endif
@@ -146,6 +151,79 @@ public class Terminal.Terminal : Vte.Terminal {
   }
 
   // Methods ===================================================================
+
+  private void stop_cursor_trail() {
+    if (this.cursor_trail_tick != 0) {
+      this.remove_tick_callback(this.cursor_trail_tick);
+      this.cursor_trail_tick = 0;
+    }
+    this.cursor_trail.reset();
+  }
+
+  // The shipped Vala binding incorrectly copies this output argument.
+  [CCode(cname = "blackbox_accessible_text_get_extents", cheader_filename = "utils/cursor-geometry.h")]
+  private static extern bool get_text_extents(Gtk.AccessibleText text,
+    uint start, uint end, out Graphene.Rect bounds);
+
+  internal bool get_cursor_bounds(out Graphene.Rect bounds) {
+    bounds = Graphene.Rect();
+    if (!this.enable_a11y || this.get_char_width() <= 0) return false;
+    var adjustment = this.vadjustment;
+    if (adjustment.value < adjustment.upper - adjustment.page_size - 1) return false;
+    var text = (Gtk.AccessibleText) this;
+    uint caret = text.get_caret_position();
+    if (!get_text_extents(text, caret, caret, out bounds)) return false;
+    long column;
+    this.get_cursor_position(out column, null);
+    bounds.origin.x = this.get_style_context().get_padding().left
+                      + column * this.get_char_width();
+    bounds.size.width = this.get_char_width();
+    bounds.size.height = this.get_char_height();
+    return bounds.origin.y >= 0 && bounds.origin.y < this.get_height();
+  }
+
+  public override void snapshot(Gtk.Snapshot snapshot) {
+    base.snapshot(snapshot);
+    Graphene.Rect bounds = Graphene.Rect();
+    if (!this.has_focus || !this.settings.cursor_trail ||
+        !Gtk.Settings.get_default().gtk_enable_animations ||
+        !this.get_cursor_bounds(out bounds)) {
+      this.stop_cursor_trail();
+      return;
+    }
+
+    int64 now = get_monotonic_time();
+    if (this.cursor_trail.move(bounds, now) && this.cursor_trail_tick == 0) {
+      this.cursor_trail_tick = this.add_tick_callback((widget, clock) => {
+        bool active = this.cursor_trail.active(clock.get_frame_time());
+        this.queue_draw();
+        if (!active) this.cursor_trail_tick = 0;
+        return active;
+      });
+    }
+    if (!this.cursor_trail.active(now)) return;
+
+    var tail = this.cursor_trail.tail(now);
+    var head = bounds.get_center();
+    float dx = head.x - tail.x;
+    float dy = head.y - tail.y;
+    float distance = (float) Math.sqrt(dx * dx + dy * dy);
+    if (distance < 0.5f) return;
+    float nx = -dy / distance;
+    float ny = dx / distance;
+    float radius = (nx.abs() * bounds.size.width + ny.abs() * bounds.size.height) / 2;
+    var path = new Gsk.PathBuilder();
+    path.move_to(tail.x + nx * radius * 0.15f, tail.y + ny * radius * 0.15f);
+    path.line_to(head.x + nx * radius, head.y + ny * radius);
+    path.line_to(head.x - nx * radius, head.y - ny * radius);
+    path.line_to(tail.x - nx * radius * 0.15f, tail.y - ny * radius * 0.15f);
+    path.close();
+    var color = Adw.StyleManager.get_default().get_accent_color_rgba();
+    color.alpha = (float) (0.55 * (1 - this.cursor_trail.progress(now)));
+    snapshot.push_clip(Graphene.Rect().init(0, 0, this.get_width(), this.get_height()));
+    snapshot.append_fill(path.to_path(), Gsk.FillRule.WINDING, color);
+    snapshot.pop();
+  }
 
   private void setup_drag_drop() {
     var target = new Gtk.DropTarget(Type.INVALID, Gdk.DragAction.COPY);
@@ -244,6 +322,8 @@ public class Terminal.Terminal : Vte.Terminal {
       bg,
       theme.palette.data
     );
+    this.set_color_cursor(Adw.StyleManager.get_default().get_accent_color_rgba());
+    this.set_color_cursor_foreground(Gdk.RGBA() { red = 1, green = 1, blue = 1, alpha = 1 });
   }
 
   private Gtk.CssProvider? padding_provider = null;
@@ -361,6 +441,13 @@ public class Terminal.Terminal : Vte.Terminal {
   }
 
   private void connect_signals() {
+    this.unmap.connect(this.stop_cursor_trail);
+    this.char_size_changed.connect(this.stop_cursor_trail);
+    this.vadjustment.value_changed.connect(this.stop_cursor_trail);
+    this.settings.notify["cursor-trail"].connect(() => {
+      this.stop_cursor_trail();
+      this.queue_draw();
+    });
     var kpcontroller = new Gtk.EventControllerKey();
     kpcontroller.key_pressed.connect(this.on_key_pressed);
     this.add_controller(kpcontroller);

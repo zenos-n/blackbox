@@ -4,6 +4,18 @@
 @define-color root_context_color  shade(@red_1, 1.38);
 @define-color ssh_context_color   shade(@purple_1, 1.28);
 
+:root {
+  --root-context-color: @root_context_color;
+  --ssh-context-color: @ssh_context_color;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --root-context-color: shade(@red_5, 0.7);
+    --ssh-context-color: shade(@purple_5, 0.7);
+  }
+}
+
 /* #blackbox-main-window.with-borders:not(.fullscreen):backdrop {
   border-color: alpha(@borders, 0.5);
 } */
@@ -22,11 +34,11 @@ window:not(.about) headerbar,
 }
 
 #blackbox-main-window.context-root .custom-headerbar {
-  background-color: @root_context_color;
+  background-color: var(--root-context-color);
 }
 
 #blackbox-main-window.context-ssh .custom-headerbar {
-  background-color: @ssh_context_color;
+  background-color: var(--ssh-context-color);
 }
 
 .custom-headerbar windowhandle > box {

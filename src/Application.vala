@@ -30,6 +30,7 @@ public class Terminal.Application : Adw.Application {
   public Application () {
     Object(
       application_id: APP_ID,
+      resource_base_path: "/com/raggesilver/BlackBox",
       flags: ApplicationFlags.HANDLES_COMMAND_LINE
     );
 

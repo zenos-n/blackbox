@@ -203,6 +203,12 @@
                     <property name="subtitle" translatable="yes">Enable to hide the cursor while typing</property>
                   </object>
                 </child>
+                <child>
+                  <object class="AdwSwitchRow" id="cursor_trail_switch_row">
+                    <property name="title" translatable="yes">Cursor Trail</property>
+                    <property name="subtitle" translatable="yes">Follow cursor jumps with an animated trail.</property>
+                  </object>
+                </child>
               </object>
             </child>
 

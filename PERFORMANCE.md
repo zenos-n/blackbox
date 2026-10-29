@@ -1,9 +1,13 @@
 # Performance and reliability baseline
 
-No throughput or latency improvement is claimed yet. The available environment
-can compile against the GNOME 50 libraries, but cannot connect to the desktop,
-start Xvfb, or access the Nix daemon. Hardware rendering and full package builds
-need verification outside that sandbox.
+No throughput or latency improvement is claimed yet. Direct sandbox commands
+cannot connect to the desktop, start Xvfb, or access the Nix daemon. A temporary
+user-systemd service can run the graphical checks in the real Wayland session.
+Those six checks passed with `GskVulkanRenderer` and the system's purple accent
+(`rgb(145,65,172)`), including a captured cursor-trail frame. The animation test
+checks that the frame callback stops after the trail and remains stopped when
+the setting is disabled. Full package builds and GPU performance measurements
+remain outstanding.
 
 ## Confirmed regressions
 

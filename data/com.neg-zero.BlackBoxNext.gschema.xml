@@ -133,6 +133,10 @@
       <default>0</default>
       <summary>Whether or not the cursor should blink</summary>
     </key>
+    <key name="cursor-trail" type="b">
+      <default>true</default>
+      <summary>Animate a trail when the text cursor moves</summary>
+    </key>
     <key name="easy-copy-paste" type="b">
       <default>false</default>
       <summary>If enabled, ctrl+c and ctrl+v will work for copy/paste</summary>

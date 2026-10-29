@@ -282,25 +282,20 @@ public class Terminal.ThemeProvider : Object {
         @define-color card_bg_color         alpha(white, .08);
         @define-color view_bg_color         darker(@window_bg_color);
 
-        @define-color accent_color            %3$s;
-        @define-color accent_bg_color         %3$s;
-        @define-color accent_fg_color         white;
         @define-color destructive_color       %1$s;
         @define-color success_color           %2$s;
-        @define-color warning_color           %4$s;
+        @define-color warning_color           %3$s;
 
         @define-color root_context_color    mix(@window_bg_color, %1$s, 0.4);
-        @define-color ssh_context_color     mix(@window_bg_color, %5$s, 0.6);
+        @define-color ssh_context_color     mix(@window_bg_color, %4$s, 0.6);
       """.printf(
         /** 1 */
         scheme.palette.index (SchemePaletteColorIndex.LIGHT_RED).to_string (),
         /** 2 */
         scheme.palette.index (SchemePaletteColorIndex.LIGHT_GREEN).to_string (),
         /** 3 */
-        scheme.palette.index (SchemePaletteColorIndex.LIGHT_BLUE).to_string (),
-        /** 4 */
         scheme.palette.index (SchemePaletteColorIndex.LIGHT_YELLOW).to_string (),
-        /** 5 */
+        /** 4 */
         scheme.palette.index (SchemePaletteColorIndex.LIGHT_PURPLE).to_string ()
       );
     }
@@ -311,25 +306,20 @@ public class Terminal.ThemeProvider : Object {
         @define-color dialog_bg_color       @window_bg_color;
         @define-color card_bg_color         alpha(white, .6);
 
-        @define-color accent_color            %3$s;
-        @define-color accent_bg_color         %3$s;
-        @define-color accent_fg_color         white;
         @define-color destructive_color       %1$s;
         @define-color success_color           %2$s;
-        @define-color warning_color           %4$s;
+        @define-color warning_color           %3$s;
 
         @define-color root_context_color    mix(@window_bg_color, %1$s, 0.4);
-        @define-color ssh_context_color     mix(@window_bg_color, %5$s, 0.6);
+        @define-color ssh_context_color     mix(@window_bg_color, %4$s, 0.6);
       """.printf(
         /** 1 */
         scheme.palette.index (SchemePaletteColorIndex.RED).to_string (),
         /** 2 */
         scheme.palette.index (SchemePaletteColorIndex.GREEN).to_string (),
         /** 3 */
-        scheme.palette.index (SchemePaletteColorIndex.BLUE).to_string (),
-        /** 4 */
         scheme.palette.index (SchemePaletteColorIndex.YELLOW).to_string (),
-        /** 5 */
+        /** 4 */
         scheme.palette.index (SchemePaletteColorIndex.PURPLE).to_string ()
       );
     }
@@ -339,6 +329,10 @@ public class Terminal.ThemeProvider : Object {
       @define-color destructive_bg_color    @destructive_color;
       @define-color success_bg_color        @success_color;
       @define-color warning_bg_color        @warning_color;
+      :root {
+        --root-context-color: @root_context_color;
+        --ssh-context-color: @ssh_context_color;
+      }
     """;
 
     return theme;

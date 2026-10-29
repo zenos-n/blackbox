@@ -32,6 +32,7 @@ bool light_themes_filter_func (Gtk.FlowBoxChild child) {
 public class Terminal.PreferencesWindow : Adw.PreferencesDialog {
   [GtkChild] unowned Adw.ComboRow             cursor_shape_combo_row;
   [GtkChild] unowned Adw.ComboRow             cursor_blink_mode_combo_row;
+  [GtkChild] unowned Adw.SwitchRow            cursor_trail_switch_row;
   [GtkChild] unowned Adw.ComboRow             scrollback_mode_combo_row;
   [GtkChild] unowned Adw.ComboRow             working_directory_mode_combo_row;
   [GtkChild] unowned Adw.ComboRow             style_preference_combo_row;
@@ -247,6 +248,9 @@ public class Terminal.PreferencesWindow : Adw.PreferencesDialog {
       "active",
       SettingsBindFlags.DEFAULT
     );
+
+    settings.schema.bind("cursor-trail", this.cursor_trail_switch_row,
+                         "active", SettingsBindFlags.DEFAULT);
 
     settings.schema.bind(
       "fill-tabs",

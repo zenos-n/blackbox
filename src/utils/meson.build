@@ -1,5 +1,6 @@
 blackbox_sources += files(
   'Constants.vala',
+  'CursorTrail.vala',
   'Css.vala',
   'Dialogs.vala',
   'File.vala',
