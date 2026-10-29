@@ -2,6 +2,9 @@
 > Black Box 0.15.2. Run `blackbox-next`. See [FORK.md](FORK.md) for the current
 > scope and [PERFORMANCE.md](PERFORMANCE.md) for validation. Kitty parity is planned.
 
+With Nix, use `nix build` to build this fork, `nix run` to launch it, or
+`nix develop` to enter its development shell. See [build instructions](FORK.md#build-and-checks).
+
 <div align="center">
   <h1><img src="./data/icons/hicolor/scalable/apps/com.raggesilver.BlackBox.svg" height="64"/>Black Box</h1>
   <h4>An elegant and customizable terminal for GNOME</h4>

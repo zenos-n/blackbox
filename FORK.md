@@ -74,6 +74,19 @@ not provide a reliable native terminal widget.
 
 ## Build and checks
 
+The flake supports x86_64 and AArch64 Linux and locks the GNOME build dependencies:
+
+```sh
+nix build
+nix run
+nix flake check
+nix develop
+```
+
+`nix build .#blackbox-next` selects the named package. The default package runs
+the Meson tests during its build. `nix develop` supplies the same build inputs
+for working on the source with Meson:
+
 ```sh
 meson setup _build --buildtype=release
 meson compile -C _build
